@@ -1,0 +1,187 @@
+{
+  "Initialize the Vote module": {
+    "prefix": "initVote",
+    "body": [
+      "const voteAddress = \"${1:module_addr}\";",
+      "",
+      "const vote = sdk.getVoteModule(voteAddress);"
+    ],
+    "description": "Initialize the Vote module"
+  },
+  "Get the balance of the project wallet in the native token of the chain": {
+    "prefix": "getBalanceChain",
+    "body": [
+      "const getBalance = async () => {",
+      "  try {",
+      "    await vote.balance();",
+      "  } catch (error) {",
+      "    console.log(error);",
+      "  }",
+      "};",
+      "",
+      "getBalance();"
+    ],
+    "description": "Get the balance of the project wallet in the native token of the chain"
+  },
+  "Get the balance of the project wallet in a particular ERC20 token contract": {
+    "prefix": "getBalanceERC20",
+    "body": [
+      "const getBalanceOfToken = async (tokenAddress) => {",
+      "  try {",
+      "    await vote.balanceOfToken(tokenAddress);",
+      "  } catch (error) {",
+      "    console.log(error);",
+      "  }",
+      "};",
+      "",
+      "getBalanceOfToken('${1:token_addr}')"
+    ],
+    "description": "Get the balance of the project wallet in a particular ERC20 token contract"
+  },
+  "Can execute a proposal": {
+    "prefix": "canExecute",
+    "body": [
+      "const canExecuteProposal = async (proposalId) => {",
+      "  try {",
+      "    await vote.canExecute(proposalId);",
+      "  } catch (error) {",
+      "    console.log(error);",
+      "  }",
+      "};",
+      "",
+      "canExecuteProposal('${1:proposal_id}')"
+    ],
+    "description": "Can execute a proposal"
+  },
+  "Execute a Proposal": {
+    "prefix": "executeProposal",
+    "body": [
+      "const executeProposal = async (proposalId) => {",
+      "  try {",
+      "    await vote.execute(proposalId);",
+      "  } catch (error) {",
+      "    console.log(error);",
+      "  }",
+      "};",
+      "",
+      "executeProposal('${1:proposal_id}');"
+    ],
+    "description": "Execute a Proposal"
+  },
+  "Get proposal by Proposal Id": {
+    "prefix": "getProposal",
+    "body": [
+      "const getProposal = async (proposalId) => {",
+      "  try {",
+      "    await vote.get(proposalId);",
+      "  } catch (error) {",
+      "    console.log(error);",
+      "  }",
+      "};",
+      "",
+      "getProposal('${1:proposal_id}');"
+    ],
+    "description": "Get proposal by Proposal Id"
+  },
+  "Get all the Proposals": {
+    "prefix": "getProposals",
+    "body": [
+      "const getAllProposals = async () => {",
+      "  try {",
+      "    await vote.getAll();",
+      "  } catch (error) {",
+      "    console.log(error);",
+      "  }",
+      "};",
+      "",
+      "getAllProposals();"
+    ],
+    "description": "Get all the Proposals"
+  },
+  "Check if an account has voted for a proposal": {
+    "prefix": "checkProposalAccStatus",
+    "body": [
+      "const hasVotedForProposal = async (proposalId, walletAddress) => {",
+      "  try {",
+      "    await vote.hasVoted(proposalId, walletAddress);",
+      "  } catch (error) {",
+      "    console.log(error);",
+      "  }",
+      "};",
+      "",
+      "hasVotedForProposal('${1:proposal_id}', '${1:wallet_addr}');"
+    ],
+    "description": "Check if an account has voted for a proposal"
+  },
+  "Create a Proposal": {
+    "prefix": "createProposal",
+    "body": [
+      "const createProposal = async (description, executions) => {",
+      "  try {",
+      "    await vote.propose(description, executions);",
+      "  } catch (error) {",
+      "    console.log(error);",
+      "  }",
+      "};",
+      "",
+      "createProposal('${1:desc}', [",
+      "  toAddress: \"${1:wallet_addr}\",",
+      "  nativeTokenValue: 0,",
+      "  transactionData: tokenModule.contract.interface.encodeFunctionData(",
+      "    \"transfer\",",
+      "    [\"${1:from_wallet_addr}\", \"${1:amount}\"]",
+      "  )",
+      "]);"
+    ],
+    "description": "Create a Proposal"
+  },
+  "Set metadata for the module": {
+    "prefix": "setMetadataModule",
+    "body": [
+      "const setModuleMetadata = async (metadata) => {",
+      "  try {",
+      "    await vote.setModuleMetadata(metadata);",
+      "  } catch (error) {",
+      "    console.log(error);",
+      "  }",
+      "};",
+      "",
+      "setModuleMetadata({",
+      "  name: '${1:name}',",
+      "  description: '${1:desc}',",
+      "  image: '${1:image_link}'",
+      "});"
+    ],
+    "description": "Set metadata for the module"
+  },
+  "Get the settings": {
+    "prefix": "getSettings",
+    "body": [
+      "const getSettings = async () => {",
+      "  try {",
+      "    await vote.settings();",
+      "  } catch (error) {",
+      "    console.log(error);",
+      "  }",
+      "};",
+      "",
+      "getSettings();"
+    ],
+    "description": "Get the settings"
+  },
+  "Vote for a proposal": {
+    "prefix": "voteProposal",
+    "body": [
+      "const voteForProposal = async (proposalId, voteType, reason) => {",
+      "  try {",
+      "    await vote.vote(proposalId, vote, reason);",
+      "  } catch (error) {",
+      "    console.log(error);",
+      "  }",
+      "};",
+      "",
+      "voteForProposal('${1:proposal_id}', '${1:vote_type}', '${1:reason}');"
+    ],
+    "description": "Vote for a proposal"
+  }
+}

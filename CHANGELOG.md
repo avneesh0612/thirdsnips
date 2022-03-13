@@ -1,3 +1,12 @@
+# [0.3.0](https://github.com/avneesh0612/thirdweb-snippets/compare/v0.2.0...v0.3.0) (2022-03-13)
+
+
+### Features
+
+* ✨ add vote collection snippets ([#4](https://github.com/avneesh0612/thirdweb-snippets/issues/4)) ([6fee031](https://github.com/avneesh0612/thirdweb-snippets/commit/6fee031536952bfeae70821c7b5cff9ac6b33aa0))
+
+
+
 # [0.2.0](https://github.com/avneesh0612/thirdweb-snippets/compare/v0.1.0...v0.2.0) (2022-03-13)
 
 
