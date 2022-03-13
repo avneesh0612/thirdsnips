@@ -5,7 +5,7 @@ import convertFileName from "../utils/convertFileName.js";
 import { readmeTop, readmeBottom } from "../data/readmeConstants.js";
 import constants from "../data/constants.js";
 
-let finalSnippets = [["Prefix", "Description", "Module"]];
+let finalSnippets = [["Serial No.", "Prefix", "Description", "Module"]];
 
 fs.readdir(constants["snippetsFolder"], function (err, files) {
   files.map((file) => {
@@ -20,8 +20,9 @@ fs.readdir(constants["snippetsFolder"], function (err, files) {
           (key) => actualData[key]
         );
         // Adding the snippet to the final array
-        snippetArray.map((snippet) => {
+        snippetArray.map((snippet, i) => {
           finalSnippets.push([
+            `${i + 1}.`,
             `\`${snippet.prefix}\``,
             snippet.description,
             `[${convertFileName(
