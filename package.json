@@ -2,7 +2,7 @@
   "name": "thirdweb-snippets",
   "displayName": "Thirdweb Snippets",
   "description": "This is an extension for Thirdweb Snippets with Typescript support as well!",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "publisher": "AvneeshAgarwal",
   "repository": {
     "url": "https://github.com/avneesh0612/thirdweb-snippets"
