@@ -105,7 +105,7 @@
       "  }",
       "};",
       "",
-      "burnFrom(\"${1:wallet_adress}\", \"${1:nft_token_id}\", \"${1:amount}\")"
+      "burnFrom(\"${1:wallet_address}\", \"${1:nft_token_id}\", \"${1:amount}\")"
     ],
     "description": "Burn a NFT from an address"
   },
@@ -220,7 +220,7 @@
       "};",
       "",
       "createNftWithErc20( \"<TOKEN_CONTRACT_ADDRESS>\", '<AMOUNT>', {",
-      "  name: '${1:toekn_name}',",
+      "  name: '${1:token_name}',",
       "  description: '${1:desc}',",
       "  image: '${1:image_link}',",
       "  properties: '${1:props_object}',",
@@ -356,7 +356,7 @@
       "const getRoyaltyRecipientAddress = async () => {",
       "  try {",
       "    await bundle.getRoyaltyRecipientAddress();",
-      "  } catch (errror) {",
+      "  } catch (error) {",
       "    console.log(error);",
       "  }",
       "};",
@@ -511,7 +511,7 @@
     "description": "Set metadata for the module"
   },
   "Set restriction on transfer": {
-    "prefix": "setRestrcitionTransfer",
+    "prefix": "setRestrictionTransfer",
     "body": [
       "const setTransferRestriction = async (status) => {",
       "  try {",
@@ -540,7 +540,7 @@
     ],
     "description": "Set royalty basic points"
   },
-  "Tranfer token to address": {
+  "Transfer token to address": {
     "prefix": "transferToken",
     "body": [
       "const transferTokenToAddress = async (to, tokenId, amount) => {",
@@ -553,9 +553,9 @@
       "",
       "transferTokenToAddress('${1:wallet_addr}', '${1:token_id}', '${1:amount}');"
     ],
-    "description": "Tranfer token to address"
+    "description": "Transfer token to address"
   },
-  "Tranfer a specific amount of NFT from an address": {
+  "Transfer a specific amount of NFT from an address": {
     "prefix": "transferNFTAddr",
     "body": [
       "const transferTokenFromAddress = async (from, to, nft) => {",
@@ -568,7 +568,7 @@
       "",
       "transferTokenFromAddress('${1:from_wallet_addr}', '${1:to_wallet_addr}', { tokenId: '${1:token_id}', amount: '${1:amount}'});"
     ],
-    "description": "Tranfer a specific amount of NFT from an address"
+    "description": "Transfer a specific amount of NFT from an address"
   },
   "Unwrap a NFT": {
     "prefix": "unwrapNFT",
