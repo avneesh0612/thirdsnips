@@ -24,7 +24,9 @@ fs.readdir(constants["snippetsFolder"], function (err, files) {
           finalSnippets.push([
             `\`${snippet.prefix}\``,
             snippet.description,
-            `${convertFileName(file)} module`,
+            `[${convertFileName(
+              file
+            )} module](https://github.com/avneesh0612/thirdweb-snippets/blob/main/snippets/${file})`,
           ]);
         });
         // Generating a markdown table
