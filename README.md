@@ -6,6 +6,39 @@ Thirdweb snippets for enhancing your the developer experience while working with
 
 | Prefix                      | Description                                                                                 | Module                   |
 | --------------------------- | ------------------------------------------------------------------------------------------- | ------------------------ |
+| `initModule`                | Initialize the bundle module                                                                | Bundle Collection module |
+| `initSupply`                | Get initial supply for a token                                                              | Bundle Collection module |
+| `initSupplyAddr`            | Get initial supply for a token for an address                                               | Bundle Collection module |
+| `burnNFT`                   | Burn NFT by Token ID and amount to burn                                                     | Bundle Collection module |
+| `burnNFTs`                  | Burn a Batch of NFTs                                                                        | Bundle Collection module |
+| `burnNFTsAddr`              | Burn a Batch of NFTs from an address                                                        | Bundle Collection module |
+| `burnNFTAddr`               | Burn a NFT from an address                                                                  | Bundle Collection module |
+| `createNFT`                 | Create NFT                                                                                  | Bundle Collection module |
+| `createMintNFT`             | Create and Mint NFT                                                                         | Bundle Collection module |
+| `createMintNFTs`            | Create and Mint a batch of NFTs                                                             | Bundle Collection module |
+| `createNFTs`                | Create a batch of NFTs                                                                      | Bundle Collection module |
+| `createERC-20`              | Create with ERC-20                                                                          | Bundle Collection module |
+| `createERC-721`             | Create with ERC-721                                                                         | Bundle Collection module |
+| `createNFT`                 | Create with NFT                                                                             | Bundle Collection module |
+| `createTOKEN`               | Create with Token                                                                           | Bundle Collection module |
+| `getNFTToken`               | Get NFT by token ID                                                                         | Bundle Collection module |
+| `getAllNFTs`                | Get All NFTs                                                                                | Bundle Collection module |
+| `getAllNFTsOwned`           | Get All NFTs Owned                                                                          | Bundle Collection module |
+| `getRoyaltyPoints`          | Get royalty basic Points                                                                    | Bundle Collection module |
+| `getRoyaltyAddr`            | Get royalty recipient address                                                               | Bundle Collection module |
+| `checkIfApproved`           | Check if a smart contract is approved to spend on your behalf                               | Bundle Collection module |
+| `checkIfRes`                | Check if transfer is Restricted                                                             | Bundle Collection module |
+| `specifySupply`             | Specify supply for a NFT                                                                    | Bundle Collection module |
+| `specifySupplyNFTs`         | Specify supply for a Batch of NFTs                                                          | Bundle Collection module |
+| `specifySupplyNFTsSend`     | Specify supply for a Batch of NFTs and send it to an Address                                | Bundle Collection module |
+| `specifySupplyNFTSend`      | Specify supply for a NFT and send it to an Address                                          | Bundle Collection module |
+| `setApprovalContract`       | Set approval for a contract                                                                 | Bundle Collection module |
+| `setMetadata`               | Set metadata for the module                                                                 | Bundle Collection module |
+| `setRestrictionTransfer`    | Set restriction on transfer                                                                 | Bundle Collection module |
+| `setRoyaltyPoints`          | Set royalty basic points                                                                    | Bundle Collection module |
+| `transferToken`             | Transfer token to address                                                                   | Bundle Collection module |
+| `transferNFTAddr`           | Transfer a specific amount of NFT from an address                                           | Bundle Collection module |
+| `unwrapNFT`                 | Unwrap a NFT                                                                                | Bundle Collection module |
 | `mintNft`                   | Mint an NFT to your wallet                                                                  | Nft Collection module    |
 | `mintNftTo`                 | Mint an NFT to someone's wallet                                                             | Nft Collection module    |
 | `nftBalance`                | Get balance of NFTs of a collection                                                         | Nft Collection module    |
@@ -40,39 +73,6 @@ Thirdweb snippets for enhancing your the developer experience while working with
 | `tokenTransferBatch`        | Transfer specific amounts of tokens to multiple addresses in a batch                        | Token module             |
 | `tokenTransferFrom`         | Transfer specific amount of tokens from an address to another address                       | Token module             |
 | `tokenTransferFromBatch`    | Transfer specific amounts of tokens from multiple addresses to another addresses in a batch | Token module             |
-| `initModule`                | Initialize the bundle module                                                                | Bundle Collection module |
-| `initSupply`                | Get initial supply for a token                                                              | Bundle Collection module |
-| `initSupplyAddr`            | Get initial supply for a token for an address                                               | Bundle Collection module |
-| `burnNFT`                   | Burn NFT by Token ID and amount to burn                                                     | Bundle Collection module |
-| `burnNFTs`                  | Burn a Batch of NFTs                                                                        | Bundle Collection module |
-| `burnNFTsAddr`              | Burn a Batch of NFTs from an address                                                        | Bundle Collection module |
-| `burnNFTAddr`               | Burn a NFT from an address                                                                  | Bundle Collection module |
-| `createNFT`                 | Create NFT                                                                                  | Bundle Collection module |
-| `createMintNFT`             | Create and Mint NFT                                                                         | Bundle Collection module |
-| `createMintNFTs`            | Create and Mint a batch of NFTs                                                             | Bundle Collection module |
-| `createNFTs`                | Create a batch of NFTs                                                                      | Bundle Collection module |
-| `createERC-20`              | Create with ERC-20                                                                          | Bundle Collection module |
-| `createERC-721`             | Create with ERC-721                                                                         | Bundle Collection module |
-| `createNFT`                 | Create with NFT                                                                             | Bundle Collection module |
-| `createTOKEN`               | Create with Token                                                                           | Bundle Collection module |
-| `getNFTToken`               | Get NFT by token ID                                                                         | Bundle Collection module |
-| `getAllNFTs`                | Get All NFTs                                                                                | Bundle Collection module |
-| `getAllNFTsOwned`           | Get All NFTs Owned                                                                          | Bundle Collection module |
-| `getRoyaltyPoints`          | Get royalty basic Points                                                                    | Bundle Collection module |
-| `getRoyaltyAddr`            | Get royalty recipient address                                                               | Bundle Collection module |
-| `checkIfApproved`           | Check if a smart contract is approved to spend on your behalf                               | Bundle Collection module |
-| `checkIfRes`                | Check if transfer is Restricted                                                             | Bundle Collection module |
-| `specifySupply`             | Specify supply for a NFT                                                                    | Bundle Collection module |
-| `specifySupplyNFTs`         | Specify supply for a Batch of NFTs                                                          | Bundle Collection module |
-| `specifySupplyNFTsSend`     | Specify supply for a Batch of NFTs and send it to an Address                                | Bundle Collection module |
-| `specifySupplyNFTSend`      | Specify supply for a NFT and send it to an Address                                          | Bundle Collection module |
-| `setApprovalContract`       | Set approval for a contract                                                                 | Bundle Collection module |
-| `setMetadata`               | Set metadata for the module                                                                 | Bundle Collection module |
-| `setRestrictionTransfer`    | Set restriction on transfer                                                                 | Bundle Collection module |
-| `setRoyaltyPoints`          | Set royalty basic points                                                                    | Bundle Collection module |
-| `transferToken`             | Transfer token to address                                                                   | Bundle Collection module |
-| `transferNFTAddr`           | Transfer a specific amount of NFT from an address                                           | Bundle Collection module |
-| `unwrapNFT`                 | Unwrap a NFT                                                                                | Bundle Collection module |
 | `initVote`                  | Initialize the Vote module                                                                  | Vote Collection module   |
 | `getBalanceChain`           | Get the balance of the project wallet in the native token of the chain                      | Vote Collection module   |
 | `getBalanceERC20`           | Get the balance of the project wallet in a particular ERC20 token contract                  | Vote Collection module   |
