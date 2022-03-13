@@ -51,7 +51,7 @@ const Working: FC = () => {
 
           <Text fontSize="lg" fontFamily="sen" fontWeight="400">
             once installed, reload your <br />
-            IDE and you're good to
+            IDE and you&apos;re good to
             <br /> go!
           </Text>
         </Box>
