@@ -31,13 +31,13 @@ fs.readdir(constants["snippetsFolder"], function (err, files) {
         let snippetTable = markdownTable(finalSnippets);
         const snippetDocs = readmeTop + snippetTable + "\n" + readmeBottom;
         // Clearing all the content in the README.md file before adding new content
-        fs.truncate(constants["readmeFile"], 0, function (err) {
+        fs.writeFile(constants["readmeFile"], "", function (err) {
           if (err) {
             console.log(err);
           }
         });
         // Adding the new content to the README.md file
-        fs.appendFile(constants["readmeFile"], snippetDocs, function (err) {
+        fs.writeFile(constants["readmeFile"], snippetDocs, function (err) {
           if (err) {
             console.log(err);
           }
@@ -46,3 +46,5 @@ fs.readdir(constants["snippetsFolder"], function (err, files) {
     );
   });
 });
+
+// wait duh
