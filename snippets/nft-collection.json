@@ -1,15 +1,15 @@
 {
-  "mintNFT": {
-    "prefix": "mintNFT",
+  "Mint an NFT to your wallet": {
+    "prefix": "mintNft",
     "body": [
-      "const nftCollection = sdk.getNFTModule(\"<MODULE_ADDRESS>\");",
+      "const nftCollection = sdk.getNFTModule(\"${1:<MODULE_ADDRESS>}\");",
       "",
       "const mintNft = async () => {",
       "  try {",
       "    await nftCollection.mint({",
-      "      name: \"thirdweb\",",
-      "      description: \"Smart contracts you control. Tools that accelerate your workflow. Intuitive SDKs and widgets for developers.\",",
-      "      image: \"ipfs/<YOUR_IPFS_FOLDER_CID>/1.png\",",
+      "      name: \"${2:thirdweb}\",",
+      "      description: \"${3:Smart contracts you control. Tools that accelerate your workflow. Intuitive SDKs and widgets for developers.}\",",
+      "      image: \"${4:ipfs/<YOUR_IPFS_FOLDER_CID>/1.png}\",",
       "      properties: {},",
       "    });",
       "  } catch (err) {",
@@ -21,17 +21,17 @@
     ],
     "description": "Mint an NFT to your wallet"
   },
-  "mintNftTo": {
+  "Mint an NFT to someone's wallet": {
     "prefix": "mintNftTo",
     "body": [
-      "const nftCollection = sdk.getNFTModule(\"<MODULE_ADDRESS>\");",
+      "const nftCollection = sdk.getNFTModule(\"${1:<MODULE_ADDRESS>}\");",
       "",
       "const mintNftTo = async (address: string) => {",
       "  try {",
       "    await nftCollection.mintTo(address, {",
-      "      name: \"thirdweb\",",
-      "      description: \"Smart contracts you control. Tools that accelerate your workflow. Intuitive SDKs and widgets for developers.\",",
-      "      image: \"ipfs/<YOUR_IPFS_FOLDER_CID>/1.png\",",
+      "      name: \"${2:thirdweb}\",",
+      "      description: \"${3:Smart contracts you control. Tools that accelerate your workflow. Intuitive SDKs and widgets for developers.}\",",
+      "      image: \"${4:ipfs/<YOUR_IPFS_FOLDER_CID>/1.png}\",",
       "      properties: {},",
       "    });",
       "  } catch (err) {",
@@ -39,15 +39,17 @@
       "  }",
       "};",
       "",
-      "mintNftTo(\"<TARGET_ADDRESS>\");"
+      "mintNftTo(\"${5:<TARGET_ADDRESS>}\");"
     ],
     "description": "Mint an NFT to someone's wallet"
   },
-  "nftBalance": {
+  "Get balance of NFTs of a collection": {
     "prefix": "nftBalance",
     "body": [
-      "const nftCollectionAddress = \"<MODULE_ADDRESS>\";",
+      "// The NFT module address received after initializing the NFT module on the dashboard.",
+      "const nftCollectionAddress = \"${1:<MODULE_ADDRESS>}\";",
       "",
+      "// Initialize the NFT drop module with the contract address.",
       "const nftCollection = sdk.getNFTModule(nftCollectionAddress);",
       "",
       "const balance = async () => {",
@@ -57,17 +59,19 @@
       "    .catch((err) => console.log(err));",
       "};"
     ],
-    "description": ""
+    "description": "Get balance of NFTs of a collection"
   },
-  "nftBalanceOf": {
+  "Get NFT balance of another account": {
     "prefix": "nftBalanceOf",
     "body": [
-      "const nftCollectionAddress = \"<MODULE_ADDRESS>\";",
+      "// The NFT module address received after initializing the NFT module on the dashboard.",
+      "const nftCollectionAddress = \"${1:<MODULE_ADDRESS>}\";",
       "",
+      "// Initialize the NFT drop module with the contract address.",
       "const nftCollection = sdk.getNFTModule(nftCollectionAddress);",
       "",
       "const balance = async () => {",
-      "    let address = \"<TARGET_ADDRESS>\";",
+      "    let address = \"${2:<TARGET_ADDRESS>}\";",
       "",
       "  await nftCollection",
       "    .balanceOf(address)",
@@ -77,11 +81,13 @@
     ],
     "description": "Get NFT balance of another account"
   },
-  "burnNFT": {
-    "prefix": "burnNFT",
+  "Burn an NFT with Token ID": {
+    "prefix": "burnNft",
     "body": [
-      "const nftCollectionAddress = \"<MODULE_ADDRESS>\";",
+      "// The NFT module address received after initializing the NFT module on the dashboard.",
+      "const nftCollectionAddress = \"${1:<MODULE_ADDRESS>}\";",
       "",
+      "// Initialize the NFT drop module with the contract address.",
       "const nftCollection = sdk.getNFTModule(nftCollectionAddress);",
       "",
       "const burnToken = async (tokenId) => {",
@@ -93,24 +99,31 @@
     ],
     "description": "Burn an NFT with Token ID"
   },
-  "generateNFTSignature": {
-    "prefix": "generateNFTSignature",
+  "Generate NFT signature for a Mint request": {
+    "prefix": "genNftSign",
     "body": [
-      "const nftCollectionAddress = \"<MODULE_ADDRESS>\";",
+      "// The NFT module address received after initializing the NFT module on the dashboard.",
+      "const nftCollectionAddress = \"${1:<MODULE_ADDRESS>}\";",
       "",
+      "// Initialize the NFT drop module with the contract address.",
       "const nftCollection = sdk.getNFTModule(nftCollectionAddress);",
       "",
       "const generateNftSignature = async () => {",
       "  await nftCollection",
       "    .generateSignature({",
-      "      currencyAddress: \"0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee\",",
+      "      // The address of the currency used in the event that there is a price set on the token.",
+      "      // If this is set to the 0x0 address, then its free to mint.",
+      "      currencyAddress: \"0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee\", // Native currencies.",
+      "      // The metadata of the token to generate a signature for.",
       "      metadata: {",
       "        id: \"0\",",
       "      },",
       "      mintEndTimeEpochSeconds: Math.floor(Date.now() / 1000) + 60 * 60 * 24 * 7,",
       "      mintStartTimeEpochSeconds: Math.floor(Date.now() / 1000),",
       "      price: 0,",
-      "      to: \"<TARGET_ADDRESS>\",",
+      "      // The receiver of the NFTs being minted when the signature is claimed.",
+      "             // 0x0000000000000000000000000000000000000000 for no owner.",
+      "      to: \"${2:<TARGET_ADDRESS>}\",",
       "    })",
       "    .then((data) => console.log(data))",
       "    .catch((err) => console.log(err));",
@@ -118,11 +131,13 @@
     ],
     "description": "Generate NFT signature for a Mint request"
   },
-  "getNftbyId": {
+  "Get a NFT by it's ID": {
     "prefix": "getNftbyId",
     "body": [
-      "const nftCollectionAddress = \"<MODULE_ADDRESS>\";",
+      "// The NFT module address received after initializing the NFT module on the dashboard.",
+      "const nftCollectionAddress = \"${1:<MODULE_ADDRESS>}\";",
       "",
+      "// Initialize the NFT drop module with the contract address.",
       "const nftCollection = sdk.getNFTModule(nftCollectionAddress);",
       "",
       "const getNftById = async (tokenId) => {",
@@ -132,13 +147,15 @@
       "    .catch((err) => console.log(err));",
       "};"
     ],
-    "description": "Get an NFT by it's id"
+    "description": "Get a NFT by it's ID"
   },
-  "getNFTs": {
-    "prefix": "getNFTs",
+  "Get all NFTs of a collection": {
+    "prefix": "getAllNft",
     "body": [
-      "const nftCollectionAddress = \"<MODULE_ADDRESS>\";",
+      "// The NFT module address received after initializing the NFT module on the dashboard.",
+      "const nftCollectionAddress = \"${1:<MODULE_ADDRESS>}\";",
       "",
+      "// Initialize the NFT drop module with the contract address.",
       "const nftCollection = sdk.getNFTModule(nftCollectionAddress);",
       "",
       "const getAllNfts = async () => {",
@@ -150,11 +167,13 @@
     ],
     "description": "Get all NFTs of a collection"
   },
-  "getNFTswithOwner": {
-    "prefix": "getNFTswithOwner",
+  "Get all NFTs of a collection owned by the owner": {
+    "prefix": "getNftsWithOwner",
     "body": [
-      "const nftCollectionAddress = \"<MODULE_ADDRESS>\";",
+      "// The NFT module address received after initializing the NFT module on the dashboard.",
+      "const nftCollectionAddress = \"${1:<MODULE_ADDRESS>}\";",
       "",
+      "// Initialize the NFT drop module with the contract address.",
       "const nftCollection = sdk.getNFTModule(nftCollectionAddress);",
       "",
       "const getAllNftsWithOwner = async () => {",
@@ -166,11 +185,13 @@
     ],
     "description": "Get all NFTs of a collection owned by the owner"
   },
-  "getNFTswithAddress": {
-    "prefix": "getNFTswithAddress",
+  "Get all NFTs of a collection owned by a specific address": {
+    "prefix": "getNftsWithAddress",
     "body": [
-      "const nftCollectionAddress = \"<MODULE_ADDRESS>\";",
+      "// The NFT module address received after initializing the NFT module on the dashboard.",
+      "const nftCollectionAddress = \"${1:<MODULE_ADDRESS>}\";",
       "",
+      "// Initialize the NFT drop module with the contract address.",
       "const nftCollection = sdk.getNFTModule(nftCollectionAddress);",
       "",
       "const getAllNftsOwnedByAddress = async (address) => {",
@@ -182,26 +203,28 @@
     ],
     "description": "Get all NFTs of a collection owned by a specific address"
   },
-  "mintNFTBatch": {
-    "prefix": "mintNFTBatch",
+  "Mint multiple NFTs in a single batch": {
+    "prefix": "mintNftBatch",
     "body": [
-      "const nftCollectionAddress = \"<MODULE_ADDRESS>\";",
+      "// The NFT module address received after initializing the NFT module on the dashboard.",
+      "const nftCollectionAddress = \"${1:<MODULE_ADDRESS>}\";",
       "",
+      "// Initialize the NFT drop module with the contract address.",
       "const nftCollection = sdk.getNFTModule(nftCollectionAddress);",
       "",
       "const mintNFTBatch = async () => {",
       "  await nftCollection",
       "    .mintBatch([",
       "      {",
-      "        name: \"thirdweb\",",
-      "        description: \"NFT Minted with thirdweb!\",",
-      "        image: \"ipfs/<YOUR_IPFS_FOLDER_CID>/1.png\",",
+      "        name: \"${2:thirdweb}\",",
+      "        description: \"${3:NFT Minted with thirdweb!}\",",
+      "        image: \"${4:ipfs/<YOUR_IPFS_FOLDER_CID>/1.png}\",",
       "        properties: {},",
       "      },",
       "      {",
-      "        name: \"thirdweb #2\",",
-      "        description: \"NFT Minted with thirdweb!\",",
-      "        image: \"ipfs/<YOUR_IPFS_FOLDER_CID>/2.png\",",
+      "        name: \"${5:thirdweb #2}\",",
+      "        description: \"${6:NFT Minted with thirdweb!}\",",
+      "        image: \"${7:ipfs/<YOUR_IPFS_FOLDER_CID>/2.png}\",",
       "        properties: {},",
       "      },",
       "    ])",
@@ -211,42 +234,38 @@
     ],
     "description": "Mint multiple NFTs in a single batch"
   },
-  "mintNFTBatchTo": {
-    "prefix": "mintNFTBatchTo",
+  "Mint multiple NFTs in a single batch to a specific address": {
+    "prefix": "mintNftBatchTo",
     "body": [
-      "const nftCollectionAddress = \"<MODULE_ADDRESS>\";",
+      "// The NFT module address received after initializing the NFT module on the dashboard.",
+      "const nftCollectionAddress = \"${1:<MODULE_ADDRESS>}\";",
       "",
+      "// Initialize the NFT drop module with the contract address.",
       "const nftCollection = sdk.getNFTModule(nftCollectionAddress);",
       "",
-      "const mintNFTBatch = async () => {",
-      "  let address = \"<TARGET_ADDRESS>\";",
+      "const mintNFT = async () => {",
+      "  let address = \"${2:<TARGET_ADDRESS>}\";",
       "",
       "  await nftCollection",
-      "    .mintBatchTo(address, [",
-      "      {",
-      "        name: \"thirdweb\",",
-      "        description: \"NFT Minted with thirdweb!\",",
-      "        image: \"ipfs/<YOUR_IPFS_FOLDER_CID>/1.png\",",
-      "        properties: {},",
-      "      },",
-      "      {",
-      "        name: \"thirdweb #2\",",
-      "        description: \"NFT Minted with thirdweb!\",",
-      "        image: \"ipfs/<YOUR_IPFS_FOLDER_CID>/2.png\",",
-      "        properties: {},",
-      "      },",
-      "    ])",
+      "    .mintTo(address, {",
+      "      name: \"${3:thirdweb}\",",
+      "      description: \"${4:NFT Minted with thirdweb!}\",",
+      "      image: \"${5:ipfs/<YOUR_IPFS_FOLDER_CID>/1.png}\",",
+      "      properties: {},",
+      "    })",
       "    .then((data) => console.log(data))",
       "    .catch((err) => console.log(err));",
       "};"
     ],
     "description": "Mint multiple NFTs in a single batch to a specific address"
   },
-  "getNFTOwner": {
-    "prefix": "getNFTOwner",
+  "Get the owner of a NFT": {
+    "prefix": "getNftOwner",
     "body": [
-      "const nftCollectionAddress = \"<MODULE_ADDRESS>\";",
+      "// The NFT module address received after initializing the NFT module on the dashboard.",
+      "const nftCollectionAddress = \"${1:<MODULE_ADDRESS>}\";",
       "",
+      "// Initialize the NFT drop module with the contract address.",
       "const nftCollection = sdk.getNFTModule(nftCollectionAddress);",
       "",
       "const getNftOwner = async (tokenId) => {",
@@ -256,13 +275,15 @@
       "    .catch((err) => console.log(err));",
       "};"
     ],
-    "description": "Get the owner of an NFT"
+    "description": "Get the owner of a NFT"
   },
-  "getNftTotalSupply": {
+  "Get the total supply of a NFT collection": {
     "prefix": "getNftTotalSupply",
     "body": [
-      "const nftCollectionAddress = \"<MODULE_ADDRESS>\";",
+      "// The NFT module address received after initializing the NFT module on the dashboard.",
+      "const nftCollectionAddress = \"${1:<MODULE_ADDRESS>}\";",
       "",
+      "// Initialize the NFT drop module with the contract address.",
       "const nftCollection = sdk.getNFTModule(nftCollectionAddress);",
       "",
       "const getTotalSupply = async () => {",
@@ -272,13 +293,15 @@
       "    .catch((err) => console.log(err));",
       "};"
     ],
-    "description": "Get the total supply of an NFT collection"
+    "description": "Get the total supply of a NFT collection"
   },
-  "transferNFT": {
-    "prefix": "transferNFT",
+  "Transfer an NFT to a specific address": {
+    "prefix": "transferNft",
     "body": [
-      "const nftCollectionAddress = \"<MODULE_ADDRESS>\";",
+      "// The NFT module address received after initializing the NFT module on the dashboard.",
+      "const nftCollectionAddress = \"${1:<MODULE_ADDRESS>}\";",
       "",
+      "// Initialize the NFT drop module with the contract address.",
       "const nftCollection = sdk.getNFTModule(nftCollectionAddress);",
       "",
       "const transferTokenToAddress = async (tokenId, address) => {",
