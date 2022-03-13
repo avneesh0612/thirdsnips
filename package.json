@@ -17,7 +17,8 @@
     "release:patch": "standard-version --release-as patch",
     "release:major": "standard-version --release-as major",
     "format": "prettier --write '**/*.{ts,json,md,js}'",
-    "genReadme": "node scripts/generateReadme.js"
+    "genReadme": "node scripts/generateReadme.js",
+    "pre-commit": "yarn run genReadme && yarn run format && git add -A ."
   },
   "categories": [
     "Snippets"

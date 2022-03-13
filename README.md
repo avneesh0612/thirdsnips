@@ -39,6 +39,25 @@ Thirdweb snippets for enhancing your the developer experience while working with
 | `transferToken`             | Transfer token to address                                                                   | Bundle Collection module |
 | `transferNFTAddr`           | Transfer a specific amount of NFT from an address                                           | Bundle Collection module |
 | `unwrapNFT`                 | Unwrap a NFT                                                                                | Bundle Collection module |
+| `tokenBalance`              | Get the balance of a token                                                                  | Token module             |
+| `tokenBalanceOf`            | Get the balance of a token for a specific address                                           | Token module             |
+| `tokenBurn`                 | Burn tokens owned by the owner                                                              | Token module             |
+| `tokenBurnFrom`             | Burn tokens owned by a specific address                                                     | Token module             |
+| `tokenGet`                  | Get details about a token module                                                            | Token module             |
+| `tokenGetAllHolderBalances` | Get all the balances of all holders                                                         | Token module             |
+| `tokenGetDelegation`        | Get the delegation of a token                                                               | Token module             |
+| `tokenGetDelegationOf`      | Get the delegation of a token for a specific address                                        | Token module             |
+| `tokenGetValue`             | Get the value for the specified amount of a token                                           | Token module             |
+| `getVoteBalance`            | Get information of the vote balance for yourself                                            | Token module             |
+| `getVoteBalanceOf`          | Get information about the vote balance for the specified address                            | Token module             |
+| `tokenMint`                 | Mint specific amount of tokens                                                              | Token module             |
+| `tokenMintBatchTo`          | Mint specific amount of tokens to multiple addresses in a batch                             | Token module             |
+| `tokenMintTo`               | Mint specific amount of tokens to a specific address                                        | Token module             |
+| `tokenTotalSupply`          | Get the total supply of a token module                                                      | Token module             |
+| `tokenTransfer`             | Transfer specific amount of tokens to a specific address                                    | Token module             |
+| `tokenTransferBatch`        | Transfer specific amounts of tokens to multiple addresses in a batch                        | Token module             |
+| `tokenTransferFrom`         | Transfer specific amount of tokens from an address to another address                       | Token module             |
+| `tokenTransferFromBatch`    | Transfer specific amounts of tokens from multiple addresses to another addresses in a batch | Token module             |
 | `initVote`                  | Initialize the Vote module                                                                  | Vote Collection module   |
 | `getBalanceChain`           | Get the balance of the project wallet in the native token of the chain                      | Vote Collection module   |
 | `getBalanceERC20`           | Get the balance of the project wallet in a particular ERC20 token contract                  | Vote Collection module   |
@@ -66,25 +85,6 @@ Thirdweb snippets for enhancing your the developer experience while working with
 | `getNftOwner`               | Get the owner of a NFT                                                                      | Nft Collection module    |
 | `getNftTotalSupply`         | Get the total supply of a NFT collection                                                    | Nft Collection module    |
 | `transferNft`               | Transfer an NFT to a specific address                                                       | Nft Collection module    |
-| `tokenBalance`              | Get the balance of a token                                                                  | Token module             |
-| `tokenBalanceOf`            | Get the balance of a token for a specific address                                           | Token module             |
-| `tokenBurn`                 | Burn tokens owned by the owner                                                              | Token module             |
-| `tokenBurnFrom`             | Burn tokens owned by a specific address                                                     | Token module             |
-| `tokenGet`                  | Get details about a token module                                                            | Token module             |
-| `tokenGetAllHolderBalances` | Get all the balances of all holders                                                         | Token module             |
-| `tokenGetDelegation`        | Get the delegation of a token                                                               | Token module             |
-| `tokenGetDelegationOf`      | Get the delegation of a token for a specific address                                        | Token module             |
-| `tokenGetValue`             | Get the value for the specified amount of a token                                           | Token module             |
-| `getVoteBalance`            | Get information of the vote balance for yourself                                            | Token module             |
-| `getVoteBalanceOf`          | Get information about the vote balance for the specified address                            | Token module             |
-| `tokenMint`                 | Mint specific amount of tokens                                                              | Token module             |
-| `tokenMintBatchTo`          | Mint specific amount of tokens to multiple addresses in a batch                             | Token module             |
-| `tokenMintTo`               | Mint specific amount of tokens to a specific address                                        | Token module             |
-| `tokenTotalSupply`          | Get the total supply of a token module                                                      | Token module             |
-| `tokenTransfer`             | Transfer specific amount of tokens to a specific address                                    | Token module             |
-| `tokenTransferBatch`        | Transfer specific amounts of tokens to multiple addresses in a batch                        | Token module             |
-| `tokenTransferFrom`         | Transfer specific amount of tokens from an address to another address                       | Token module             |
-| `tokenTransferFromBatch`    | Transfer specific amounts of tokens from multiple addresses to another addresses in a batch | Token module             |
 
 
 ## Show your support
