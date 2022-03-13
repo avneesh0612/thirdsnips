@@ -1,6 +1,6 @@
 const constants = {
   snippetsFolder: "snippets",
-  readmeFile: "README.md"
+  readmeFile: "README.md",
 };
 
-export default constants
+export default constants;
