@@ -10,6 +10,7 @@ import "@fontsource/jost/600.css";
 import "@fontsource/syncopate/400.css";
 import "@fontsource/syncopate/700.css";
 
+import "@fontsource/sen/400.css";
 import "@fontsource/sen/700.css";
 
 function MyApp({ Component, pageProps }: AppProps) {
