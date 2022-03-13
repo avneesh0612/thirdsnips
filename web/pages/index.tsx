@@ -1,15 +1,21 @@
-import type { NextPage } from 'next'
+import type { NextPage } from "next";
 
-import { Box } from '@chakra-ui/react'
+import { Box } from "@chakra-ui/react";
+import { Header, Hero } from "../components";
 
 const Home: NextPage = () => {
   return (
     <>
-    <Box>
-    Hello
-    </Box>
+      <Box
+        h="100vh"
+        bgImage="https://www.buildspacein.xyz/section1/background_gradient.svg"
+        objectFit="cover"
+      >
+        <Header />
+        <Hero />
+      </Box>
     </>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

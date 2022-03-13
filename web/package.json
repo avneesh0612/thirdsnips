@@ -12,10 +12,14 @@
     "@chakra-ui/react": "^1.8.6",
     "@emotion/react": "^11",
     "@emotion/styled": "^11",
+    "@fontsource/jost": "^4.5.4",
+    "@fontsource/sen": "^4.5.3",
+    "@fontsource/syncopate": "^4.5.3",
     "framer-motion": "^6",
     "next": "12.1.0",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "react-typed": "^1.2.0"
   },
   "devDependencies": {
     "@types/node": "17.0.21",
