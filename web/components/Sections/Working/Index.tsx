@@ -1,6 +1,7 @@
 import { FC } from "react";
 
 import { Box, Text } from "@chakra-ui/react";
+import Card from "./Card";
 
 const Working: FC = () => {
   return (
@@ -23,7 +24,7 @@ const Working: FC = () => {
         my="16"
         fontSize="3xl"
       >
-        <Text>how it&nbsp;</Text>
+        <Text>How it&nbsp;</Text>
         <Text bgGradient="linear(to-r, #7f00ff, #e100ff)" bgClip="text">
           works
         </Text>
@@ -36,25 +37,15 @@ const Working: FC = () => {
         alignItems="center"
         gap="20"
       >
-        <Box py="16" px="12" rounded="md" bgColor="#010101" textColor="white">
-          <Text fontSize="xl">1. installation</Text>
+        <Card
+          title="1. Installation"
+          desc="You can install our extension through VSCode Marketplace"
+        />
 
-          <Text fontSize="lg" fontFamily="sen" fontWeight="400">
-            You can install our <br />
-            extension through VSCode <br />
-            Marketplace
-          </Text>
-        </Box>
-
-        <Box py="16" px="12" rounded="md" bgColor="#010101" textColor="white">
-          <Text fontSize="xl">2. usage</Text>
-
-          <Text fontSize="lg" fontFamily="sen" fontWeight="400">
-            once installed, reload your <br />
-            IDE and you&apos;re good to
-            <br /> go!
-          </Text>
-        </Box>
+        <Card
+          title="2. Usage"
+          desc="Once installed, reload your IDE and you're good to go!"
+        />
       </Box>
     </Box>
   );

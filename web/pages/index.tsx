@@ -10,7 +10,7 @@ const Home: NextPage = () => {
         h="100vh"
         w="100vw"
         overflowX="hidden"
-        bgImage="https://www.buildspacein.xyz/section1/background_gradient.svg"
+        bgImage="https://res.cloudinary.com/didkcszrq/image/upload/v1647222804/background_gradient_mwbieb.svg"
         backgroundSize="cover"
       >
         <Header />
