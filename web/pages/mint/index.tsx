@@ -1,13 +1,13 @@
 import type { NextPage } from "next";
 
-import { Box, Text, Button, Badge } from "@chakra-ui/react";
+import { Box, Text, Button, Badge, useToast } from "@chakra-ui/react";
 
 import { Header } from "../../components";
 import { useWeb3 } from "@3rdweb/hooks";
 
 const MintPage: NextPage = () => {
-  const { address, chainId, connectWallet, disconnectWallet, error } =
-    useWeb3();
+  const { address, connectWallet } = useWeb3();
+  const toast = useToast();
 
   return (
     <>
@@ -27,7 +27,7 @@ const MintPage: NextPage = () => {
           justifyContent="center"
           fontFamily="syncopate"
           fontWeight="700"
-          fontSize="5xl"
+          fontSize={{ base: "3xl", lg: "5xl" }}
           textColor="gray.700"
           mt="16"
         >
@@ -70,10 +70,26 @@ const MintPage: NextPage = () => {
           <Box fontFamily="sen">
             {address ? (
               <>
-                <Button colorScheme="messenger">claim NFT</Button>
+                <Button
+                  colorScheme="messenger"
+                  onClick={() =>
+                    toast({
+                      title: "he beta?",
+                      description: "nft lega? jaa dudu pee.",
+                      status: "success",
+                      duration: 9000,
+                      isClosable: true,
+                    })
+                  }
+                >
+                  claim NFT
+                </Button>
               </>
             ) : (
-              <Button onClick={() => connectWallet("injected")} colorScheme="messenger">
+              <Button
+                onClick={() => connectWallet("injected")}
+                colorScheme="messenger"
+              >
                 connect wallet
               </Button>
             )}

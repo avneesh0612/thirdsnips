@@ -10,7 +10,7 @@ const Header: FC<props> = ({ onHomepage }) => {
   return (
     <>
       <Box
-        px="10"
+        px={{ base: "1", sm: "2", md: "4", lg: "6", xl: "10" }}
         py="8"
         display="flex"
         flexDir="row"
@@ -22,7 +22,7 @@ const Header: FC<props> = ({ onHomepage }) => {
           flexDir="row"
           alignItems="center"
           fontFamily="jost"
-          fontSize="2xl"
+          fontSize={{ base: "xl", lg: "2xl" }}
           fontWeight="600"
         >
           <Text>✨third</Text>
@@ -36,7 +36,7 @@ const Header: FC<props> = ({ onHomepage }) => {
           fontFamily="sen"
           fontSize="xl"
           fontWeight="700"
-          gap="8"
+          gap={{ base: "2", md: "4", lg: "8" }}
         >
           <Link href="https://scam.com">github.</Link>
           {onHomepage ? (
