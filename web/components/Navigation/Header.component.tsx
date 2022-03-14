@@ -1,8 +1,12 @@
 import { FC } from "react";
 
-import { Box, Text, Flex } from "@chakra-ui/react";
+import { Box, Text, Link } from "@chakra-ui/react";
 
-const Header: FC = () => {
+interface props {
+  onHomepage: boolean;
+}
+
+const Header: FC<props> = ({ onHomepage }) => {
   return (
     <>
       <Box
@@ -34,9 +38,12 @@ const Header: FC = () => {
           fontWeight="700"
           gap="8"
         >
-          <Text>github.</Text>
-
-          <Text>early access.</Text>
+          <Link href="https://scam.com">github.</Link>
+          {onHomepage ? (
+            <Link href="/mint">early access.</Link>
+          ) : (
+            <Link href="/">home.</Link>
+          )}
         </Box>
       </Box>
     </>
