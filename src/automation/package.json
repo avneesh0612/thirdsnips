@@ -1,0 +1,8 @@
+{
+  "name": "automation",
+  "version": "1.0.0",
+  "main": "scripts/generateReadme.js",
+  "dependencies": {
+    "markdown-table": "2.0.0"
+  }
+}

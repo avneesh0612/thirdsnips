@@ -1,14 +1,10 @@
-const readmeTop = `# thirdweb-snippets
-
-Thirdweb snippets for enhancing your the developer experience while working with thirdweb 🚀!
-
-## Usage
+const readmeTop = `# 🌈 Table of Snippets
 
 `;
 
 const readmeBottom = `
 
-## Show your support
+## ⭐ Show your support
 
 Give a ⭐️ if this project helped you!
 
