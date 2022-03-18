@@ -38,11 +38,11 @@
     "snippets": [
       {
         "language": "javascript",
-        "path": "./snippets/nft-collection.json"
+        "path": "./snippets/bundle-collection.json"
       },
       {
         "language": "typescript",
-        "path": "./snippets/nft-collection.json"
+        "path": "./snippets/bundle-collection.json"
       },
       {
         "language": "javascript",
@@ -51,6 +51,22 @@
       {
         "language": "typescript",
         "path": "./snippets/token.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/nft-collection.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/nft-collection.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/vote-collection.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/vote-collection.json"
       }
     ]
   },
