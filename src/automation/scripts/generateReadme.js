@@ -1,14 +1,15 @@
-import fs from "fs";
-import { markdownTable } from "markdown-table";
+const fs = require("fs");
+// @ts-ignore
+const markdownTable = require("markdown-table");
 
-import convertFileName from "../utils/convertFileName.js";
-import { readmeTop, readmeBottom } from "../data/readmeConstants.js";
-import constants from "../data/constants.js";
+const convertFileName = require("../utils/convertFileName");
+const { readmeTop, readmeBottom } = require("../data/readmeConstants");
+const constants = require("../data/constants");
 
 let finalSnippets = [["Prefix", "Description", "Module"]];
 
 fs.readdir(constants["snippetsFolder"], function (err, files) {
-  files.map((file) => {
+  files.map(file => {
     // Reading the files in the snippet folder and getting the JSON file
     fs.readFile(
       `${constants["snippetsFolder"]}/${file}`,
@@ -17,10 +18,10 @@ fs.readdir(constants["snippetsFolder"], function (err, files) {
         const actualData = JSON.parse(data);
         // Converting the object to an array
         const snippetArray = Object.keys(actualData).map(
-          (key) => actualData[key]
+          key => actualData[key]
         );
         // Adding the snippet to the final array
-        snippetArray.map((snippet) => {
+        snippetArray.map(snippet => {
           finalSnippets.push([
             `\`${snippet.prefix}\``,
             snippet.description,
@@ -48,5 +49,3 @@ fs.readdir(constants["snippetsFolder"], function (err, files) {
     );
   });
 });
-
-// wait duh

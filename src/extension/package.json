@@ -1,0 +1,88 @@
+{
+  "name": "thirdweb-snippets",
+  "displayName": "Thirdweb Snippets",
+  "description": "Stop re-writing thirdweb snippets. Use thirdsnips to make it all snap!",
+  "version": "0.0.2",
+  "publisher": "Avneesh Agarwal",
+  "repository": {
+    "url": "https://github.com/avneesh0612/thirdweb-snippets"
+  },
+  "engines": {
+    "vscode": "^1.65.0"
+  },
+  "scripts": {
+    "release": "standard-version",
+    "release:minor": "standard-version --release-as minor",
+    "release:patch": "standard-version --release-as patch",
+    "release:major": "standard-version --release-as major",
+    "format": "prettier --write .",
+    "genReadme": "node scripts/generateReadme.js",
+    "lint": "eslint .",
+    "prepare": "husky install",
+    "pre-commit": "yarn genReadme && yarn format && git add -A ."
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:thirdweb.helloWorld"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "thirdweb.helloWorld",
+        "title": "Hello World"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "javascript",
+        "path": "./snippets/bundle-collection.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/bundle-collection.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/token.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/token.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/nft-collection.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/nft-collection.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/vote-collection.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/vote-collection.json"
+      }
+    ]
+  },
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "mongoose": "^6.2.6",
+    "vscode": "^1.1.37"
+  },
+  "devDependencies": {
+    "@types/glob": "^7.2.0",
+    "@types/mocha": "^9.0.0",
+    "@types/node": "14.x",
+    "@types/vscode": "^1.65.0",
+    "@vscode/test-electron": "^2.0.3",
+    "eslint": "^8.6.0",
+    "glob": "^7.2.0",
+    "mocha": "^9.1.3"
+  }
+}

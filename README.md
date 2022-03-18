@@ -1,92 +1,69 @@
-# thirdweb-snippets
+# 🌈 thirdsnips
 
-Thirdweb snippets for enhancing your the developer experience while working with thirdweb 🚀!
+> Stop re-writing thirdweb snippets. Use thirdsnips to make it all snap!
 
-## Usage
+Thirdsnips is a tool which enhances the developer experience while working with [thirdweb](https://thirdweb.com/).
 
-| Prefix                      | Description                                                                                 | Module                                                                                                                 |
-| --------------------------- | ------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| `initModule`                | Initialize the bundle module                                                                | [Bundle Collection module](https://github.com/avneesh0612/thirdweb-snippets/blob/main/snippets/bundle-collection.json) |
-| `initSupply`                | Get initial supply for a token                                                              | [Bundle Collection module](https://github.com/avneesh0612/thirdweb-snippets/blob/main/snippets/bundle-collection.json) |
-| `initSupplyAddr`            | Get initial supply for a token for an address                                               | [Bundle Collection module](https://github.com/avneesh0612/thirdweb-snippets/blob/main/snippets/bundle-collection.json) |
-| `burnNFT`                   | Burn NFT by Token ID and amount to burn                                                     | [Bundle Collection module](https://github.com/avneesh0612/thirdweb-snippets/blob/main/snippets/bundle-collection.json) |
-| `burnNFTs`                  | Burn a Batch of NFTs                                                                        | [Bundle Collection module](https://github.com/avneesh0612/thirdweb-snippets/blob/main/snippets/bundle-collection.json) |
-| `burnNFTsAddr`              | Burn a Batch of NFTs from an address                                                        | [Bundle Collection module](https://github.com/avneesh0612/thirdweb-snippets/blob/main/snippets/bundle-collection.json) |
-| `burnNFTAddr`               | Burn a NFT from an address                                                                  | [Bundle Collection module](https://github.com/avneesh0612/thirdweb-snippets/blob/main/snippets/bundle-collection.json) |
-| `createNFT`                 | Create NFT                                                                                  | [Bundle Collection module](https://github.com/avneesh0612/thirdweb-snippets/blob/main/snippets/bundle-collection.json) |
-| `createMintNFT`             | Create and Mint NFT                                                                         | [Bundle Collection module](https://github.com/avneesh0612/thirdweb-snippets/blob/main/snippets/bundle-collection.json) |
-| `createMintNFTs`            | Create and Mint a batch of NFTs                                                             | [Bundle Collection module](https://github.com/avneesh0612/thirdweb-snippets/blob/main/snippets/bundle-collection.json) |
-| `createNFTs`                | Create a batch of NFTs                                                                      | [Bundle Collection module](https://github.com/avneesh0612/thirdweb-snippets/blob/main/snippets/bundle-collection.json) |
-| `createERC-20`              | Create with ERC-20                                                                          | [Bundle Collection module](https://github.com/avneesh0612/thirdweb-snippets/blob/main/snippets/bundle-collection.json) |
-| `createERC-721`             | Create with ERC-721                                                                         | [Bundle Collection module](https://github.com/avneesh0612/thirdweb-snippets/blob/main/snippets/bundle-collection.json) |
-| `createNFT`                 | Create with NFT                                                                             | [Bundle Collection module](https://github.com/avneesh0612/thirdweb-snippets/blob/main/snippets/bundle-collection.json) |
-| `createTOKEN`               | Create with Token                                                                           | [Bundle Collection module](https://github.com/avneesh0612/thirdweb-snippets/blob/main/snippets/bundle-collection.json) |
-| `getNFTToken`               | Get NFT by token ID                                                                         | [Bundle Collection module](https://github.com/avneesh0612/thirdweb-snippets/blob/main/snippets/bundle-collection.json) |
-| `getAllNFTs`                | Get All NFTs                                                                                | [Bundle Collection module](https://github.com/avneesh0612/thirdweb-snippets/blob/main/snippets/bundle-collection.json) |
-| `getAllNFTsOwned`           | Get All NFTs Owned                                                                          | [Bundle Collection module](https://github.com/avneesh0612/thirdweb-snippets/blob/main/snippets/bundle-collection.json) |
-| `getRoyaltyPoints`          | Get royalty basic Points                                                                    | [Bundle Collection module](https://github.com/avneesh0612/thirdweb-snippets/blob/main/snippets/bundle-collection.json) |
-| `getRoyaltyAddr`            | Get royalty recipient address                                                               | [Bundle Collection module](https://github.com/avneesh0612/thirdweb-snippets/blob/main/snippets/bundle-collection.json) |
-| `checkIfApproved`           | Check if a smart contract is approved to spend on your behalf                               | [Bundle Collection module](https://github.com/avneesh0612/thirdweb-snippets/blob/main/snippets/bundle-collection.json) |
-| `checkIfRes`                | Check if transfer is Restricted                                                             | [Bundle Collection module](https://github.com/avneesh0612/thirdweb-snippets/blob/main/snippets/bundle-collection.json) |
-| `specifySupply`             | Specify supply for a NFT                                                                    | [Bundle Collection module](https://github.com/avneesh0612/thirdweb-snippets/blob/main/snippets/bundle-collection.json) |
-| `specifySupplyNFTs`         | Specify supply for a Batch of NFTs                                                          | [Bundle Collection module](https://github.com/avneesh0612/thirdweb-snippets/blob/main/snippets/bundle-collection.json) |
-| `specifySupplyNFTsSend`     | Specify supply for a Batch of NFTs and send it to an Address                                | [Bundle Collection module](https://github.com/avneesh0612/thirdweb-snippets/blob/main/snippets/bundle-collection.json) |
-| `specifySupplyNFTSend`      | Specify supply for a NFT and send it to an Address                                          | [Bundle Collection module](https://github.com/avneesh0612/thirdweb-snippets/blob/main/snippets/bundle-collection.json) |
-| `setApprovalContract`       | Set approval for a contract                                                                 | [Bundle Collection module](https://github.com/avneesh0612/thirdweb-snippets/blob/main/snippets/bundle-collection.json) |
-| `setMetadata`               | Set metadata for the module                                                                 | [Bundle Collection module](https://github.com/avneesh0612/thirdweb-snippets/blob/main/snippets/bundle-collection.json) |
-| `setRestrictionTransfer`    | Set restriction on transfer                                                                 | [Bundle Collection module](https://github.com/avneesh0612/thirdweb-snippets/blob/main/snippets/bundle-collection.json) |
-| `setRoyaltyPoints`          | Set royalty basic points                                                                    | [Bundle Collection module](https://github.com/avneesh0612/thirdweb-snippets/blob/main/snippets/bundle-collection.json) |
-| `transferToken`             | Transfer token to address                                                                   | [Bundle Collection module](https://github.com/avneesh0612/thirdweb-snippets/blob/main/snippets/bundle-collection.json) |
-| `transferNFTAddr`           | Transfer a specific amount of NFT from an address                                           | [Bundle Collection module](https://github.com/avneesh0612/thirdweb-snippets/blob/main/snippets/bundle-collection.json) |
-| `unwrapNFT`                 | Unwrap a NFT                                                                                | [Bundle Collection module](https://github.com/avneesh0612/thirdweb-snippets/blob/main/snippets/bundle-collection.json) |
-| `tokenBalance`              | Get the balance of a token                                                                  | [Token module](https://github.com/avneesh0612/thirdweb-snippets/blob/main/snippets/token.json)                         |
-| `tokenBalanceOf`            | Get the balance of a token for a specific address                                           | [Token module](https://github.com/avneesh0612/thirdweb-snippets/blob/main/snippets/token.json)                         |
-| `tokenBurn`                 | Burn tokens owned by the owner                                                              | [Token module](https://github.com/avneesh0612/thirdweb-snippets/blob/main/snippets/token.json)                         |
-| `tokenBurnFrom`             | Burn tokens owned by a specific address                                                     | [Token module](https://github.com/avneesh0612/thirdweb-snippets/blob/main/snippets/token.json)                         |
-| `tokenGet`                  | Get details about a token module                                                            | [Token module](https://github.com/avneesh0612/thirdweb-snippets/blob/main/snippets/token.json)                         |
-| `tokenGetAllHolderBalances` | Get all the balances of all holders                                                         | [Token module](https://github.com/avneesh0612/thirdweb-snippets/blob/main/snippets/token.json)                         |
-| `tokenGetDelegation`        | Get the delegation of a token                                                               | [Token module](https://github.com/avneesh0612/thirdweb-snippets/blob/main/snippets/token.json)                         |
-| `tokenGetDelegationOf`      | Get the delegation of a token for a specific address                                        | [Token module](https://github.com/avneesh0612/thirdweb-snippets/blob/main/snippets/token.json)                         |
-| `tokenGetValue`             | Get the value for the specified amount of a token                                           | [Token module](https://github.com/avneesh0612/thirdweb-snippets/blob/main/snippets/token.json)                         |
-| `getVoteBalance`            | Get information of the vote balance for yourself                                            | [Token module](https://github.com/avneesh0612/thirdweb-snippets/blob/main/snippets/token.json)                         |
-| `getVoteBalanceOf`          | Get information about the vote balance for the specified address                            | [Token module](https://github.com/avneesh0612/thirdweb-snippets/blob/main/snippets/token.json)                         |
-| `tokenMint`                 | Mint specific amount of tokens                                                              | [Token module](https://github.com/avneesh0612/thirdweb-snippets/blob/main/snippets/token.json)                         |
-| `tokenMintBatchTo`          | Mint specific amount of tokens to multiple addresses in a batch                             | [Token module](https://github.com/avneesh0612/thirdweb-snippets/blob/main/snippets/token.json)                         |
-| `tokenMintTo`               | Mint specific amount of tokens to a specific address                                        | [Token module](https://github.com/avneesh0612/thirdweb-snippets/blob/main/snippets/token.json)                         |
-| `tokenTotalSupply`          | Get the total supply of a token module                                                      | [Token module](https://github.com/avneesh0612/thirdweb-snippets/blob/main/snippets/token.json)                         |
-| `tokenTransfer`             | Transfer specific amount of tokens to a specific address                                    | [Token module](https://github.com/avneesh0612/thirdweb-snippets/blob/main/snippets/token.json)                         |
-| `tokenTransferBatch`        | Transfer specific amounts of tokens to multiple addresses in a batch                        | [Token module](https://github.com/avneesh0612/thirdweb-snippets/blob/main/snippets/token.json)                         |
-| `tokenTransferFrom`         | Transfer specific amount of tokens from an address to another address                       | [Token module](https://github.com/avneesh0612/thirdweb-snippets/blob/main/snippets/token.json)                         |
-| `tokenTransferFromBatch`    | Transfer specific amounts of tokens from multiple addresses to another addresses in a batch | [Token module](https://github.com/avneesh0612/thirdweb-snippets/blob/main/snippets/token.json)                         |
-| `mintNft`                   | Mint an NFT to your wallet                                                                  | [Nft Collection module](https://github.com/avneesh0612/thirdweb-snippets/blob/main/snippets/nft-collection.json)       |
-| `mintNftTo`                 | Mint an NFT to someone's wallet                                                             | [Nft Collection module](https://github.com/avneesh0612/thirdweb-snippets/blob/main/snippets/nft-collection.json)       |
-| `nftBalance`                | Get balance of NFTs of a collection                                                         | [Nft Collection module](https://github.com/avneesh0612/thirdweb-snippets/blob/main/snippets/nft-collection.json)       |
-| `nftBalanceOf`              | Get NFT balance of another account                                                          | [Nft Collection module](https://github.com/avneesh0612/thirdweb-snippets/blob/main/snippets/nft-collection.json)       |
-| `burnNft`                   | Burn an NFT with Token ID                                                                   | [Nft Collection module](https://github.com/avneesh0612/thirdweb-snippets/blob/main/snippets/nft-collection.json)       |
-| `genNftSign`                | Generate NFT signature for a Mint request                                                   | [Nft Collection module](https://github.com/avneesh0612/thirdweb-snippets/blob/main/snippets/nft-collection.json)       |
-| `getNftbyId`                | Get a NFT by it's ID                                                                        | [Nft Collection module](https://github.com/avneesh0612/thirdweb-snippets/blob/main/snippets/nft-collection.json)       |
-| `getAllNft`                 | Get all NFTs of a collection                                                                | [Nft Collection module](https://github.com/avneesh0612/thirdweb-snippets/blob/main/snippets/nft-collection.json)       |
-| `getNftsWithOwner`          | Get all NFTs of a collection owned by the owner                                             | [Nft Collection module](https://github.com/avneesh0612/thirdweb-snippets/blob/main/snippets/nft-collection.json)       |
-| `getNftsWithAddress`        | Get all NFTs of a collection owned by a specific address                                    | [Nft Collection module](https://github.com/avneesh0612/thirdweb-snippets/blob/main/snippets/nft-collection.json)       |
-| `mintNftBatch`              | Mint multiple NFTs in a single batch                                                        | [Nft Collection module](https://github.com/avneesh0612/thirdweb-snippets/blob/main/snippets/nft-collection.json)       |
-| `mintNftBatchTo`            | Mint multiple NFTs in a single batch to a specific address                                  | [Nft Collection module](https://github.com/avneesh0612/thirdweb-snippets/blob/main/snippets/nft-collection.json)       |
-| `getNftOwner`               | Get the owner of a NFT                                                                      | [Nft Collection module](https://github.com/avneesh0612/thirdweb-snippets/blob/main/snippets/nft-collection.json)       |
-| `getNftTotalSupply`         | Get the total supply of a NFT collection                                                    | [Nft Collection module](https://github.com/avneesh0612/thirdweb-snippets/blob/main/snippets/nft-collection.json)       |
-| `transferNft`               | Transfer an NFT to a specific address                                                       | [Nft Collection module](https://github.com/avneesh0612/thirdweb-snippets/blob/main/snippets/nft-collection.json)       |
-| `initVote`                  | Initialize the Vote module                                                                  | [Vote Collection module](https://github.com/avneesh0612/thirdweb-snippets/blob/main/snippets/vote-collection.json)     |
-| `getBalanceChain`           | Get the balance of the project wallet in the native token of the chain                      | [Vote Collection module](https://github.com/avneesh0612/thirdweb-snippets/blob/main/snippets/vote-collection.json)     |
-| `getBalanceERC20`           | Get the balance of the project wallet in a particular ERC20 token contract                  | [Vote Collection module](https://github.com/avneesh0612/thirdweb-snippets/blob/main/snippets/vote-collection.json)     |
-| `canExecute`                | Can execute a proposal                                                                      | [Vote Collection module](https://github.com/avneesh0612/thirdweb-snippets/blob/main/snippets/vote-collection.json)     |
-| `executeProposal`           | Execute a Proposal                                                                          | [Vote Collection module](https://github.com/avneesh0612/thirdweb-snippets/blob/main/snippets/vote-collection.json)     |
-| `getProposal`               | Get proposal by Proposal Id                                                                 | [Vote Collection module](https://github.com/avneesh0612/thirdweb-snippets/blob/main/snippets/vote-collection.json)     |
-| `getProposals`              | Get all the Proposals                                                                       | [Vote Collection module](https://github.com/avneesh0612/thirdweb-snippets/blob/main/snippets/vote-collection.json)     |
-| `checkProposalAccStatus`    | Check if an account has voted for a proposal                                                | [Vote Collection module](https://github.com/avneesh0612/thirdweb-snippets/blob/main/snippets/vote-collection.json)     |
-| `createProposal`            | Create a Proposal                                                                           | [Vote Collection module](https://github.com/avneesh0612/thirdweb-snippets/blob/main/snippets/vote-collection.json)     |
-| `setMetadataModule`         | Set metadata for the module                                                                 | [Vote Collection module](https://github.com/avneesh0612/thirdweb-snippets/blob/main/snippets/vote-collection.json)     |
-| `getSettings`               | Get the settings                                                                            | [Vote Collection module](https://github.com/avneesh0612/thirdweb-snippets/blob/main/snippets/vote-collection.json)     |
-| `voteProposal`              | Vote for a proposal                                                                         | [Vote Collection module](https://github.com/avneesh0612/thirdweb-snippets/blob/main/snippets/vote-collection.json)     |
+## 🏛 About thirdweb
 
-## Show your support
+thirdweb is a platform that provides developers with all the tools needed to build sophisticated web3 apps. Use their smart contracts, SDKs, and UI components to create your own NFTs, governance tokens, marketplaces, and more.
+
+![](https://imgur.com/ycxqwQ2.png)
+
+![](https://imgur.com/SitQvou.png)
+
+![](https://imgur.com/HXbFnH8.png)
+
+## 🚀 How to install thirdsnips ?
+
+### ✨ Visual Studio Code
+
+1. Install thirdsnips from the VSCode marketplace
+2. Reload VSCode
+3. The snippets are ready to use!
+
+### ✨ Vim
+
+You can use thirdsnips in vim by the following snippet-plugins:
+
+- [vim-vsnip](https://github.com/hrsh7th/vim-vsnip)
+- [LuaSnip](https://github.com/L3MON4D3/LuaSnip)
+- [coc-snippets](https://github.com/neoclide/coc-snippets)
+
+Please set up the aforementioned plugins before using this snippet plugin. You
+might need to explicitly enable loading of VSCode snippet plugins (like in the case of LuaSnip).
+
+1. With [packer](https://github.com/wbthomason/packer.nvim) -
+
+   ```
+   use "avneesh0612/thirdweb-snippets"
+   ```
+
+2. With [vim-plug](https://github.com/junegunn/vim-plug)
+
+   ```
+   Plug "avneesh0612/thirdweb-snippets"
+   ```
+
+3. If you are using `coc-snippets`, you can simply run the following command -
+
+   ```
+   :CocInstall https://github.com/avneesh0612/thirdweb-snippets@main
+   ```
+
+### ✨ Atom
+
+_Coming soon_
+
+## 🦄 Usage
+
+All the snippets are available in the 🌈 [Table of Snippets](./SNIPPETS.md)
+
+## 👀 Early access NFT
+
+We are giving away 100 NFTs to the first 100 people who install our VSCode extension and run the `nft` command.
+
+## ⭐ Show your support
 
 Give a ⭐️ if this project helped you!
 

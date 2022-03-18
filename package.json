@@ -1,29 +1,33 @@
 {
   "name": "thirdweb-snippets",
-  "displayName": "Thirdweb Snippets",
-  "description": "This is an extension for Thirdweb Snippets with Typescript support as well!",
-  "version": "0.1.0",
-  "type": "module",
-  "publisher": "AvneeshAgarwal",
-  "repository": {
-    "url": "https://github.com/avneesh0612/thirdweb-snippets"
-  },
-  "engines": {
-    "vscode": "^1.64.0"
-  },
+  "version": "0.0.1",
+  "repository": "git@github.com:avneesh0612/thirdweb-snippets.git",
+  "author": "Avneesh Agarwal",
+  "license": "GPL-3.0-only",
   "scripts": {
-    "release": "standard-version",
-    "release:minor": "standard-version --release-as minor",
-    "release:patch": "standard-version --release-as patch",
-    "release:major": "standard-version --release-as major",
-    "format": "prettier --write .",
-    "genReadme": "node scripts/generateReadme.js",
-    "pre-commit": "yarn genReadme && yarn format && git add -A ."
+    "generateReadme": "node ./src/automation/scripts/generateReadme.js",
+    "prepare": "husky install",
+    "format": "prettier --write src",
+    "format:check": "prettier --check src",
+    "pre-commit": "yarn run generateReadme && yarn run format && git add -A .",
+    "start:web": "cd src/web && yarn install && yarn start"
   },
-  "categories": [
-    "Snippets"
-  ],
+  "devDependencies": {
+    "commitlint": "^16.2.3",
+    "commitlint-config-gitmoji": "^2.2.5",
+    "husky": "^7.0.4",
+    "prettier": "^2.6.0"
+  },
+  "dependencies": {
+    "@commitlint/cli": "^16.2.3"
+  },
   "contributes": {
+    "commands": [
+      {
+        "command": "thirdweb.helloWorld",
+        "title": "Hello World"
+      }
+    ],
     "snippets": [
       {
         "language": "javascript",
@@ -58,12 +62,5 @@
         "path": "./snippets/vote-collection.json"
       }
     ]
-  },
-  "dependencies": {
-    "markdown-table": "^3.0.2"
-  },
-  "devDependencies": {
-    "husky": "^7.0.4",
-    "prettier": "^2.5.1"
   }
 }
