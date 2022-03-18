@@ -3,4 +3,4 @@ const constants = {
   readmeFile: "README.md",
 };
 
-export default constants;
+module.exports = constants;

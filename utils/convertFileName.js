@@ -12,4 +12,4 @@ function convertFileName(fileName) {
   return words.join(" ");
 }
 
-export default convertFileName;
+module.exports = convertFileName;
