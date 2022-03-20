@@ -1,12 +1,12 @@
 import { FC } from "react";
 
-import { Box, Text, Flex } from "@chakra-ui/react";
+import { Box, Text, Flex, Link } from "@chakra-ui/react";
 
 const Header: FC = () => {
   return (
     <>
       <Box
-        px="10"
+        px={{ base: "2", sm: "4", md: "6", lg: "8", xl: "10" }}
         py="8"
         display="flex"
         flexDir="row"
@@ -18,7 +18,7 @@ const Header: FC = () => {
           flexDir="row"
           alignItems="center"
           fontFamily="jost"
-          fontSize="2xl"
+          fontSize={{ base: "xl", md: "2xl" }}
           fontWeight="600"
         >
           <Text>✨third</Text>
@@ -26,17 +26,12 @@ const Header: FC = () => {
         </Box>
 
         <Box
-          display="flex"
-          flexDir="row"
-          alignItems="center"
           fontFamily="sen"
-          fontSize="xl"
+          fontSize={{ base: "lg", md: "xl" }}
           fontWeight="700"
-          gap="8"
         >
-          <Text>github.</Text>
 
-          <Text>early access.</Text>
+          <Link href="https://scam.com">github.</Link>
         </Box>
       </Box>
     </>

@@ -12,6 +12,7 @@ import "@fontsource/syncopate/700.css";
 
 import "@fontsource/sen/400.css";
 import "@fontsource/sen/700.css";
+
 import { NextSeo } from "next-seo";
 
 function MyApp({ Component, pageProps }: AppProps) {
