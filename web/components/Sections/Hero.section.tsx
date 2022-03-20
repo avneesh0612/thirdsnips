@@ -14,7 +14,7 @@ const Hero: FC = () => {
         justifyContent="center"
         fontFamily="syncopate"
         fontWeight="700"
-        fontSize="5xl"
+        fontSize={{ base: "3xl", sm: "4xl", lg: "5xl" }}
         textColor="gray.700"
         mt="16"
       >

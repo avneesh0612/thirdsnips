@@ -32,10 +32,10 @@ const Working: FC = () => {
 
       <Box
         display="flex"
-        flexDir="row"
+        flexDir={{ base: "column", md: "row" }}
         justifyContent="center"
         alignItems="center"
-        gap="20"
+        gap={{ base: "16", md: "20" }}
       >
         <Card
           title="1. Installation"

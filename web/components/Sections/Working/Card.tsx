@@ -11,14 +11,15 @@ const Card: FC<Props> = ({ title, desc }) => {
     <Box
       py="16"
       px="12"
-      w="80"
+      w={{ base: "72", sm: "80" }}
+      h="60"
       rounded="md"
       bgColor="#010101"
       textColor="white"
     >
-      <Text fontSize="xl">{title}</Text>
+      <Text fontSize={{ base: "lg", lg: "xl" }}>{title}</Text>
 
-      <Text fontSize="lg" fontFamily="sen" fontWeight="400" mt="1">
+      <Text fontSize={{ base: "md", lg: "lg" }} fontFamily="sen" fontWeight="400" mt="1">
         {desc}
       </Text>
     </Box>
