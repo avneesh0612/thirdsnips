@@ -2,7 +2,11 @@ import { FC } from "react";
 
 import { Box, Text, Flex, Link } from "@chakra-ui/react";
 
-const Header: FC = () => {
+interface props {
+  onHomePage: boolean
+}
+
+const Header: FC<props> = (onHomePage) => {
   return (
     <>
       <Box
@@ -27,11 +31,20 @@ const Header: FC = () => {
 
         <Box
           fontFamily="sen"
+          display="flex"
+          flexDir="row"
+          alignItems="center"
+          gap="4"
           fontSize={{ base: "lg", md: "xl" }}
           fontWeight="700"
         >
-
           <Link href="https://scam.com">github.</Link>
+
+          {onHomePage ? (
+            <Link href="/mint">early access.</Link>
+          ) : (
+            <Link href="/">home.</Link>
+          )}
         </Box>
       </Box>
     </>

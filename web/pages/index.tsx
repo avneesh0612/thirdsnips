@@ -4,6 +4,7 @@ import { Box } from "@chakra-ui/react";
 import { Header, Hero, Working } from "../components";
 
 const Home: NextPage = () => {
+  
   return (
     <>
       <Box
@@ -13,7 +14,7 @@ const Home: NextPage = () => {
         bgImage="https://res.cloudinary.com/didkcszrq/image/upload/v1647222804/background_gradient_mwbieb.svg"
         backgroundSize="cover"
       >
-        <Header />
+        <Header onHomePage={true} />
         <Hero />
         <Working />
       </Box>
