@@ -15,7 +15,7 @@ const MintPage: NextPage = () => {
 
   useEffect(() => {
     error?.name === "UnsupportedChainIdError" ? onOpen() : onClose()
-  }, [error]);
+  }, [error, onOpen, onClose]);
 
   const loginWithGithub = async () => {
     const { user, session, error } = await supabase.auth.signIn(

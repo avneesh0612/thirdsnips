@@ -36,7 +36,7 @@ const ChangeNetwork: FC<props> = ({ isOpen, onOpen, onClose }) => {
             textAlign="center"
           >
             <Box display="flex" flexDir="row" alignItems="center">
-              <Image src="/assests/polygon-icon.svg" height="8" width="8" />
+              <Image src="/assests/polygon-icon.svg" height="8" width="8" alt="polygon bhai" />
 
               <Text fontWeight="700" fontSize="lg">
                 you&apos;re not connected to the polygon mumbai network
