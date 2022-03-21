@@ -1,5 +1,5 @@
 import * as vscode from "vscode";
-import { SidePanel } from "./sidePanel";
+import { SidebarProvider } from "./sideBarProvider";
 
 /**
  * @param {{ subscriptions: import("vscode").Disposable[]; }} context
@@ -7,14 +7,13 @@ import { SidePanel } from "./sidePanel";
 function activate(context: vscode.ExtensionContext) {
   console.log('Congratulations, your extension "thirdweb" is now active!');
 
-  let disposable = vscode.commands.registerCommand(
-    "thirdweb.nft",
-    async function () {
-      SidePanel.createOrShow(context.extensionUri);
-    }
+  const sidebarProvider = new SidebarProvider(context.extensionUri);
+  context.subscriptions.push(
+    vscode.window.registerWebviewViewProvider(
+      "thirdsnips-sidebar",
+      sidebarProvider
+    )
   );
-
-  context.subscriptions.push(disposable);
 }
 
 function deactivate() {}
