@@ -35,7 +35,7 @@ const MintPage: NextPage = () => {
         redirectTo:
           env === "development"
             ? "https://3000-kranurag-thirdwebsnippet-rf24ngqle54.ws-us38.gitpod.io/mint"
-            : "http://thirdweb-snippets.vercel.app/mint",
+            : "https://www.thirdsnips.live/mint",
       }
     );
   };
