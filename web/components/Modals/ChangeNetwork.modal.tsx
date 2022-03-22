@@ -12,14 +12,11 @@ import {
   Box,
   Image,
 } from "@chakra-ui/react";
+import config from "../../lib/config";
 
-interface props {
-  isOpen: boolean;
-  onOpen: () => void;
-  onClose: () => void;
-}
+import type { modalProps } from "../../@types/types";
 
-const ChangeNetwork: FC<props> = ({ isOpen, onOpen, onClose }) => {
+const ChangeNetwork: FC<modalProps> = ({ isOpen, onOpen, onClose }) => {
   const { switchNetwork } = useSwitchNetwork();
 
   return (
@@ -36,7 +33,12 @@ const ChangeNetwork: FC<props> = ({ isOpen, onOpen, onClose }) => {
             textAlign="center"
           >
             <Box display="flex" flexDir="row" alignItems="center">
-              <Image src="/assests/polygon-icon.svg" height="8" width="8" alt="polygon bhai" />
+              <Image
+                src="/assests/polygon-icon.svg"
+                height="8"
+                width="8"
+                alt="polygon bhai"
+              />
 
               <Text fontWeight="700" fontSize="lg">
                 you&apos;re not connected to the polygon mumbai network
@@ -52,7 +54,7 @@ const ChangeNetwork: FC<props> = ({ isOpen, onOpen, onClose }) => {
                 _focus={{}}
                 _active={{}}
                 onClick={async () => {
-                  await switchNetwork(80001);
+                  await switchNetwork(config.supportedChainIds[0]);
                 }}
                 fontWeight="bold"
                 bg="linear-gradient(289.29deg, #00E3D6 -76.18%, #3788FF 116.82%)"

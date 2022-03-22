@@ -2,27 +2,28 @@ import type { NextPage } from "next";
 import { useEffect, useState } from "react";
 
 import { Box, Text, Button, Badge, useDisclosure } from "@chakra-ui/react";
+import type { modes } from "../../@types/types";
 
-import { Header } from "../../components";
+import { Header, ChangeNetwork } from "../../components";
 import { useWeb3 } from "@3rdweb/hooks";
 import { supabase } from "../../utils/supabaseClient";
 
-import { ChangeNetwork } from "../../components";
-
 const MintPage: NextPage = () => {
-  const { address, connectWallet, error } = useWeb3();  
+  const { address, connectWallet, error } = useWeb3();
   const { isOpen, onOpen, onClose } = useDisclosure();
 
-  type modes = "development" | "production" | "test"
-
-  const [env, setEnv] = useState<modes>()
-
-  useEffect(()=>{
-  process.env.NODE_ENV === "development" ? setEnv("development") : process.env.NODE_ENV === "production" ? setEnv("production") : setEnv("test")
-  }, [env, setEnv])
+  const [env, setEnv] = useState<modes>();
 
   useEffect(() => {
-    error?.name === "UnsupportedChainIdError" ? onOpen() : onClose()
+    process.env.NODE_ENV === "development"
+      ? setEnv("development")
+      : process.env.NODE_ENV === "production"
+      ? setEnv("production")
+      : setEnv("test");
+  }, [env, setEnv]);
+
+  useEffect(() => {
+    error?.name === "UnsupportedChainIdError" ? onOpen() : onClose();
   }, [error, onOpen, onClose]);
 
   const loginWithGithub = async () => {
@@ -32,7 +33,9 @@ const MintPage: NextPage = () => {
       },
       {
         redirectTo:
-          env === "development" ? "http://localhost:3000/mint" : "http://thirdweb-snippets.vercel.app/mint",
+          env === "development"
+            ? "https://3000-kranurag-thirdwebsnippet-rf24ngqle54.ws-us38.gitpod.io/mint"
+            : "http://thirdweb-snippets.vercel.app/mint",
       }
     );
   };
@@ -120,9 +123,22 @@ const MintPage: NextPage = () => {
               </Button>
             )}
 
-            <Button onClick={loginWithGithub} colorScheme="messenger">
-              login with github
-            </Button>
+            {user ? (
+              <Text
+                fontSize="xl"
+                display="flex"
+                flexDir="row"
+                gap="1"
+                alignItems="center"
+              >
+                hello,
+                <Text color="gray.800">{user.user_metadata.full_name}</Text>
+              </Text>
+            ) : (
+              <Button onClick={loginWithGithub} colorScheme="messenger">
+                login with github
+              </Button>
+            )}
           </Box>
         </Box>
       </Box>
