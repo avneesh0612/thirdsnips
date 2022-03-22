@@ -1,12 +1,9 @@
 import { FC } from "react";
 
 import { Box, Text, Flex, Link } from "@chakra-ui/react";
+import type { headerProps } from "../../@types/types";
 
-interface props {
-  onHomePage: boolean
-}
-
-const Header: FC<props> = (onHomePage) => {
+const Header: FC<headerProps> = onHomePage => {
   return (
     <>
       <Box

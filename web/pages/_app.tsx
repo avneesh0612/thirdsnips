@@ -5,7 +5,8 @@ import { ThirdwebWeb3Provider } from "@3rdweb/hooks";
 import "regenerator-runtime/runtime";
 import theme from "../styles/theme";
 
-import "@fontsource/jost/400.css";
+import config from "../lib/config";
+
 import "@fontsource/jost/500.css";
 import "@fontsource/jost/600.css";
 
@@ -18,16 +19,11 @@ import "@fontsource/sen/700.css";
 import { NextSeo } from "next-seo";
 
 function MyApp({ Component, pageProps }: AppProps) {
-
-  const supportedChainIds = [80001];
-
-  const connectors = {
-    injected: {},
-  };
-
-
   return (
-    <ThirdwebWeb3Provider connectors={connectors} supportedChainIds={supportedChainIds}>
+    <ThirdwebWeb3Provider
+      connectors={config.connectors}
+      supportedChainIds={config.supportedChainIds}
+    >
       <ChakraProvider theme={theme}>
         <NextSeo
           title="ThirdSnips"
