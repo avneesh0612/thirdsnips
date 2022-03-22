@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 import { Box, Text, Button, Badge, useDisclosure } from "@chakra-ui/react";
 
@@ -13,6 +13,14 @@ const MintPage: NextPage = () => {
   const { address, connectWallet, error } = useWeb3();  
   const { isOpen, onOpen, onClose } = useDisclosure();
 
+  type modes = "development" | "production" | "test"
+
+  const [env, setEnv] = useState<modes>()
+
+  useEffect(()=>{
+  process.env.NODE_ENV === "development" ? setEnv("development") : process.env.NODE_ENV === "production" ? setEnv("production") : setEnv("test")
+  }, [env, setEnv])
+
   useEffect(() => {
     error?.name === "UnsupportedChainIdError" ? onOpen() : onClose()
   }, [error, onOpen, onClose]);
@@ -24,7 +32,7 @@ const MintPage: NextPage = () => {
       },
       {
         redirectTo:
-          "https://3000-kranurag-thirdwebsnippet-ubg5cxwxtna.ws-us38.gitpod.io/mint",
+          env === "development" ? "http://localhost:3000/mint" : "http://thirdweb-snippets.vercel.app/mint",
       }
     );
   };
