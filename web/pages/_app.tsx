@@ -16,13 +16,17 @@ import "@fontsource/syncopate/700.css";
 import "@fontsource/sen/400.css";
 import "@fontsource/sen/700.css";
 
+import { ThirdwebProvider } from "@thirdweb-dev/react";
+
 import { NextSeo } from "next-seo";
 
 function MyApp({ Component, pageProps }: AppProps) {
+
+   const desiredChainId = 4;
+
   return (
-    <ThirdwebWeb3Provider
-      connectors={config.connectors}
-      supportedChainIds={config.supportedChainIds}
+    <ThirdwebProvider
+    desiredChainId={desiredChainId}
     >
       <ChakraProvider theme={theme}>
         <NextSeo
@@ -45,7 +49,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         />
         <Component {...pageProps} />
       </ChakraProvider>
-    </ThirdwebWeb3Provider>
+    </ThirdwebProvider>
   );
 }
 

@@ -5,12 +5,16 @@ import { Box, Text, Button, Badge } from "@chakra-ui/react";
 import type { modes } from "../../@types/types";
 
 import { Header } from "../../components";
-import { useWeb3 } from "@3rdweb/hooks";
 import { supabase } from "../../utils/supabaseClient";
 
+import { useAddress, useMetamask, useNFTDrop } from "@thirdweb-dev/react";
+
 const MintPage: NextPage = () => {
-  const { address, connectWallet, error } = useWeb3();
   const [env, setEnv] = useState<modes>();
+  const connectWithMetamask = useMetamask()
+  const address = useAddress()
+
+  const nftDrop = useNFTDrop("0x538e45B8149C697d2c3d65441e4f2a6691Be35fC");
 
   useEffect(() => {
     process.env.NODE_ENV === "development"
@@ -109,7 +113,7 @@ const MintPage: NextPage = () => {
               </>
             ) : (
               <Button
-                onClick={() => connectWallet("injected")}
+                onClick={() => connectWithMetamask()}
                 colorScheme="messenger"
               >
                 connect wallet
