@@ -1,8 +1,6 @@
 import type { NextPage } from "next";
-import { useEffect, useState } from "react";
 
 import { Box, Text, Button, Badge } from "@chakra-ui/react";
-import type { modes } from "../../@types/types";
 
 import { Header } from "../../components";
 
@@ -13,19 +11,10 @@ import {
 } from "@thirdweb-dev/react";
 
 const MintPage: NextPage = () => {
-  const [env, setEnv] = useState<modes>();
   const connectWithMetamask = useMetamask()
   const address = useAddress()
 
   const nftDrop = useNFTDrop("0x968fAE78A3FdF1C3DBfb86F00Ab9590b4B145b8e");
-
-  useEffect(() => {
-    process.env.NODE_ENV === "development"
-      ? setEnv("development")
-      : process.env.NODE_ENV === "production"
-      ? setEnv("production")
-      : setEnv("test");
-  }, [env, setEnv]);
 
   return (
     <>
