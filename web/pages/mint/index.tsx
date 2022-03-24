@@ -7,14 +7,19 @@ import type { modes } from "../../@types/types";
 import { Header } from "../../components";
 import { supabase } from "../../utils/supabaseClient";
 
-import { useAddress, useMetamask, useNFTDrop } from "@thirdweb-dev/react";
+import {
+  useAddress,
+  useMetamask,
+  useNFTDrop,
+  useNFTCollection,
+} from "@thirdweb-dev/react";
 
 const MintPage: NextPage = () => {
   const [env, setEnv] = useState<modes>();
   const connectWithMetamask = useMetamask()
   const address = useAddress()
 
-  const nftDrop = useNFTDrop("0x538e45B8149C697d2c3d65441e4f2a6691Be35fC");
+  const nftDrop = useNFTDrop("0x1d5c1C13613FEa5C244486A824ABE4BD43BF27Ef");
 
   useEffect(() => {
     process.env.NODE_ENV === "development"
@@ -109,7 +114,7 @@ const MintPage: NextPage = () => {
           >
             {address ? (
               <>
-                <Button colorScheme="messenger">claim NFT</Button>
+                <Button colorScheme="messenger" onClick={()=>nftDrop?.claim(1)}>claim NFT</Button>
               </>
             ) : (
               <Button

@@ -1,7 +1,6 @@
 import type { AppProps } from "next/app";
 
 import { ChakraProvider } from "@chakra-ui/react";
-import { ThirdwebWeb3Provider } from "@3rdweb/hooks";
 import "regenerator-runtime/runtime";
 import theme from "../styles/theme";
 
