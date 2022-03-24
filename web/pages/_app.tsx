@@ -21,7 +21,7 @@ import { NextSeo } from "next-seo";
 
 function MyApp({ Component, pageProps }: AppProps) {
 
-   const desiredChainId = 4;
+   const desiredChainId = 80001;
 
   return (
     <ThirdwebProvider
