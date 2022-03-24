@@ -1,5 +1,5 @@
 export default {
-  supportedChainIds: [80001],
+  supportedChainIds: [1, 3, 4, 5, 137, 80001],
   connectors: {
     injected: {},
   },
