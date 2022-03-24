@@ -1,5 +1,4 @@
 const fs = require("fs");
-// @ts-ignore
 const markdownTable = require("markdown-table");
 
 const convertFileName = require("../utils/convertFileName");
