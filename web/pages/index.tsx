@@ -14,7 +14,7 @@ const Home: NextPage = () => {
         bgImage="https://res.cloudinary.com/didkcszrq/image/upload/v1647222804/background_gradient_mwbieb.svg"
         backgroundSize="cover"
       >
-        <Header onHomePage={true} />
+        <Header />
         <Hero />
         <Working />
       </Box>

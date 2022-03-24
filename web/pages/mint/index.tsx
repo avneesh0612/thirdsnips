@@ -1,17 +1,15 @@
 import type { NextPage } from "next";
 import { useEffect, useState } from "react";
 
-import { Box, Text, Button, Badge, useDisclosure } from "@chakra-ui/react";
+import { Box, Text, Button, Badge } from "@chakra-ui/react";
 import type { modes } from "../../@types/types";
 
-import { Header, ChangeNetwork } from "../../components";
+import { Header } from "../../components";
 import { useWeb3 } from "@3rdweb/hooks";
 import { supabase } from "../../utils/supabaseClient";
 
 const MintPage: NextPage = () => {
   const { address, connectWallet, error } = useWeb3();
-  const { isOpen, onOpen, onClose } = useDisclosure();
-
   const [env, setEnv] = useState<modes>();
 
   useEffect(() => {
@@ -21,10 +19,6 @@ const MintPage: NextPage = () => {
       ? setEnv("production")
       : setEnv("test");
   }, [env, setEnv]);
-
-  useEffect(() => {
-    error?.name === "UnsupportedChainIdError" ? onOpen() : onClose();
-  }, [error, onOpen, onClose]);
 
   const loginWithGithub = async () => {
     const { user, session, error } = await supabase.auth.signIn(
@@ -44,7 +38,6 @@ const MintPage: NextPage = () => {
 
   return (
     <>
-      <ChangeNetwork isOpen={isOpen} onOpen={onOpen} onClose={onClose} />
       <Box
         h="100vh"
         w="100vw"
@@ -52,7 +45,7 @@ const MintPage: NextPage = () => {
         bgImage="https://res.cloudinary.com/didkcszrq/image/upload/v1647222804/background_gradient_mwbieb.svg"
         backgroundSize="cover"
       >
-        <Header onHomePage={false} />
+        <Header />
 
         <Box
           display="flex"
