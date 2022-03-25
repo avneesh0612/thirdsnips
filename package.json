@@ -21,46 +21,38 @@
   "dependencies": {
     "@commitlint/cli": "^16.2.3"
   },
-  "contributes": {
-    "commands": [
-      {
-        "command": "thirdweb.helloWorld",
-        "title": "Hello World"
-      }
-    ],
-    "snippets": [
-      {
-        "language": "javascript",
-        "path": "./snippets/bundle-collection.json"
-      },
-      {
-        "language": "typescript",
-        "path": "./snippets/bundle-collection.json"
-      },
-      {
-        "language": "javascript",
-        "path": "./snippets/token.json"
-      },
-      {
-        "language": "typescript",
-        "path": "./snippets/token.json"
-      },
-      {
-        "language": "typescript",
-        "path": "./snippets/nft-collection.json"
-      },
-      {
-        "language": "javascript",
-        "path": "./snippets/nft-collection.json"
-      },
-      {
-        "language": "typescript",
-        "path": "./snippets/vote-collection.json"
-      },
-      {
-        "language": "javascript",
-        "path": "./snippets/vote-collection.json"
-      }
-    ]
-  }
+  "snippets": [
+    {
+      "language": "javascript",
+      "path": "./snippets/bundle-collection.json"
+    },
+    {
+      "language": "typescript",
+      "path": "./snippets/bundle-collection.json"
+    },
+    {
+      "language": "javascript",
+      "path": "./snippets/token.json"
+    },
+    {
+      "language": "typescript",
+      "path": "./snippets/token.json"
+    },
+    {
+      "language": "typescript",
+      "path": "./snippets/nft-collection.json"
+    },
+    {
+      "language": "javascript",
+      "path": "./snippets/nft-collection.json"
+    },
+    {
+      "language": "typescript",
+      "path": "./snippets/vote-collection.json"
+    },
+    {
+      "language": "javascript",
+      "path": "./snippets/vote-collection.json"
+    }
+  ]
 }
