@@ -25,9 +25,9 @@
     "description": "The useNFTDrop() hook"
   },
   "The usePackModule() hook": {
-    "prefix": "usePackModule",
-    "body": ["const usePackModule = usePackModule(${1:moduleAddress})"],
-    "description": "The usePackModule() hook"
+    "prefix": "usePack",
+    "body": ["const usePack = usePack(${1:moduleAddress})"],
+    "description": "The usePack() hook"
   },
   "The useSplit() hook": {
     "prefix": "useSplit",
