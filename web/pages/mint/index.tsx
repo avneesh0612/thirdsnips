@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
 import { Box, Text, Button, Input } from "@chakra-ui/react";
 
