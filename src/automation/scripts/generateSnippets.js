@@ -12,27 +12,27 @@ axios
     "https://raw.githubusercontent.com/thirdweb-dev/typescript-sdk/main/docs/snippets.json"
   )
   .then(response => {
-    for (let module in response.data) {
+    for (let contract in response.data) {
       try {
         fs.appendFileSync(
-          `${testSnippetsFolder}/${module.toLowerCase()}.json`,
+          `${testSnippetsFolder}/${contract.toLowerCase()}.json`,
           ""
         );
       } catch {
         fs.mkdirSync(testSnippetsFolder);
         fs.appendFileSync(
-          `${testSnippetsFolder}/${module.toLowerCase()}.json`,
+          `${testSnippetsFolder}/${contract.toLowerCase()}.json`,
           ""
         );
       }
-      objectPath.get(response.data, `${module}.methods`).map(method => {
+      objectPath.get(response.data, `${contract}.methods`).map(method => {
         const snippet = renderSnippet(
           objectPath.get(method, "examples.javascript"),
-          `${module.toLowerCase()}${upperCase(method["name"])}`,
+          `${contract.toLowerCase()}${upperCase(method["name"])}`,
           method["summary"].replace(/\n/g, "")
         );
         fs.appendFileSync(
-          `${testSnippetsFolder}/${module.toLowerCase()}.json`,
+          `${testSnippetsFolder}/${contract.toLowerCase()}.json`,
           `${snippet}`
         );
       });

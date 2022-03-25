@@ -5,7 +5,7 @@ const convertFileName = require("../utils/convertFileName");
 const { readmeTop, readmeBottom } = require("../data/readmeConstants");
 const constants = require("../data/constants");
 
-let finalSnippets = [["Prefix", "Description", "Module"]];
+let finalSnippets = [["Prefix", "Description", "Contract"]];
 
 fs.readdir(constants["snippetsFolder"], function (err, files) {
   files.map(file => {
@@ -26,7 +26,7 @@ fs.readdir(constants["snippetsFolder"], function (err, files) {
             snippet.description,
             `[${convertFileName(
               file
-            )} module](https://github.com/avneesh0612/thirdweb-snippets/blob/main/snippets/${file})`,
+            )} contract](https://github.com/avneesh0612/thirdweb-snippets/blob/main/snippets/${file})`,
           ]);
         });
         // Generating a markdown table
