@@ -3,39 +3,37 @@ const fs = require("fs");
 const objectPath = require("object-path");
 const shelljs = require("shelljs");
 
-const { testSnippetsFolder, snippetsFolder } = require("../data/constants");
+const {
+  snippetsFolder,
+  snippetsApiUrl,
+  snippetsFile,
+  snippetsFilePath,
+} = require("../data/constants");
 const renderSnippet = require("../utils/renderSnippet");
-const upperCase = require("../utils/upperCase");
 
-axios
-  .get(
-    "https://raw.githubusercontent.com/thirdweb-dev/typescript-sdk/main/docs/snippets.json"
-  )
-  .then(response => {
-    for (let contract in response.data) {
-      try {
-        fs.appendFileSync(
-          `${testSnippetsFolder}/${contract.toLowerCase()}.json`,
-          ""
-        );
-      } catch {
-        fs.mkdirSync(testSnippetsFolder);
-        fs.appendFileSync(
-          `${testSnippetsFolder}/${contract.toLowerCase()}.json`,
-          ""
-        );
-      }
-      objectPath.get(response.data, `${contract}.methods`).map(method => {
-        const snippet = renderSnippet(
-          objectPath.get(method, "examples.javascript"),
-          `${contract.toLowerCase()}${upperCase(method["name"])}`,
-          method["summary"].replace(/\n/g, "")
-        );
-        fs.appendFileSync(
-          `${testSnippetsFolder}/${contract.toLowerCase()}.json`,
-          `${snippet}`
-        );
-      });
+axios.get(snippetsApiUrl).then(response => {
+  fs.writeFile(`${snippetsFolder}/${snippetsFile}`, "", function (err) {
+    if (err) {
+      console.log(err);
     }
-    shelljs.exec("yarn format");
   });
+  try {
+    fs.appendFileSync(`${snippetsFolder}/${snippetsFile}`, "{");
+  } catch {
+    fs.mkdirSync(snippetsFolder);
+    fs.appendFileSync(`${snippetsFolder}/${snippetsFile}`, "{");
+  }
+  for (let contract in response.data) {
+    objectPath.get(response.data, `${contract}.methods`).map(method => {
+      const snippet = renderSnippet(
+        objectPath.get(method, "examples.javascript"),
+        method["name"],
+        method["summary"].replace(/\n/g, "")
+      );
+      fs.appendFileSync(`${snippetsFolder}/${snippetsFile}`, `${snippet}`);
+    });
+  }
+  shelljs.exec(`truncate -s -1 ${snippetsFilePath}`);
+  fs.appendFileSync(`${snippetsFolder}/${snippetsFile}`, "}");
+  shelljs.exec("yarn format");
+});

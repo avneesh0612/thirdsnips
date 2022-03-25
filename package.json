@@ -5,12 +5,13 @@
   "author": "Avneesh Agarwal",
   "license": "GPL-3.0-only",
   "scripts": {
+    "install": "yarn install && cd src/automation && yarn install",
+    "generateSnippets": "node ./src/automation/scripts/generateSnippets.js",
     "generateReadme": "node ./src/automation/scripts/generateReadme.js",
     "prepare": "husky install",
     "format": "prettier --write src",
     "format:check": "prettier --check src",
-    "pre-commit": "yarn run generateReadme && yarn run format && git add -A .",
-    "start:web": "cd src/web && yarn install && yarn start"
+    "pre-commit": "yarn run generateReadme && yarn run generateSnippets && yarn run format && git add -A ."
   },
   "devDependencies": {
     "commitlint": "^16.2.3",
@@ -24,35 +25,11 @@
   "snippets": [
     {
       "language": "javascript",
-      "path": "./snippets/bundle-collection.json"
+      "path": "src/extension/snippets/snippets.json"
     },
     {
       "language": "typescript",
-      "path": "./snippets/bundle-collection.json"
-    },
-    {
-      "language": "javascript",
-      "path": "./snippets/token.json"
-    },
-    {
-      "language": "typescript",
-      "path": "./snippets/token.json"
-    },
-    {
-      "language": "typescript",
-      "path": "./snippets/nft-collection.json"
-    },
-    {
-      "language": "javascript",
-      "path": "./snippets/nft-collection.json"
-    },
-    {
-      "language": "typescript",
-      "path": "./snippets/vote-collection.json"
-    },
-    {
-      "language": "javascript",
-      "path": "./snippets/vote-collection.json"
+      "path": "src/extension/snippets/snippets.json"
     }
   ]
 }

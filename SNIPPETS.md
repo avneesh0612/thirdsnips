@@ -1,74 +1,60 @@
 # 🌈 Table of Snippets
 
-| Prefix                              | Description                                                                                      | Contract                                                                                                                       |
-| ----------------------------------- | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
-| `editionMintBatchTo`                | Mint Many NFTs with limited supplies                                                             | [Edition contract](https://github.com/avneesh0612/thirdweb-snippets/tree/main/src/extension/snippets/edition.json)             |
-| `editionMintTo`                     | Mint an NFT with a limited supply                                                                | [Edition contract](https://github.com/avneesh0612/thirdweb-snippets/tree/main/src/extension/snippets/edition.json)             |
-| `editionBalanceOf`                  | Get NFT Balance                                                                                  | [Edition contract](https://github.com/avneesh0612/thirdweb-snippets/tree/main/src/extension/snippets/edition.json)             |
-| `editionGet`                        | Get a single NFT Metadata                                                                        | [Edition contract](https://github.com/avneesh0612/thirdweb-snippets/tree/main/src/extension/snippets/edition.json)             |
-| `editionGetAll`                     | Get All NFTs                                                                                     | [Edition contract](https://github.com/avneesh0612/thirdweb-snippets/tree/main/src/extension/snippets/edition.json)             |
-| `editionGetOwned`                   | Get Owned NFTs                                                                                   | [Edition contract](https://github.com/avneesh0612/thirdweb-snippets/tree/main/src/extension/snippets/edition.json)             |
-| `editionTransfer`                   | Transfer a single NFT                                                                            | [Edition contract](https://github.com/avneesh0612/thirdweb-snippets/tree/main/src/extension/snippets/edition.json)             |
-| `nftcollectionMintBatchTo`          | Mint Many unique NFTs                                                                            | [Nftcollection contract](https://github.com/avneesh0612/thirdweb-snippets/tree/main/src/extension/snippets/nftcollection.json) |
-| `nftcollectionMintTo`               | Mint a unique NFT                                                                                | [Nftcollection contract](https://github.com/avneesh0612/thirdweb-snippets/tree/main/src/extension/snippets/nftcollection.json) |
-| `nftcollectionBalanceOf`            | Get NFT Balance                                                                                  | [Nftcollection contract](https://github.com/avneesh0612/thirdweb-snippets/tree/main/src/extension/snippets/nftcollection.json) |
-| `nftcollectionGet`                  | Get a single NFT Metadata                                                                        | [Nftcollection contract](https://github.com/avneesh0612/thirdweb-snippets/tree/main/src/extension/snippets/nftcollection.json) |
-| `nftcollectionGetAll`               | Get All NFTs                                                                                     | [Nftcollection contract](https://github.com/avneesh0612/thirdweb-snippets/tree/main/src/extension/snippets/nftcollection.json) |
-| `nftcollectionGetOwned`             | Get Owned NFTs                                                                                   | [Nftcollection contract](https://github.com/avneesh0612/thirdweb-snippets/tree/main/src/extension/snippets/nftcollection.json) |
-| `nftcollectionTransfer`             | Transfer a single NFT                                                                            | [Nftcollection contract](https://github.com/avneesh0612/thirdweb-snippets/tree/main/src/extension/snippets/nftcollection.json) |
-| `marketplaceBuyoutListing`          | Purchase NFTs                                                                                    | [Marketplace contract](https://github.com/avneesh0612/thirdweb-snippets/tree/main/src/extension/snippets/marketplace.json)     |
-| `marketplaceGetActiveListings`      | Get all active listings                                                                          | [Marketplace contract](https://github.com/avneesh0612/thirdweb-snippets/tree/main/src/extension/snippets/marketplace.json)     |
-| `marketplaceGetAllListings`         | Get all the listings                                                                             | [Marketplace contract](https://github.com/avneesh0612/thirdweb-snippets/tree/main/src/extension/snippets/marketplace.json)     |
-| `marketplaceSetBidBufferBps`        | Set the Auction bid buffer                                                                       | [Marketplace contract](https://github.com/avneesh0612/thirdweb-snippets/tree/main/src/extension/snippets/marketplace.json)     |
-| `marketplaceSetTimeBufferInSeconds` | Set the Auction Time buffer:                                                                     | [Marketplace contract](https://github.com/avneesh0612/thirdweb-snippets/tree/main/src/extension/snippets/marketplace.json)     |
-| `editiondropClaimTo`                | Claim NFTs to a specific Wallet                                                                  | [Editiondrop contract](https://github.com/avneesh0612/thirdweb-snippets/tree/main/src/extension/snippets/editiondrop.json)     |
-| `editiondropCreateBatch`            | Create a batch of NFTs to be claimed in the future                                               | [Editiondrop contract](https://github.com/avneesh0612/thirdweb-snippets/tree/main/src/extension/snippets/editiondrop.json)     |
-| `editiondropBalanceOf`              | Get NFT Balance                                                                                  | [Editiondrop contract](https://github.com/avneesh0612/thirdweb-snippets/tree/main/src/extension/snippets/editiondrop.json)     |
-| `editiondropGet`                    | Get a single NFT Metadata                                                                        | [Editiondrop contract](https://github.com/avneesh0612/thirdweb-snippets/tree/main/src/extension/snippets/editiondrop.json)     |
-| `editiondropGetAll`                 | Get All NFTs                                                                                     | [Editiondrop contract](https://github.com/avneesh0612/thirdweb-snippets/tree/main/src/extension/snippets/editiondrop.json)     |
-| `editiondropGetOwned`               | Get Owned NFTs                                                                                   | [Editiondrop contract](https://github.com/avneesh0612/thirdweb-snippets/tree/main/src/extension/snippets/editiondrop.json)     |
-| `editiondropTransfer`               | Transfer a single NFT                                                                            | [Editiondrop contract](https://github.com/avneesh0612/thirdweb-snippets/tree/main/src/extension/snippets/editiondrop.json)     |
-| `nftdropClaimTo`                    | Claim unique NFTs to a specific Wallet                                                           | [Nftdrop contract](https://github.com/avneesh0612/thirdweb-snippets/tree/main/src/extension/snippets/nftdrop.json)             |
-| `nftdropCreateBatch`                | Create a batch of unique NFTs to be claimed in the future                                        | [Nftdrop contract](https://github.com/avneesh0612/thirdweb-snippets/tree/main/src/extension/snippets/nftdrop.json)             |
-| `nftdropGetAllClaimed`              | Get All Claimed NFTs                                                                             | [Nftdrop contract](https://github.com/avneesh0612/thirdweb-snippets/tree/main/src/extension/snippets/nftdrop.json)             |
-| `nftdropGetAllUnclaimed`            | Get All Unclaimed NFTs                                                                           | [Nftdrop contract](https://github.com/avneesh0612/thirdweb-snippets/tree/main/src/extension/snippets/nftdrop.json)             |
-| `nftdropTotalClaimedSupply`         | Get the claimed supply                                                                           | [Nftdrop contract](https://github.com/avneesh0612/thirdweb-snippets/tree/main/src/extension/snippets/nftdrop.json)             |
-| `nftdropTotalUnclaimedSupply`       | Get the unclaimed supply                                                                         | [Nftdrop contract](https://github.com/avneesh0612/thirdweb-snippets/tree/main/src/extension/snippets/nftdrop.json)             |
-| `nftdropBalanceOf`                  | Get NFT Balance                                                                                  | [Nftdrop contract](https://github.com/avneesh0612/thirdweb-snippets/tree/main/src/extension/snippets/nftdrop.json)             |
-| `nftdropGet`                        | Get a single NFT Metadata                                                                        | [Nftdrop contract](https://github.com/avneesh0612/thirdweb-snippets/tree/main/src/extension/snippets/nftdrop.json)             |
-| `nftdropGetAll`                     | Get All NFTs                                                                                     | [Nftdrop contract](https://github.com/avneesh0612/thirdweb-snippets/tree/main/src/extension/snippets/nftdrop.json)             |
-| `nftdropGetOwned`                   | Get Owned NFTs                                                                                   | [Nftdrop contract](https://github.com/avneesh0612/thirdweb-snippets/tree/main/src/extension/snippets/nftdrop.json)             |
-| `nftdropTransfer`                   | Transfer a single NFT                                                                            | [Nftdrop contract](https://github.com/avneesh0612/thirdweb-snippets/tree/main/src/extension/snippets/nftdrop.json)             |
-| `tokenMintBatchTo`                  | Mint Tokens To Many Wallets                                                                      | [Token contract](https://github.com/avneesh0612/thirdweb-snippets/tree/main/src/extension/snippets/token.json)                 |
-| `tokenMintTo`                       | Mint Tokens                                                                                      | [Token contract](https://github.com/avneesh0612/thirdweb-snippets/tree/main/src/extension/snippets/token.json)                 |
-| `tokenAllowance`                    | Get Token Allowance                                                                              | [Token contract](https://github.com/avneesh0612/thirdweb-snippets/tree/main/src/extension/snippets/token.json)                 |
-| `tokenAllowanceOf`                  | Get Token Allowance                                                                              | [Token contract](https://github.com/avneesh0612/thirdweb-snippets/tree/main/src/extension/snippets/token.json)                 |
-| `tokenBalance`                      | Get Token Balance for the currently connected wallet                                             | [Token contract](https://github.com/avneesh0612/thirdweb-snippets/tree/main/src/extension/snippets/token.json)                 |
-| `tokenBalanceOf`                    | Get Token Balance                                                                                | [Token contract](https://github.com/avneesh0612/thirdweb-snippets/tree/main/src/extension/snippets/token.json)                 |
-| `tokenBurn`                         | Burn Tokens                                                                                      | [Token contract](https://github.com/avneesh0612/thirdweb-snippets/tree/main/src/extension/snippets/token.json)                 |
-| `tokenBurnFrom`                     | Burn Tokens                                                                                      | [Token contract](https://github.com/avneesh0612/thirdweb-snippets/tree/main/src/extension/snippets/token.json)                 |
-| `tokenGet`                          | Get the token Metadata (name, symbol, etc...)                                                    | [Token contract](https://github.com/avneesh0612/thirdweb-snippets/tree/main/src/extension/snippets/token.json)                 |
-| `tokenSetAllowance`                 | Allows the specified `spender` wallet to transfer the given `amount` of tokens to another wallet | [Token contract](https://github.com/avneesh0612/thirdweb-snippets/tree/main/src/extension/snippets/token.json)                 |
-| `tokenTransfer`                     | Transfer Tokens                                                                                  | [Token contract](https://github.com/avneesh0612/thirdweb-snippets/tree/main/src/extension/snippets/token.json)                 |
-| `tokenTransferBatch`                | Transfer Tokens To Many Wallets                                                                  | [Token contract](https://github.com/avneesh0612/thirdweb-snippets/tree/main/src/extension/snippets/token.json)                 |
-| `tokenTransferFrom`                 | Transfer Tokens From Address                                                                     | [Token contract](https://github.com/avneesh0612/thirdweb-snippets/tree/main/src/extension/snippets/token.json)                 |
-| `packBalanceOf`                     | Get Pack Balance                                                                                 | [Pack contract](https://github.com/avneesh0612/thirdweb-snippets/tree/main/src/extension/snippets/pack.json)                   |
-| `packCreate`                        | Create Pack                                                                                      | [Pack contract](https://github.com/avneesh0612/thirdweb-snippets/tree/main/src/extension/snippets/pack.json)                   |
-| `packGetAll`                        | Get Pack Data                                                                                    | [Pack contract](https://github.com/avneesh0612/thirdweb-snippets/tree/main/src/extension/snippets/pack.json)                   |
-| `packGetNFTs`                       | Get Pack Reward Data                                                                             | [Pack contract](https://github.com/avneesh0612/thirdweb-snippets/tree/main/src/extension/snippets/pack.json)                   |
-| `packOpen`                          | Open Pack                                                                                        | [Pack contract](https://github.com/avneesh0612/thirdweb-snippets/tree/main/src/extension/snippets/pack.json)                   |
-| `packTransfer`                      | Transfer Pack                                                                                    | [Pack contract](https://github.com/avneesh0612/thirdweb-snippets/tree/main/src/extension/snippets/pack.json)                   |
-| `splitBalanceOf`                    | Get Funds owed to a particular wallet                                                            | [Split contract](https://github.com/avneesh0612/thirdweb-snippets/tree/main/src/extension/snippets/split.json)                 |
-| `splitBalanceOfToken`               | Get non-native Token Funds owed to a particular wallet                                           | [Split contract](https://github.com/avneesh0612/thirdweb-snippets/tree/main/src/extension/snippets/split.json)                 |
-| `splitDistribute`                   | Distribute Funds                                                                                 | [Split contract](https://github.com/avneesh0612/thirdweb-snippets/tree/main/src/extension/snippets/split.json)                 |
-| `splitGetAllRecipients`             | Get Recipients of this splits contract                                                           | [Split contract](https://github.com/avneesh0612/thirdweb-snippets/tree/main/src/extension/snippets/split.json)                 |
-| `splitWithdraw`                     | Withdraw Funds                                                                                   | [Split contract](https://github.com/avneesh0612/thirdweb-snippets/tree/main/src/extension/snippets/split.json)                 |
-| `voteCanExecute`                    | Can Execute                                                                                      | [Vote contract](https://github.com/avneesh0612/thirdweb-snippets/tree/main/src/extension/snippets/vote.json)                   |
-| `voteExecute`                       | Execute Proposal                                                                                 | [Vote contract](https://github.com/avneesh0612/thirdweb-snippets/tree/main/src/extension/snippets/vote.json)                   |
-| `voteGetAll`                        | Get All Proposals                                                                                | [Vote contract](https://github.com/avneesh0612/thirdweb-snippets/tree/main/src/extension/snippets/vote.json)                   |
-| `voteHasVoted`                      | Check If Wallet Voted                                                                            | [Vote contract](https://github.com/avneesh0612/thirdweb-snippets/tree/main/src/extension/snippets/vote.json)                   |
-| `votePropose`                       | Create Proposal                                                                                  | [Vote contract](https://github.com/avneesh0612/thirdweb-snippets/tree/main/src/extension/snippets/vote.json)                   |
-| `voteVote`                          | Vote                                                                                             | [Vote contract](https://github.com/avneesh0612/thirdweb-snippets/tree/main/src/extension/snippets/vote.json)                   |
+
+thirdsnips currently has a total of 51 snippets.
+
+| Prefix                   | Description                                                                                      |
+| ------------------------ | ------------------------------------------------------------------------------------------------ |
+| `mintBatchTo`            | Mint Many NFTs with limited supplies                                                             |
+| `mintTo`                 | Mint an NFT with a limited supply                                                                |
+| `balanceOf`              | Get NFT Balance                                                                                  |
+| `get`                    | Get a single NFT Metadata                                                                        |
+| `getAll`                 | Get All NFTs                                                                                     |
+| `getOwned`               | Get Owned NFTs                                                                                   |
+| `transfer`               | Transfer a single NFT                                                                            |
+| `claimTo`                | Claim NFTs to a specific Wallet                                                                  |
+| `createBatch`            | Create a batch of NFTs to be claimed in the future                                               |
+| `buyoutListing`          | Purchase NFTs                                                                                    |
+| `getActiveListings`      | Get all active listings                                                                          |
+| `getAllListings`         | Get all the listings                                                                             |
+| `setBidBufferBps`        | Set the Auction bid buffer                                                                       |
+| `setTimeBufferInSeconds` | Set the Auction Time buffer:                                                                     |
+| `mintBatchTo`            | Mint Many unique NFTs                                                                            |
+| `mintTo`                 | Mint a unique NFT                                                                                |
+| `claimTo`                | Claim unique NFTs to a specific Wallet                                                           |
+| `createBatch`            | Create a batch of unique NFTs to be claimed in the future                                        |
+| `getAllClaimed`          | Get All Claimed NFTs                                                                             |
+| `getAllUnclaimed`        | Get All Unclaimed NFTs                                                                           |
+| `totalClaimedSupply`     | Get the claimed supply                                                                           |
+| `totalUnclaimedSupply`   | Get the unclaimed supply                                                                         |
+| `balanceOf`              | Get Pack Balance                                                                                 |
+| `create`                 | Create Pack                                                                                      |
+| `getAll`                 | Get Pack Data                                                                                    |
+| `getNFTs`                | Get Pack Reward Data                                                                             |
+| `open`                   | Open Pack                                                                                        |
+| `transfer`               | Transfer Pack                                                                                    |
+| `balanceOf`              | Get Funds owed to a particular wallet                                                            |
+| `balanceOfToken`         | Get non-native Token Funds owed to a particular wallet                                           |
+| `distributeToken`        | Distribute Funds                                                                                 |
+| `getAllRecipients`       | Get Recipients of this splits contract                                                           |
+| `withdraw`               | Withdraw Funds                                                                                   |
+| `mintBatchTo`            | Mint Tokens To Many Wallets                                                                      |
+| `mintTo`                 | Mint Tokens                                                                                      |
+| `allowanceOf`            | Get Token Allowance                                                                              |
+| `balance`                | Get Token Balance for the currently connected wallet                                             |
+| `balanceOf`              | Get Token Balance                                                                                |
+| `burnFrom`               | Burn Tokens                                                                                      |
+| `get`                    | Get the token Metadata (name, symbol, etc...)                                                    |
+| `setAllowance`           | Allows the specified `spender` wallet to transfer the given `amount` of tokens to another wallet |
+| `transfer`               | Transfer Tokens                                                                                  |
+| `transferBatch`          | Transfer Tokens To Many Wallets                                                                  |
+| `transferFrom`           | Transfer Tokens From Address                                                                     |
+| `canExecute`             | Can Execute                                                                                      |
+| `execute`                | Execute Proposal                                                                                 |
+| `getAll`                 | Get All Proposals                                                                                |
+| `hasVoted`               | Check If Wallet Voted                                                                            |
+| `propose`                | Create Proposal                                                                                  |
+| `vote`                   | Vote                                                                                             |
 
 
 ## ⭐ Show your support

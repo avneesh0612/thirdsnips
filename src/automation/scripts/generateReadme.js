@@ -1,11 +1,10 @@
 const fs = require("fs");
 const markdownTable = require("markdown-table");
 
-const convertFileName = require("../utils/convertFileName");
 const { readmeTop, readmeBottom } = require("../data/readmeConstants");
 const constants = require("../data/constants");
 
-let finalSnippets = [["Prefix", "Description", "Contract"]];
+let finalSnippets = [["Prefix", "Description"]];
 
 fs.readdir(constants["snippetsFolder"], function (err, files) {
   files.map(file => {
@@ -21,17 +20,20 @@ fs.readdir(constants["snippetsFolder"], function (err, files) {
         );
         // Adding the snippet to the final array
         snippetArray.map(snippet => {
-          finalSnippets.push([
-            `\`${snippet.prefix}\``,
-            snippet.description,
-            `[${convertFileName(
-              file
-            )} contract](https://github.com/avneesh0612/thirdweb-snippets/tree/main/src/extension/snippets/${file})`,
-          ]);
+          finalSnippets.push([`\`${snippet.prefix}\``, snippet.description]);
         });
         // Generating a markdown table
         let snippetTable = markdownTable(finalSnippets);
-        const snippetDocs = readmeTop + snippetTable + "\n" + readmeBottom;
+        const snippetStats = `thirdsnips currently has a total of ${finalSnippets.length} snippets.`;
+
+        const snippetDocs =
+          readmeTop +
+          "\n" +
+          snippetStats +
+          "\n\n" +
+          snippetTable +
+          "\n" +
+          readmeBottom;
         // Clearing all the content in the README.md file before adding new content
         fs.writeFile(constants["readmeFile"], "", function (err) {
           if (err) {

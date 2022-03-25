@@ -12,8 +12,7 @@ const renderSnippet = (snippet, tabtrigger, description) => {
     return index === separatedSnippetLength - 1 ? `"${line}"` : `"${line}",`;
   });
 
-  return `
-      "${description}": {
+  return `"${description}": {
         "prefix": "${tabtrigger}",
         "body": [
           ${newSnippet.join("\n")}

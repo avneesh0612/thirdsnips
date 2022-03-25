@@ -1,0 +1,809 @@
+{
+  "Mint Many NFTs with limited supplies": {
+    "prefix": "mintBatchTo",
+    "body": [
+      "// Address of the wallet you want to mint the NFT to",
+      "const toAddress = \"{{wallet_address}}\"",
+      "",
+      "// Custom metadata and supplies of your NFTs",
+      "const metadataWithSupply = [{",
+      "  supply: 50, // The number of this NFT you want to mint",
+      "  metadata: {",
+      "    name: \"Cool NFT #1\",",
+      "    description: \"This is a cool NFT\",",
+      "    image: fs.readFileSync(\"path/to/image.png\"), // This can be an image url or file",
+      "  },",
+      "}, {",
+      "  supply: 100,",
+      "  metadata: {",
+      "    name: \"Cool NFT #2\",",
+      "    description: \"This is a cool NFT\",",
+      "    image: fs.readFileSync(\"path/to/image.png\"), // This can be an image url or file",
+      "  },",
+      "}];",
+      "",
+      "const tx = await contract.mintBatchTo(toAddress, metadataWithSupply);",
+      "const receipt = tx[0].receipt; // same transaction receipt for all minted NFTs",
+      "const firstTokenId = tx[0].id; // token id of the first minted NFT",
+      "const firstNFT = await tx[0].data(); // (optional) fetch details of the first minted NFT"
+    ],
+    "description": "Mint Many NFTs with limited supplies"
+  },
+  "Mint an NFT with a limited supply": {
+    "prefix": "mintTo",
+    "body": [
+      "// Address of the wallet you want to mint the NFT to",
+      "const toAddress = \"{{wallet_address}}\"",
+      "",
+      "// Custom metadata of the NFT, note that you can fully customize this metadata with other properties.",
+      "const metadata = {",
+      "  name: \"Cool NFT\",",
+      "  description: \"This is a cool NFT\",",
+      "  image: fs.readFileSync(\"path/to/image.png\"), // This can be an image url or file",
+      "}",
+      "",
+      "const metadataWithSupply = {",
+      "  metadata,",
+      "  supply: 1000, // The number of this NFT you want to mint",
+      "}",
+      "",
+      "const tx = await contract.mintTo(toAddress, metadataWithSupply);",
+      "const receipt = tx.receipt; // the transaction receipt",
+      "const tokenId = tx.id; // the id of the NFT minted",
+      "const nft = await tx.data(); // (optional) fetch details of minted NFT"
+    ],
+    "description": "Mint an NFT with a limited supply"
+  },
+  "Get NFT Balance": {
+    "prefix": "balanceOf",
+    "body": [
+      "// Address of the wallet to check NFT balance",
+      "const address = \"{{wallet_address}}\";",
+      "",
+      "const balance = await contract.balanceOf(address);",
+      "console.log(balance);"
+    ],
+    "description": "Get NFT Balance"
+  },
+  "Get a single NFT Metadata": {
+    "prefix": "get",
+    "body": ["const nft = await contract.get(\"0\");", "console.log(nft);"],
+    "description": "Get a single NFT Metadata"
+  },
+  "Get All NFTs": {
+    "prefix": "getAll",
+    "body": ["const nfts = await contract.getAll();", "console.log(nfts);"],
+    "description": "Get All NFTs"
+  },
+  "Get Owned NFTs": {
+    "prefix": "getOwned",
+    "body": [
+      "// Address of the wallet to get the NFTs of",
+      "const address = \"{{wallet_address}}\";",
+      "const nfts = await contract.getOwned(address);",
+      "console.log(nfts);"
+    ],
+    "description": "Get Owned NFTs"
+  },
+  "Transfer a single NFT": {
+    "prefix": "transfer",
+    "body": [
+      "// Address of the wallet you want to send the NFT to",
+      "const toAddress = \"{{wallet_address}}\";",
+      "",
+      "// The token ID of the NFT you want to send",
+      "const tokenId = \"0\";",
+      "// How many copies of the NFTs to transfer",
+      "const amount = 3;",
+      "",
+      "await contract.transfer(toAddress, tokenId, amount);"
+    ],
+    "description": "Transfer a single NFT"
+  },
+  "Claim NFTs to a specific Wallet": {
+    "prefix": "claimTo",
+    "body": [
+      "const address = \"{{wallet_address}}\"; // address of the wallet you want to claim the NFTs",
+      "const tokenId = 0; // the id of the NFT you want to claim",
+      "const quantity = 1; // how many NFTs you want to claim",
+      "",
+      "const tx = await contract.claimTo(address, tokenId, quantity);",
+      "const receipt = tx.receipt; // the transaction receipt",
+      "const claimedTokenId = tx.id; // the id of the NFT claimed",
+      "const claimedNFT = await tx.data(); // (optional) get the claimed NFT metadata"
+    ],
+    "description": "Claim NFTs to a specific Wallet"
+  },
+  "Create a batch of NFTs to be claimed in the future": {
+    "prefix": "createBatch",
+    "body": [
+      "// Custom metadata of the NFTs to create",
+      "const metadatas = [{",
+      "  name: \"Cool NFT\",",
+      "  description: \"This is a cool NFT\",",
+      "  image: fs.readFileSync(\"path/to/image.png\"), // This can be an image url or file",
+      "}, {",
+      "  name: \"Cool NFT\",",
+      "  description: \"This is a cool NFT\",",
+      "  image: fs.readFileSync(\"path/to/image.png\"),",
+      "}];",
+      "",
+      "const results = await contract.createBatch(metadatas); // uploads and creates the NFTs on chain",
+      "const firstTokenId = results[0].id; // token id of the first created NFT",
+      "const firstNFT = await results[0].data(); // (optional) fetch details of the first created NFT"
+    ],
+    "description": "Create a batch of NFTs to be claimed in the future"
+  },
+  "Get NFT Balance": {
+    "prefix": "balanceOf",
+    "body": [
+      "// Address of the wallet to check NFT balance",
+      "const address = \"{{wallet_address}}\";",
+      "",
+      "const balance = await contract.balanceOf(address);",
+      "console.log(balance);"
+    ],
+    "description": "Get NFT Balance"
+  },
+  "Get a single NFT Metadata": {
+    "prefix": "get",
+    "body": ["const nft = await contract.get(\"0\");", "console.log(nft);"],
+    "description": "Get a single NFT Metadata"
+  },
+  "Get All NFTs": {
+    "prefix": "getAll",
+    "body": ["const nfts = await contract.getAll();", "console.log(nfts);"],
+    "description": "Get All NFTs"
+  },
+  "Get Owned NFTs": {
+    "prefix": "getOwned",
+    "body": [
+      "// Address of the wallet to get the NFTs of",
+      "const address = \"{{wallet_address}}\";",
+      "const nfts = await contract.getOwned(address);",
+      "console.log(nfts);"
+    ],
+    "description": "Get Owned NFTs"
+  },
+  "Transfer a single NFT": {
+    "prefix": "transfer",
+    "body": [
+      "// Address of the wallet you want to send the NFT to",
+      "const toAddress = \"{{wallet_address}}\";",
+      "",
+      "// The token ID of the NFT you want to send",
+      "const tokenId = \"0\";",
+      "// How many copies of the NFTs to transfer",
+      "const amount = 3;",
+      "",
+      "await contract.transfer(toAddress, tokenId, amount);"
+    ],
+    "description": "Transfer a single NFT"
+  },
+  "Purchase NFTs": {
+    "prefix": "buyoutListing",
+    "body": [
+      "// The listing ID of the asset you want to buy",
+      "const listingId = 0;",
+      "// Quantity of the asset you want to buy",
+      "const quantityDesired = 1;",
+      "",
+      "await contract.buyoutListing(listingId, quantityDesired);"
+    ],
+    "description": "Purchase NFTs"
+  },
+  "Get all active listings": {
+    "prefix": "getActiveListings",
+    "body": [
+      "const listings = await contract.getActiveListings();",
+      "const priceOfFirstActiveListing = listings[0].price;"
+    ],
+    "description": "Get all active listings"
+  },
+  "Get all the listings": {
+    "prefix": "getAllListings",
+    "body": [
+      "const listings = await contract.getAllListings();",
+      "const priceOfFirstListing = listings[0].price;"
+    ],
+    "description": "Get all the listings"
+  },
+  "Set the Auction bid buffer": {
+    "prefix": "setBidBufferBps",
+    "body": [
+      "// the bid buffer in basis points",
+      "const bufferBps = 500;",
+      "await contract.setBidBufferBps(bufferBps);"
+    ],
+    "description": "Set the Auction bid buffer"
+  },
+  "Set the Auction Time buffer:": {
+    "prefix": "setTimeBufferInSeconds",
+    "body": [
+      "// the time buffer in seconds",
+      "const bufferInSeconds = 60;",
+      "await contract.setTimeBufferInSeconds(bufferInSeconds);"
+    ],
+    "description": "Set the Auction Time buffer:"
+  },
+  "Mint Many unique NFTs": {
+    "prefix": "mintBatchTo",
+    "body": [
+      "// Address of the wallet you want to mint the NFT to",
+      "const toAddress = \"{{wallet_address}}\";",
+      "",
+      "// Custom metadata of the NFTs you want to mint.",
+      "const metadatas = [{",
+      "  name: \"Cool NFT #1\",",
+      "  description: \"This is a cool NFT\",",
+      "  image: fs.readFileSync(\"path/to/image.png\"), // This can be an image url or file",
+      "}, {",
+      "  name: \"Cool NFT #2\",",
+      "  description: \"This is a cool NFT\",",
+      "  image: fs.readFileSync(\"path/to/other/image.png\"),",
+      "}];",
+      "",
+      "const tx = await contract.mintBatchTo(toAddress, metadatas);",
+      "const receipt = tx[0].receipt; // same transaction receipt for all minted NFTs",
+      "const firstTokenId = tx[0].id; // token id of the first minted NFT",
+      "const firstNFT = await tx[0].data(); // (optional) fetch details of the first minted NFT"
+    ],
+    "description": "Mint Many unique NFTs"
+  },
+  "Mint a unique NFT": {
+    "prefix": "mintTo",
+    "body": [
+      "// Address of the wallet you want to mint the NFT to",
+      "const toAddress = \"{{wallet_address}}\";",
+      "",
+      "// Custom metadata of the NFT, note that you can fully customize this metadata with other properties.",
+      "const metadata = {",
+      "  name: \"Cool NFT\",",
+      "  description: \"This is a cool NFT\",",
+      "  image: fs.readFileSync(\"path/to/image.png\"), // This can be an image url or file",
+      "};",
+      "",
+      "const tx = await contract.mintTo(toAddress, metadata);",
+      "const receipt = tx.receipt; // the transaction receipt",
+      "const tokenId = tx.id; // the id of the NFT minted",
+      "const nft = await tx.data(); // (optional) fetch details of minted NFT"
+    ],
+    "description": "Mint a unique NFT"
+  },
+  "Get NFT Balance": {
+    "prefix": "balanceOf",
+    "body": [
+      "// Address of the wallet to check NFT balance",
+      "const address = \"{{wallet_address}}\";",
+      "",
+      "const balance = await contract.balanceOf(address);",
+      "console.log(balance);"
+    ],
+    "description": "Get NFT Balance"
+  },
+  "Get a single NFT Metadata": {
+    "prefix": "get",
+    "body": ["const nft = await contract.get(\"0\");", "console.log(nft);"],
+    "description": "Get a single NFT Metadata"
+  },
+  "Get All NFTs": {
+    "prefix": "getAll",
+    "body": ["const nfts = await contract.getAll();", "console.log(nfts);"],
+    "description": "Get All NFTs"
+  },
+  "Get Owned NFTs": {
+    "prefix": "getOwned",
+    "body": [
+      "// Address of the wallet to get the NFTs of",
+      "const address = \"{{wallet_address}}\";",
+      "const nfts = await contract.getOwned(address);",
+      "console.log(nfts);"
+    ],
+    "description": "Get Owned NFTs"
+  },
+  "Transfer a single NFT": {
+    "prefix": "transfer",
+    "body": [
+      "// Address of the wallet you want to send the NFT to",
+      "const toAddress = \"{{wallet_address}}\";",
+      "",
+      "// The token ID of the NFT you want to send",
+      "const tokenId = \"0\";",
+      "",
+      "await contract.transfer(toAddress, tokenId);"
+    ],
+    "description": "Transfer a single NFT"
+  },
+  "Claim unique NFTs to a specific Wallet": {
+    "prefix": "claimTo",
+    "body": [
+      "const address = \"{{wallet_address}}\"; // address of the wallet you want to claim the NFTs",
+      "const quantity = 1; // how many unique NFTs you want to claim",
+      "",
+      "const tx = await contract.claimTo(address, quantity);",
+      "const receipt = tx.receipt; // the transaction receipt",
+      "const claimedTokenId = tx.id; // the id of the NFT claimed",
+      "const claimedNFT = await tx.data(); // (optional) get the claimed NFT metadata"
+    ],
+    "description": "Claim unique NFTs to a specific Wallet"
+  },
+  "Create a batch of unique NFTs to be claimed in the future": {
+    "prefix": "createBatch",
+    "body": [
+      "// Custom metadata of the NFTs to create",
+      "const metadatas = [{",
+      "  name: \"Cool NFT\",",
+      "  description: \"This is a cool NFT\",",
+      "  image: fs.readFileSync(\"path/to/image.png\"), // This can be an image url or file",
+      "}, {",
+      "  name: \"Cool NFT\",",
+      "  description: \"This is a cool NFT\",",
+      "  image: fs.readFileSync(\"path/to/image.png\"),",
+      "}];",
+      "",
+      "const results = await contract.createBatch(metadatas); // uploads and creates the NFTs on chain",
+      "const firstTokenId = results[0].id; // token id of the first created NFT",
+      "const firstNFT = await results[0].data(); // (optional) fetch details of the first created NFT"
+    ],
+    "description": "Create a batch of unique NFTs to be claimed in the future"
+  },
+  "Get All Claimed NFTs": {
+    "prefix": "getAllClaimed",
+    "body": [
+      "const claimedNFTs = await contract.getAllClaimed();",
+      "const firstOwner = claimedNFTs[0].owner;"
+    ],
+    "description": "Get All Claimed NFTs"
+  },
+  "Get All Unclaimed NFTs": {
+    "prefix": "getAllUnclaimed",
+    "body": [
+      "const unclaimedNFTs = await contract.getAllUnclaimed();",
+      "const firstUnclaimedNFT = unclaimedNFTs[0].name;"
+    ],
+    "description": "Get All Unclaimed NFTs"
+  },
+  "Get the claimed supply": {
+    "prefix": "totalClaimedSupply",
+    "body": [
+      "const claimedNFTCount = await contract.totalClaimedSupply();",
+      "console.log(`NFTs claimed so far: ${claimedNFTCount}`);"
+    ],
+    "description": "Get the claimed supply"
+  },
+  "Get the unclaimed supply": {
+    "prefix": "totalUnclaimedSupply",
+    "body": [
+      "const unclaimedNFTCount = await contract.totalUnclaimedSupply();",
+      "console.log(`NFTs left to claim: ${unclaimedNFTCount}`);"
+    ],
+    "description": "Get the unclaimed supply"
+  },
+  "Get NFT Balance": {
+    "prefix": "balanceOf",
+    "body": [
+      "// Address of the wallet to check NFT balance",
+      "const address = \"{{wallet_address}}\";",
+      "",
+      "const balance = await contract.balanceOf(address);",
+      "console.log(balance);"
+    ],
+    "description": "Get NFT Balance"
+  },
+  "Get a single NFT Metadata": {
+    "prefix": "get",
+    "body": ["const nft = await contract.get(\"0\");", "console.log(nft);"],
+    "description": "Get a single NFT Metadata"
+  },
+  "Get All NFTs": {
+    "prefix": "getAll",
+    "body": ["const nfts = await contract.getAll();", "console.log(nfts);"],
+    "description": "Get All NFTs"
+  },
+  "Get Owned NFTs": {
+    "prefix": "getOwned",
+    "body": [
+      "// Address of the wallet to get the NFTs of",
+      "const address = \"{{wallet_address}}\";",
+      "const nfts = await contract.getOwned(address);",
+      "console.log(nfts);"
+    ],
+    "description": "Get Owned NFTs"
+  },
+  "Transfer a single NFT": {
+    "prefix": "transfer",
+    "body": [
+      "// Address of the wallet you want to send the NFT to",
+      "const toAddress = \"{{wallet_address}}\";",
+      "",
+      "// The token ID of the NFT you want to send",
+      "const tokenId = \"0\";",
+      "",
+      "await contract.transfer(toAddress, tokenId);"
+    ],
+    "description": "Transfer a single NFT"
+  },
+  "Get Pack Balance": {
+    "prefix": "balanceOf",
+    "body": [
+      "// Address of the wallet to check pack balance",
+      "const address = \"{{wallet_address}}\";",
+      "// The token ID of the pack you want to check the wallets balance of",
+      "const tokenId = \"0\"",
+      "",
+      "const balance = await contract.balanceOf(address, tokenId);",
+      "console.log(balance);"
+    ],
+    "description": "Get Pack Balance"
+  },
+  "Create Pack": {
+    "prefix": "create",
+    "body": [
+      "// Data to create the pack",
+      "const pack = {",
+      "  // The address of the contract that holds the rewards you want to include",
+      "  assetContract: \"0x...\",",
+      "  // The metadata of the pack",
+      "  metadata: {",
+      "    name: \"Cool Pack\",",
+      "    description: \"This is a cool pack\",",
+      "    // This can be an image url or image file",
+      "    image: readFileSync(\"path/to/image.png\"),",
+      "  },",
+      "  // The NFTs you want to include in the pack",
+      "  assets: [",
+      "    {",
+      "      tokenId: 0, // The token ID of the asset you want to add",
+      "      amount: 1, // The amount of the asset you want to add",
+      "    }, {",
+      "      tokenId: 1,",
+      "      amount: 1,",
+      "    }",
+      "  ],",
+      "};",
+      "",
+      "await contract.create(pack);"
+    ],
+    "description": "Create Pack"
+  },
+  "Get Pack Data": {
+    "prefix": "getAll",
+    "body": ["const packs = await contract.getAll();", "console.log(packs);"],
+    "description": "Get Pack Data"
+  },
+  "Get Pack Reward Data": {
+    "prefix": "getNFTs",
+    "body": [
+      "// The pack ID of the pack whos rewards you want to get",
+      "const packId = 0;",
+      "",
+      "const nfts = await contract.getNFTs(packId);",
+      "console.log(nfts);"
+    ],
+    "description": "Get Pack Reward Data"
+  },
+  "Open Pack": {
+    "prefix": "open",
+    "body": [
+      "// The pack ID of the asset you want to buy",
+      "const packId = \"0\";",
+      "const tx = await contract.open(packId);",
+      "const receipt = tx.receipt; // the transaction receipt",
+      "const packId = tx.id; // the id of the pack that was opened",
+      "const rewards = tx.data(); // the contents of the opened pack"
+    ],
+    "description": "Open Pack"
+  },
+  "Transfer Pack": {
+    "prefix": "transfer",
+    "body": [
+      "// Address of the wallet you want to send the pack to",
+      "const toAddress = \"0x...\";",
+      "",
+      "// The token ID of the pack you want to send",
+      "const tokenId = \"0\";",
+      "",
+      "// The number of packs you want to send",
+      "const amount = 1;",
+      "",
+      "await contract.transfer(toAddress, tokenId, amount);"
+    ],
+    "description": "Transfer Pack"
+  },
+  "Get Funds owed to a particular wallet": {
+    "prefix": "balanceOf",
+    "body": [
+      "// The address to check the funds of",
+      "const address = \"{{wallet_address}}\";",
+      "const funds = await contract.balanceOf(address);",
+      "console.log(funds);"
+    ],
+    "description": "Get Funds owed to a particular wallet"
+  },
+  "Get non-native Token Funds owed to a particular wallet": {
+    "prefix": "balanceOfToken",
+    "body": [
+      "// The address to check the funds of",
+      "const address = \"{{wallet_address}}\";",
+      "// The address of the currency to check the contracts funds of",
+      "const tokenAddress = \"0x...\"",
+      "const funds = await contract.balanceOfToken(address, tokenAddress);",
+      "console.log(funds);"
+    ],
+    "description": "Get non-native Token Funds owed to a particular wallet"
+  },
+  "Distribute Funds": {
+    "prefix": "distribute",
+    "body": ["await contract.distribute();"],
+    "description": "Distribute Funds"
+  },
+  "Distribute Funds": {
+    "prefix": "distributeToken",
+    "body": [
+      "// The address of the currency to distribute funds",
+      "const tokenAddress = \"0x...\"",
+      "await contract.distributeToken(tokenAddress);"
+    ],
+    "description": "Distribute Funds"
+  },
+  "Get Recipients of this splits contract": {
+    "prefix": "getAllRecipients",
+    "body": [
+      "const recipients = await contract.getAllRecipients();",
+      "console.log(recipients);"
+    ],
+    "description": "Get Recipients of this splits contract"
+  },
+  "Withdraw Funds": {
+    "prefix": "withdraw",
+    "body": [
+      "// the wallet address that wants to withdraw their funds",
+      "const walletAddress = \"{{wallet_address}}\"",
+      "await contract.withdraw(walletAddress);"
+    ],
+    "description": "Withdraw Funds"
+  },
+  "Mint Tokens To Many Wallets": {
+    "prefix": "mintBatchTo",
+    "body": [
+      "// Data of the tokens you want to mint",
+      "const data = [",
+      "  {",
+      "    toAddress: \"{{wallet_address}}\", // Address to mint tokens to",
+      "    amount: 0.2, // How many tokens to mint to specified address",
+      "  },",
+      " {",
+      "   toAddress: \"0x...\",",
+      "   amount: 1.4,",
+      " }",
+      "]",
+      "",
+      "await contract.mintBatchTo(data);"
+    ],
+    "description": "Mint Tokens To Many Wallets"
+  },
+  "Mint Tokens": {
+    "prefix": "mintTo",
+    "body": [
+      "const toAddress = \"{{wallet_address}}\"; // Address of the wallet you want to mint the tokens to",
+      "const amount = \"1.5\"; // The amount of this token you want to mint",
+      "",
+      "await contract.mintTo(toAddress, amount);"
+    ],
+    "description": "Mint Tokens"
+  },
+  "Get Token Allowance": {
+    "prefix": "allowance",
+    "body": [
+      "// Address of the wallet to check token allowance",
+      "const spenderAddress = \"0x...\";",
+      "",
+      "const allowance = await contract.allowanceOf(otherAddress);",
+      "console.log(allowance);"
+    ],
+    "description": "Get Token Allowance"
+  },
+  "Get Token Allowance": {
+    "prefix": "allowanceOf",
+    "body": [
+      "// Address of the wallet who owns the funds",
+      "const address = \"{{wallet_address}}\";",
+      "",
+      "// Address of the wallet to check token allowance",
+      "const spenderAddress = \"0x...\";",
+      "",
+      "const allowance = await contract.allowanceOf(address, spenderAddress);",
+      "console.log(allowance);"
+    ],
+    "description": "Get Token Allowance"
+  },
+  "Get Token Balance for the currently connected wallet": {
+    "prefix": "balance",
+    "body": [
+      "const balance = await contract.balance();",
+      "console.log(balance);"
+    ],
+    "description": "Get Token Balance for the currently connected wallet"
+  },
+  "Get Token Balance": {
+    "prefix": "balanceOf",
+    "body": [
+      "// Address of the wallet to check token balance",
+      "const address = \"{{wallet_address}}\";",
+      "",
+      "const balance = await contract.balanceOf(address);",
+      "console.log(balance);"
+    ],
+    "description": "Get Token Balance"
+  },
+  "Burn Tokens": {
+    "prefix": "burn",
+    "body": [
+      "// The amount of this token you want to burn",
+      "const amount = 1.2;",
+      "",
+      "await contract.burn(amount);"
+    ],
+    "description": "Burn Tokens"
+  },
+  "Burn Tokens": {
+    "prefix": "burnFrom",
+    "body": [
+      "// Address of the wallet sending the tokens",
+      "const holderAddress = \"{{wallet_address}}\";",
+      "",
+      "// The amount of this token you want to burn",
+      "const amount = 1.2;",
+      "",
+      "await contract.burnFrom(holderAddress, amount);"
+    ],
+    "description": "Burn Tokens"
+  },
+  "Get the token Metadata (name, symbol, etc...)": {
+    "prefix": "get",
+    "body": ["const token = await contract.get();", "console.log(token);"],
+    "description": "Get the token Metadata (name, symbol, etc...)"
+  },
+  "Allows the specified `spender` wallet to transfer the given `amount` of tokens to another wallet": {
+    "prefix": "setAllowance",
+    "body": [
+      "// Address of the wallet to allow transfers from",
+      "const spenderAddress = \"0x...\";",
+      "",
+      "// The number of tokens to give as allowance",
+      "const amount = 100",
+      "",
+      "await contract.setAllowance(spenderAddress, amount);"
+    ],
+    "description": "Allows the specified `spender` wallet to transfer the given `amount` of tokens to another wallet"
+  },
+  "Transfer Tokens": {
+    "prefix": "transfer",
+    "body": [
+      "// Address of the wallet you want to send the tokens to",
+      "const toAddress = \"0x...\";",
+      "",
+      "// The amount of tokens you want to send",
+      "const amount = 0.1;",
+      "",
+      "await contract.transfer(toAddress, amount);"
+    ],
+    "description": "Transfer Tokens"
+  },
+  "Transfer Tokens To Many Wallets": {
+    "prefix": "transferBatch",
+    "body": [
+      "// Data of the tokens you want to mint",
+      "const data = [",
+      "  {",
+      "    toAddress: \"{{wallet_address}}\", // Address to mint tokens to",
+      "    amount: 100, // How many tokens to mint to specified address",
+      "  },",
+      " {",
+      "   toAddress: \"0x...\",",
+      "   amount: 100,",
+      " }",
+      "]",
+      "",
+      "await contract.transferBatch(data);"
+    ],
+    "description": "Transfer Tokens To Many Wallets"
+  },
+  "Transfer Tokens From Address": {
+    "prefix": "transferFrom",
+    "body": [
+      "// Address of the wallet sending the tokens",
+      "const fromAddress = \"{{wallet_address}}\";",
+      "",
+      "// Address of the wallet you want to send the tokens to",
+      "const toAddress = \"0x...\";",
+      "",
+      "// The number of tokens you want to send",
+      "const amount = 1.2",
+      "",
+      "// Note that the connected wallet must have approval to transfer the tokens of the fromAddress",
+      "await contract.transferFrom(fromAddress, toAddress, amount);"
+    ],
+    "description": "Transfer Tokens From Address"
+  },
+  "Can Execute": {
+    "prefix": "canExecute",
+    "body": [
+      "// The proposal ID of the proposal you want to check",
+      "const proposalId = \"0\";",
+      "const canExecute = await contract.canExecute(proposalId);",
+      "console.log(canExecute);"
+    ],
+    "description": "Can Execute"
+  },
+  "Execute Proposal": {
+    "prefix": "execute",
+    "body": [
+      "// The proposal ID ofthe proposal you want to execute",
+      "const proposalId = \"0\"",
+      "await contract.execute(proposalId);"
+    ],
+    "description": "Execute Proposal"
+  },
+  "Get All Proposals": {
+    "prefix": "getAll",
+    "body": [
+      "const proposals = await contract.getAll();",
+      "console.log(proposals);"
+    ],
+    "description": "Get All Proposals"
+  },
+  "Check If Wallet Voted": {
+    "prefix": "hasVoted",
+    "body": [
+      "// The proposal ID of the proposal you want to check",
+      "const proposalId = \"0\";",
+      "// The address of the wallet you want to check to see if they voted",
+      "const address = \"{{wallet_address}}\";",
+      "",
+      "await contract.hasVoted(proposalId, address);"
+    ],
+    "description": "Check If Wallet Voted"
+  },
+  "Create Proposal": {
+    "prefix": "propose",
+    "body": [
+      "// The description of the proposal you want to pass",
+      "const description = \"This is a great proposal - vote for it!\"",
+      "// You can (optionally) pass in contract calls that will get executed when the proposal is executed.",
+      "const executions = [",
+      "  {",
+      "    // The contract you want to make a call to",
+      "    toAddress: \"0x...\",",
+      "    // The amount of the native currency to send in this transaction",
+      "    nativeTokenValue: 0,",
+      "    // Transaction data that will be executed when the proposal is executed",
+      "    // This is an example transfer transaction with a token contract (which you would need to setup in code)",
+      "    transactionData: tokenContract.encoder.encode(",
+      "      \"transfer\", [",
+      "        fromAddress,",
+      "        amount,",
+      "      ]",
+      "    ),",
+      "  }",
+      "]",
+      "",
+      "const proposal = await contract.propose(description, executions);"
+    ],
+    "description": "Create Proposal"
+  },
+  "Vote": {
+    "prefix": "vote",
+    "body": [
+      "// The proposal ID of the proposal you want to vote on",
+      "const proposalId = \"0\";",
+      "// The vote type you want to cast, can be VoteType.Against, VoteType.For, or VoteType.Abstain",
+      "const voteType = VoteType.For;",
+      "// The (optional) reason for the vote",
+      "const reason = \"I like this proposal!\";",
+      "",
+      "await contract.vote(proposalId, voteType, reason);"
+    ],
+    "description": "Vote"
+  }
+}
