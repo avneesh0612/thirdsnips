@@ -1,9 +1,12 @@
 import { FC } from "react";
 
-import { Box, Text, Flex, Link } from "@chakra-ui/react";
-import type { headerProps } from "../../@types/types";
+import { Box, Text, Link } from "@chakra-ui/react";
 
-const Header: FC<headerProps> = onHomePage => {
+import { useRouter } from "next/router";
+
+const Header: FC = () => {
+  const router = useRouter()
+  
   return (
     <>
       <Box
@@ -37,11 +40,13 @@ const Header: FC<headerProps> = onHomePage => {
         >
           <Link href="https://scam.com">github.</Link>
 
-          {onHomePage ? (
-            <Link href="/mint">early access.</Link>
-          ) : (
-            <Link href="/">home.</Link>
-          )}
+          {
+            router.pathname === "/" ? (
+              <Link href="/mint">early access.</Link>
+            ) : (
+              <Link href="/">home.</Link>
+            )
+          }
         </Box>
       </Box>
     </>

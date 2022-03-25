@@ -1,50 +1,23 @@
 import type { NextPage } from "next";
-import { useEffect, useState } from "react";
 
-import { Box, Text, Button, Badge, useDisclosure } from "@chakra-ui/react";
-import type { modes } from "../../@types/types";
+import { Box, Text, Button, Badge } from "@chakra-ui/react";
 
-import { Header, ChangeNetwork } from "../../components";
-import { useWeb3 } from "@3rdweb/hooks";
-import { supabase } from "../../utils/supabaseClient";
+import { Header } from "../../components";
+
+import {
+  useAddress,
+  useMetamask,
+  useNFTDrop,
+} from "@thirdweb-dev/react";
 
 const MintPage: NextPage = () => {
-  const { address, connectWallet, error } = useWeb3();
-  const { isOpen, onOpen, onClose } = useDisclosure();
+  const connectWithMetamask = useMetamask()
+  const address = useAddress()
 
-  const [env, setEnv] = useState<modes>();
-
-  useEffect(() => {
-    process.env.NODE_ENV === "development"
-      ? setEnv("development")
-      : process.env.NODE_ENV === "production"
-      ? setEnv("production")
-      : setEnv("test");
-  }, [env, setEnv]);
-
-  useEffect(() => {
-    error?.name === "UnsupportedChainIdError" ? onOpen() : onClose();
-  }, [error, onOpen, onClose]);
-
-  const loginWithGithub = async () => {
-    const { user, session, error } = await supabase.auth.signIn(
-      {
-        provider: "github",
-      },
-      {
-        redirectTo:
-          env === "development"
-            ? "https://3000-kranurag-thirdwebsnippet-rf24ngqle54.ws-us38.gitpod.io/mint"
-            : "https://www.thirdsnips.live/mint",
-      }
-    );
-  };
-
-  const user = supabase.auth.user();
+  const nftDrop = useNFTDrop("0x968fAE78A3FdF1C3DBfb86F00Ab9590b4B145b8e");
 
   return (
     <>
-      <ChangeNetwork isOpen={isOpen} onOpen={onOpen} onClose={onClose} />
       <Box
         h="100vh"
         w="100vw"
@@ -52,7 +25,7 @@ const MintPage: NextPage = () => {
         bgImage="https://res.cloudinary.com/didkcszrq/image/upload/v1647222804/background_gradient_mwbieb.svg"
         backgroundSize="cover"
       >
-        <Header onHomePage={false} />
+        <Header />
 
         <Box
           display="flex"
@@ -65,7 +38,7 @@ const MintPage: NextPage = () => {
           textColor="gray.700"
           mt="16"
         >
-          <Text>cliam your early access NFT</Text>
+          <Text>claim your early access NFT</Text>
 
           {address ? (
             <Text
@@ -112,31 +85,14 @@ const MintPage: NextPage = () => {
           >
             {address ? (
               <>
-                <Button colorScheme="messenger">claim NFT</Button>
+                <Button colorScheme="messenger" onClick={()=>nftDrop?.claim(0)}>claim NFT</Button>
               </>
             ) : (
               <Button
-                onClick={() => connectWallet("injected")}
+                onClick={() => connectWithMetamask()}
                 colorScheme="messenger"
               >
                 connect wallet
-              </Button>
-            )}
-
-            {user ? (
-              <Text
-                fontSize="xl"
-                display="flex"
-                flexDir="row"
-                gap="1"
-                alignItems="center"
-              >
-                hello,
-                <Text color="gray.800">{user.user_metadata.full_name}</Text>
-              </Text>
-            ) : (
-              <Button onClick={loginWithGithub} colorScheme="messenger">
-                login with github
               </Button>
             )}
           </Box>
