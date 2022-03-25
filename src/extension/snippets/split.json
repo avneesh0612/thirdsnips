@@ -1,0 +1,46 @@
+{
+  "Get Funds owed to a particular wallet": {
+    "prefix": "splitBalanceOf",
+    "body": [
+      "// The address to check the funds of",
+      "const address = \"{{wallet_address}}\";",
+      "const funds = await contract.balanceOf(address);",
+      "console.log(funds);"
+    ],
+    "description": "Get Funds owed to a particular wallet"
+  },
+  "Get non-native Token Funds owed to a particular wallet": {
+    "prefix": "splitBalanceOfToken",
+    "body": [
+      "// The address to check the funds of",
+      "const address = \"{{wallet_address}}\";",
+      "// The address of the currency to check the contracts funds of",
+      "const tokenAddress = \"0x...\"",
+      "const funds = await contract.balanceOfToken(address, tokenAddress);",
+      "console.log(funds);"
+    ],
+    "description": "Get non-native Token Funds owed to a particular wallet"
+  },
+  "Distribute Funds": {
+    "prefix": "splitDistribute",
+    "body": ["await contract.distribute();"],
+    "description": "Distribute Funds"
+  },
+  "Get Recipients of this splits contract": {
+    "prefix": "splitGetAllRecipients",
+    "body": [
+      "const recipients = await contract.getAllRecipients();",
+      "console.log(recipients);"
+    ],
+    "description": "Get Recipients of this splits contract"
+  },
+  "Withdraw Funds": {
+    "prefix": "splitWithdraw",
+    "body": [
+      "// the wallet address that wants to withdraw their funds",
+      "const walletAddress = \"{{wallet_address}}\"",
+      "await contract.withdraw(walletAddress);"
+    ],
+    "description": "Withdraw Funds"
+  }
+}

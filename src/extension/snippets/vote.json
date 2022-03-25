@@ -1,0 +1,82 @@
+{
+  "Can Execute": {
+    "prefix": "voteCanExecute",
+    "body": [
+      "// The proposal ID of the proposal you want to check",
+      "const proposalId = \"0\";",
+      "const canExecute = await contract.canExecute(proposalId);",
+      "console.log(canExecute);"
+    ],
+    "description": "Can Execute"
+  },
+  "Execute Proposal": {
+    "prefix": "voteExecute",
+    "body": [
+      "// The proposal ID ofthe proposal you want to execute",
+      "const proposalId = \"0\"",
+      "await contract.execute(proposalId);"
+    ],
+    "description": "Execute Proposal"
+  },
+  "Get All Proposals": {
+    "prefix": "voteGetAll",
+    "body": [
+      "const proposals = await contract.getAll();",
+      "console.log(proposals);"
+    ],
+    "description": "Get All Proposals"
+  },
+  "Check If Wallet Voted": {
+    "prefix": "voteHasVoted",
+    "body": [
+      "// The proposal ID of the proposal you want to check",
+      "const proposalId = \"0\";",
+      "// The address of the wallet you want to check to see if they voted",
+      "const address = \"{{wallet_address}}\";",
+      "",
+      "await contract.hasVoted(proposalId, address);"
+    ],
+    "description": "Check If Wallet Voted"
+  },
+  "Create Proposal": {
+    "prefix": "votePropose",
+    "body": [
+      "// The description of the proposal you want to pass",
+      "const description = \"This is a great proposal - vote for it!\"",
+      "// You can (optionally) pass in contract calls that will get executed when the proposal is executed.",
+      "const executions = [",
+      "  {",
+      "    // The contract you want to make a call to",
+      "    toAddress: \"0x...\",",
+      "    // The amount of the native currency to send in this transaction",
+      "    nativeTokenValue: 0,",
+      "    // Transaction data that will be executed when the proposal is executed",
+      "    // This is an example transfer transaction with a token contract (which you would need to setup in code)",
+      "    transactionData: tokenContract.encoder.encode(",
+      "      \"transfer\", [",
+      "        fromAddress,",
+      "        amount,",
+      "      ]",
+      "    ),",
+      "  }",
+      "]",
+      "",
+      "const proposal = await contract.propose(description, executions);"
+    ],
+    "description": "Create Proposal"
+  },
+  "Vote": {
+    "prefix": "voteVote",
+    "body": [
+      "// The proposal ID of the proposal you want to vote on",
+      "const proposalId = \"0\";",
+      "// The vote type you want to cast, can be VoteType.Against, VoteType.For, or VoteType.Abstain",
+      "const voteType = VoteType.For;",
+      "// The (optional) reason for the vote",
+      "const reason = \"I like this proposal!\";",
+      "",
+      "await contract.vote(proposalId, voteType, reason);"
+    ],
+    "description": "Vote"
+  }
+}
