@@ -1,58 +1,36 @@
 import type { NextPage } from "next";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 
-import { Box, Text, Button, Badge, useDisclosure } from "@chakra-ui/react";
-import type { modes } from "../../@types/types";
+import { Box, Text, Button, Input } from "@chakra-ui/react";
 
-import { Header, ChangeNetwork } from "../../components";
-import { useWeb3 } from "@3rdweb/hooks";
-import { supabase } from "../../utils/supabaseClient";
+import { Header, ClaimNFT } from "../../components";
+
+import { useAddress } from "@thirdweb-dev/react";
 
 const MintPage: NextPage = () => {
-  const { address, connectWallet, error } = useWeb3();
-  const { isOpen, onOpen, onClose } = useDisclosure();
+  const address = useAddress();
+  const [val, setVal] = useState<string>();
 
-  const [env, setEnv] = useState<modes>();
+  let secret = "All Hail Web3!";
 
-  useEffect(() => {
-    process.env.NODE_ENV === "development"
-      ? setEnv("development")
-      : process.env.NODE_ENV === "production"
-      ? setEnv("production")
-      : setEnv("test");
-  }, [env, setEnv]);
+  const [metTheCondition, setMetTheCondition] = useState<boolean>(false);
+  console.log(metTheCondition);
 
-  useEffect(() => {
-    error?.name === "UnsupportedChainIdError" ? onOpen() : onClose();
-  }, [error, onOpen, onClose]);
-
-  const loginWithGithub = async () => {
-    const { user, session, error } = await supabase.auth.signIn(
-      {
-        provider: "github",
-      },
-      {
-        redirectTo:
-          env === "development"
-            ? "https://3000-kranurag-thirdwebsnippet-rf24ngqle54.ws-us38.gitpod.io/mint"
-            : "https://www.thirdsnips.live/mint",
-      }
-    );
+  const check = () => {
+    val === secret ? setMetTheCondition(true) : setMetTheCondition(false);
   };
-
-  const user = supabase.auth.user();
 
   return (
     <>
-      <ChangeNetwork isOpen={isOpen} onOpen={onOpen} onClose={onClose} />
       <Box
         h="100vh"
         w="100vw"
+        fontFamily="sen"
         overflowX="hidden"
         bgImage="https://res.cloudinary.com/didkcszrq/image/upload/v1647222804/background_gradient_mwbieb.svg"
         backgroundSize="cover"
       >
-        <Header onHomePage={false} />
+        <Header />
 
         <Box
           display="flex"
@@ -65,9 +43,9 @@ const MintPage: NextPage = () => {
           textColor="gray.700"
           mt="16"
         >
-          <Text>cliam your early access NFT</Text>
+          <Text>claim your early access NFT</Text>
 
-          {address ? (
+          {metTheCondition && address ? (
             <Text
               fontFamily="sen"
               fontWeight="400"
@@ -76,7 +54,7 @@ const MintPage: NextPage = () => {
             >
               wallet connected! claim your early access NFT
             </Text>
-          ) : (
+          ) : metTheCondition ? (
             <Text
               fontFamily="sen"
               fontWeight="400"
@@ -85,61 +63,46 @@ const MintPage: NextPage = () => {
             >
               please connect your wallet to continue
             </Text>
-          )}
+          ) : null}
 
-          {address && (
-            <Box fontFamily="sen">
-              <Badge
-                px="4"
-                py="1"
-                rounded="full"
-                fontSize="md"
-                colorScheme="green"
-              >
-                {address}
-              </Badge>
-            </Box>
-          )}
-
-          <Box
-            fontFamily="sen"
-            my="4"
-            display="flex"
-            flexDir="column"
-            justifyContent="center"
-            alignItems="center"
-            gap="4"
-          >
-            {address ? (
-              <>
-                <Button colorScheme="messenger">claim NFT</Button>
-              </>
-            ) : (
-              <Button
-                onClick={() => connectWallet("injected")}
-                colorScheme="messenger"
-              >
-                connect wallet
-              </Button>
-            )}
-
-            {user ? (
+          {!metTheCondition && (
+            <>
               <Text
+                fontFamily="sen"
+                fontWeight="400"
+                textColor="gray.600"
                 fontSize="xl"
-                display="flex"
-                flexDir="row"
-                gap="1"
-                alignItems="center"
               >
-                hello,
-                <Text color="gray.800">{user.user_metadata.full_name}</Text>
+                please enter the secret phrase to proceed to the next step
               </Text>
-            ) : (
-              <Button onClick={loginWithGithub} colorScheme="messenger">
-                login with github
-              </Button>
-            )}
-          </Box>
+
+              <Box
+                display="flex"
+                fontFamily="sen"
+                justifyContent="center"
+                my="4"
+                flexDir="column"
+              >
+                <Box>
+                  <Input
+                    placeholder="enter the secret phrase uwu..."
+                    w="96"
+                    bgColor="gray.100"
+                    textColor="gray.700"
+                    _placeholder={{ textColor: "gray.500" }}
+                    onChange={e => setVal(e.target.value)}
+                  />
+                </Box>
+                <Box>
+                  <Button colorScheme="messenger" onClick={check}>
+                    check
+                  </Button>
+                </Box>
+              </Box>
+            </>
+          )}
+
+          {metTheCondition && <ClaimNFT />}
         </Box>
       </Box>
     </>

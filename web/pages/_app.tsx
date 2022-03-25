@@ -1,7 +1,6 @@
 import type { AppProps } from "next/app";
 
 import { ChakraProvider } from "@chakra-ui/react";
-import { ThirdwebWeb3Provider } from "@3rdweb/hooks";
 import "regenerator-runtime/runtime";
 import theme from "../styles/theme";
 
@@ -16,13 +15,17 @@ import "@fontsource/syncopate/700.css";
 import "@fontsource/sen/400.css";
 import "@fontsource/sen/700.css";
 
+import { ThirdwebProvider } from "@thirdweb-dev/react";
+
 import { NextSeo } from "next-seo";
 
 function MyApp({ Component, pageProps }: AppProps) {
+
+   const desiredChainId = 80001;
+
   return (
-    <ThirdwebWeb3Provider
-      connectors={config.connectors}
-      supportedChainIds={config.supportedChainIds}
+    <ThirdwebProvider
+    desiredChainId={desiredChainId}
     >
       <ChakraProvider theme={theme}>
         <NextSeo
@@ -45,7 +48,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         />
         <Component {...pageProps} />
       </ChakraProvider>
-    </ThirdwebWeb3Provider>
+    </ThirdwebProvider>
   );
 }
 

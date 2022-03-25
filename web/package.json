@@ -9,14 +9,15 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@3rdweb/hooks": "^1.9.2",
     "@chakra-ui/react": "^1.8.6",
     "@emotion/react": "^11",
     "@emotion/styled": "^11",
     "@fontsource/jost": "^4.5.4",
     "@fontsource/sen": "^4.5.3",
     "@fontsource/syncopate": "^4.5.3",
-    "@supabase/supabase-js": "^1.31.1",
+    "@thirdweb-dev/react": "^2.0.1",
+    "@thirdweb-dev/sdk": "^2.0.14",
+    "ethers": "^5.6.1",
     "framer-motion": "^6",
     "next": "12.1.0",
     "next-seo": "^5.1.0",
