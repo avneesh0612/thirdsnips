@@ -1,5 +1,5 @@
-import { FC } from "react";
 import { Box, Text } from "@chakra-ui/react";
+import { FC } from "react";
 
 interface Props {
   title: string;
@@ -19,7 +19,12 @@ const Card: FC<Props> = ({ title, desc }) => {
     >
       <Text fontSize={{ base: "lg", lg: "xl" }}>{title}</Text>
 
-      <Text fontSize={{ base: "md", lg: "lg" }} fontFamily="sen" fontWeight="400" mt="1">
+      <Text
+        fontSize={{ base: "md", lg: "lg" }}
+        fontFamily="sen"
+        fontWeight="400"
+        mt="1"
+      >
         {desc}
       </Text>
     </Box>

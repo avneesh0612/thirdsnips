@@ -1,12 +1,10 @@
+import { Box, Text, Link } from "@chakra-ui/react";
+import { useRouter } from "next/router";
 import { FC } from "react";
 
-import { Box, Text, Link } from "@chakra-ui/react";
-
-import { useRouter } from "next/router";
-
 const Header: FC = () => {
-  const router = useRouter()
-  
+  const router = useRouter();
+
   return (
     <>
       <Box
@@ -40,13 +38,11 @@ const Header: FC = () => {
         >
           <Link href="https://scam.com">github.</Link>
 
-          {
-            router.pathname === "/" ? (
-              <Link href="/mint">early access.</Link>
-            ) : (
-              <Link href="/">home.</Link>
-            )
-          }
+          {router.pathname === "/" ? (
+            <Link href="/mint">early access.</Link>
+          ) : (
+            <Link href="/">home.</Link>
+          )}
         </Box>
       </Box>
     </>

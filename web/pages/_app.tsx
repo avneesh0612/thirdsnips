@@ -1,32 +1,22 @@
-import type { AppProps } from "next/app";
-
-import { ChakraProvider } from "@chakra-ui/react";
-import "regenerator-runtime/runtime";
-import theme from "../styles/theme";
-
 import config from "../lib/config";
-
+import theme from "../styles/theme";
+import { ChakraProvider } from "@chakra-ui/react";
 import "@fontsource/jost/500.css";
 import "@fontsource/jost/600.css";
-
-import "@fontsource/syncopate/400.css";
-import "@fontsource/syncopate/700.css";
-
 import "@fontsource/sen/400.css";
 import "@fontsource/sen/700.css";
-
+import "@fontsource/syncopate/400.css";
+import "@fontsource/syncopate/700.css";
 import { ThirdwebProvider } from "@thirdweb-dev/react";
-
 import { NextSeo } from "next-seo";
+import type { AppProps } from "next/app";
+import "regenerator-runtime/runtime";
 
 function MyApp({ Component, pageProps }: AppProps) {
-
-   const desiredChainId = 80001;
+  const desiredChainId = 80001;
 
   return (
-    <ThirdwebProvider
-    desiredChainId={desiredChainId}
-    >
+    <ThirdwebProvider desiredChainId={desiredChainId}>
       <ChakraProvider theme={theme}>
         <NextSeo
           title="ThirdSnips"
