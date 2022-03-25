@@ -23,14 +23,32 @@
     "@commitlint/cli": "^16.2.3",
     "@trivago/prettier-plugin-sort-imports": "^3.2.0"
   },
-  "snippets": [
-    {
-      "language": "javascript",
-      "path": "src/extension/snippets/snippets.json"
-    },
-    {
-      "language": "typescript",
-      "path": "src/extension/snippets/snippets.json"
-    }
-  ]
+  "contributes": {
+    "snippets": [
+      {
+        "language": "javascript",
+        "path": "./snippets/snippets.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/snippets.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/react.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/react.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/sdk.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/sdk.json"
+      }
+    ]
+  }
 }

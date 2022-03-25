@@ -1,8 +1,8 @@
 {
   "name": "thirdweb-snippets",
-  "displayName": "Thirdweb Snippets",
+  "displayName": "thirdsnips",
   "description": "Stop re-writing thirdweb snippets. Use thirdsnips to make it all snap!",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "publisher": "Avneesh Agarwal",
   "repository": {
     "url": "https://github.com/avneesh0612/thirdweb-snippets"
@@ -10,47 +10,41 @@
   "engines": {
     "vscode": "^1.65.0"
   },
+  "devDependencies": {
+    "prettier": "^2.6.0"
+  },
   "scripts": {
     "format": "prettier --write ."
   },
   "categories": [
     "Other"
   ],
-  "snippets": [
-    {
-      "language": "javascript",
-      "path": "./snippets/bundle-collection.json"
-    },
-    {
-      "language": "typescript",
-      "path": "./snippets/bundle-collection.json"
-    },
-    {
-      "language": "javascript",
-      "path": "./snippets/token.json"
-    },
-    {
-      "language": "typescript",
-      "path": "./snippets/token.json"
-    },
-    {
-      "language": "typescript",
-      "path": "./snippets/nft-collection.json"
-    },
-    {
-      "language": "javascript",
-      "path": "./snippets/nft-collection.json"
-    },
-    {
-      "language": "typescript",
-      "path": "./snippets/vote-collection.json"
-    },
-    {
-      "language": "javascript",
-      "path": "./snippets/vote-collection.json"
-    }
-  ],
-  "devDependencies": {
-    "prettier": "^2.6.0"
+  "contributes": {
+    "snippets": [
+      {
+        "language": "javascript",
+        "path": "./snippets/snippets.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/snippets.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/react.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/react.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/sdk.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/sdk.json"
+      }
+    ]
   }
 }
