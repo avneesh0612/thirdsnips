@@ -1,0 +1,52 @@
+{
+  "Wrap your application in the Provider": {
+    "prefix": "provider",
+    "body": [
+      "import { ChainId, ThirdwebProvider } from \"@thirdweb-dev/react\";",
+      "",
+      "const App = () => {",
+      "  return (",
+      "    <ThirdwebProvider desiredChainId={ChainId.Mainnet}>",
+      "      <${1:YourApp} />",
+      "    </ThirdwebProvider>",
+      "  );",
+      "};"
+    ],
+    "description": "Wrap your application in the Provider"
+  },
+  "The useAddress() hook": {
+    "prefix": "useAddress()",
+    "body": ["const address = useAddress()"],
+    "description": "The useAddress() hook"
+  },
+  "The useChainId() hook": {
+    "prefix": "useChainId",
+    "body": ["const chainId = useChainId()"],
+    "description": "The useChainId() hook"
+  },
+  "The useMetamask() hook": {
+    "prefix": "useMetamask",
+    "body": ["const connectWithMetamask = useMetamask()"],
+    "description": "The useMetamask() hook"
+  },
+  "The useWalletConnect() hook": {
+    "prefix": "useWalletConnect",
+    "body": ["const connectWithWalletConnect = useWalletConnect()"],
+    "description": "The useWalletConnect() hook"
+  },
+  "The useCoinbaseWallet() hook": {
+    "prefix": "useCoinbaseWallet",
+    "body": ["const connectWithCoinbase = useCoinbaseWallet()"],
+    "description": "The useCoinbaseWallet() hook"
+  },
+  "The useDisconnect() hook": {
+    "prefix": "useDisconnect",
+    "body": ["const disconnectWallet = useDisconnect()"],
+    "description": "The useDisconnect() hook"
+  },
+  "The useNetwork() hook": {
+    "prefix": "useNetwork",
+    "body": ["const useNetwork = useNetwork()"],
+    "description": "The useNetwork() hook"
+  }
+}
