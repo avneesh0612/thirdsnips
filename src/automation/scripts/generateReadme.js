@@ -26,7 +26,7 @@ fs.readdir(constants["snippetsFolder"], function (err, files) {
             snippet.description,
             `[${convertFileName(
               file
-            )} contract](https://github.com/avneesh0612/thirdweb-snippets/blob/main/snippets/${file})`,
+            )} contract](https://github.com/avneesh0612/thirdweb-snippets/tree/main/src/extension/snippets/${file})`,
           ]);
         });
         // Generating a markdown table
