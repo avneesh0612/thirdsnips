@@ -1,0 +1,82 @@
+{
+  "Claim NFTs to a specific Wallet": {
+    "prefix": "editiondropClaimTo",
+    "body": [
+      "const address = \"{{wallet_address}}\"; // address of the wallet you want to claim the NFTs",
+      "const tokenId = 0; // the id of the NFT you want to claim",
+      "const quantity = 1; // how many NFTs you want to claim",
+      "",
+      "const tx = await contract.claimTo(address, tokenId, quantity);",
+      "const receipt = tx.receipt; // the transaction receipt",
+      "const claimedTokenId = tx.id; // the id of the NFT claimed",
+      "const claimedNFT = await tx.data(); // (optional) get the claimed NFT metadata"
+    ],
+    "description": "Claim NFTs to a specific Wallet"
+  },
+  "Create a batch of NFTs to be claimed in the future": {
+    "prefix": "editiondropCreateBatch",
+    "body": [
+      "// Custom metadata of the NFTs to create",
+      "const metadatas = [{",
+      "  name: \"Cool NFT\",",
+      "  description: \"This is a cool NFT\",",
+      "  image: fs.readFileSync(\"path/to/image.png\"), // This can be an image url or file",
+      "}, {",
+      "  name: \"Cool NFT\",",
+      "  description: \"This is a cool NFT\",",
+      "  image: fs.readFileSync(\"path/to/image.png\"),",
+      "}];",
+      "",
+      "const results = await contract.createBatch(metadatas); // uploads and creates the NFTs on chain",
+      "const firstTokenId = results[0].id; // token id of the first created NFT",
+      "const firstNFT = await results[0].data(); // (optional) fetch details of the first created NFT"
+    ],
+    "description": "Create a batch of NFTs to be claimed in the future"
+  },
+  "Get NFT Balance": {
+    "prefix": "editiondropBalanceOf",
+    "body": [
+      "// Address of the wallet to check NFT balance",
+      "const address = \"{{wallet_address}}\";",
+      "",
+      "const balance = await contract.balanceOf(address);",
+      "console.log(balance);"
+    ],
+    "description": "Get NFT Balance"
+  },
+  "Get a single NFT Metadata": {
+    "prefix": "editiondropGet",
+    "body": ["const nft = await contract.get(\"0\");", "console.log(nft);"],
+    "description": "Get a single NFT Metadata"
+  },
+  "Get All NFTs": {
+    "prefix": "editiondropGetAll",
+    "body": ["const nfts = await contract.getAll();", "console.log(nfts);"],
+    "description": "Get All NFTs"
+  },
+  "Get Owned NFTs": {
+    "prefix": "editiondropGetOwned",
+    "body": [
+      "// Address of the wallet to get the NFTs of",
+      "const address = \"{{wallet_address}}\";",
+      "const nfts = await contract.getOwned(address);",
+      "console.log(nfts);"
+    ],
+    "description": "Get Owned NFTs"
+  },
+  "Transfer a single NFT": {
+    "prefix": "editiondropTransfer",
+    "body": [
+      "// Address of the wallet you want to send the NFT to",
+      "const toAddress = \"{{wallet_address}}\";",
+      "",
+      "// The token ID of the NFT you want to send",
+      "const tokenId = \"0\";",
+      "// How many copies of the NFTs to transfer",
+      "const amount = 3;",
+      "",
+      "await contract.transfer(toAddress, tokenId, amount);"
+    ],
+    "description": "Transfer a single NFT"
+  }
+}
