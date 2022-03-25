@@ -1,10 +1,8 @@
+import { Header, Hero, Working } from "../components";
+import { Box } from "@chakra-ui/react";
 import type { NextPage } from "next";
 
-import { Box } from "@chakra-ui/react";
-import { Header, Hero, Working } from "../components";
-
 const Home: NextPage = () => {
-  
   return (
     <>
       <Box

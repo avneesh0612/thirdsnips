@@ -1,8 +1,7 @@
-import { FC } from "react";
-
 import { Box, Text, Button } from "@chakra-ui/react";
-import Typed from "react-typed";
+import { FC } from "react";
 import { BsArrowRightShort } from "react-icons/bs";
+import Typed from "react-typed";
 
 const Hero: FC = () => {
   return (

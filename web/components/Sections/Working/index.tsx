@@ -1,7 +1,6 @@
-import { FC } from "react";
-
-import { Box, Text } from "@chakra-ui/react";
 import Card from "./Card";
+import { Box, Text } from "@chakra-ui/react";
+import { FC } from "react";
 
 const Working: FC = () => {
   return (

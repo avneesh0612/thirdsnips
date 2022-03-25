@@ -20,7 +20,8 @@
     "prettier": "^2.6.0"
   },
   "dependencies": {
-    "@commitlint/cli": "^16.2.3"
+    "@commitlint/cli": "^16.2.3",
+    "@trivago/prettier-plugin-sort-imports": "^3.2.0"
   },
   "snippets": [
     {

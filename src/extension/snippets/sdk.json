@@ -1,0 +1,47 @@
+{
+  "The useEdition() hook": {
+    "prefix": "useEdition",
+    "body": ["const useEdition = useEdition(${1:contractAddress})"],
+    "description": "The useEdition() hook"
+  },
+  "The useEditionDrop() hook": {
+    "prefix": "useEditionDrop",
+    "body": ["const useEditionDrop = useEditionDrop(${1:contractAddress})"],
+    "description": "The useEditionDrop() hook"
+  },
+  "The useMarketplace() hook": {
+    "prefix": "useMarketplace",
+    "body": ["const useMarketplace = useMarketplace(${1:contractAddress})"],
+    "description": "The useMarketplace() hook"
+  },
+  "The useNFTCollection() hook": {
+    "prefix": "useNFTCollection",
+    "body": ["const useNFTCollection = useNFTCollection(${1:contractAddress})"],
+    "description": "The useNFTCollection() hook"
+  },
+  "The useNFTDrop() hook": {
+    "prefix": "useNFTDrop",
+    "body": ["const useNFTDrop = useNFTDrop(${1:contractAddress})"],
+    "description": "The useNFTDrop() hook"
+  },
+  "The usePackModule() hook": {
+    "prefix": "usePack",
+    "body": ["const usePack = usePack(${1:moduleAddress})"],
+    "description": "The usePack() hook"
+  },
+  "The useSplit() hook": {
+    "prefix": "useSplit",
+    "body": ["const useSplit = useSplit(${1:contractAddress})"],
+    "description": "The useSplit() hook"
+  },
+  "The useToken() hook": {
+    "prefix": "useToken",
+    "body": ["const useToken = useToken(${1:contractAddress})"],
+    "description": "The useToken() hook"
+  },
+  "The useVote() hook": {
+    "prefix": "useVote",
+    "body": ["const useVote = useVote(${1:contractAddress})"],
+    "description": "The useVote() hook"
+  }
+}

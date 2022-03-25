@@ -1,10 +1,27 @@
 # 🌈 Table of Snippets
 
 
-thirdsnips currently has a total of 51 snippets.
+thirdsnips currently has a total of 68 snippets.
 
 | Prefix                   | Description                                                                                      |
 | ------------------------ | ------------------------------------------------------------------------------------------------ |
+| `provider`               | Wrap your application in the Provider                                                            |
+| `useAddress`             | The useAddress() hook                                                                            |
+| `useChainId`             | The useChainId() hook                                                                            |
+| `useMetamask`            | The useMetamask() hook                                                                           |
+| `useWalletConnect`       | The useWalletConnect() hook                                                                      |
+| `useCoinbaseWallet`      | The useCoinbaseWallet() hook                                                                     |
+| `useDisconnect`          | The useDisconnect() hook                                                                         |
+| `useNetwork`             | The useNetwork() hook                                                                            |
+| `useEdition`             | The useEdition() hook                                                                            |
+| `useEditionDrop`         | The useEditionDrop() hook                                                                        |
+| `useMarketplace`         | The useMarketplace() hook                                                                        |
+| `useNFTCollection`       | The useNFTCollection() hook                                                                      |
+| `useNFTDrop`             | The useNFTDrop() hook                                                                            |
+| `usePack`                | The usePack() hook                                                                               |
+| `useSplit`               | The useSplit() hook                                                                              |
+| `useToken`               | The useToken() hook                                                                              |
+| `useVote`                | The useVote() hook                                                                               |
 | `mintBatchTo`            | Mint Many NFTs with limited supplies                                                             |
 | `mintTo`                 | Mint an NFT with a limited supply                                                                |
 | `balanceOf`              | Get NFT Balance                                                                                  |

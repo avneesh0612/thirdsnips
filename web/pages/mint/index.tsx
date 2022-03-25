@@ -1,11 +1,8 @@
-import type { NextPage } from "next";
-import React, { useEffect, useState } from "react";
-
-import { Box, Text, Button, Input } from "@chakra-ui/react";
-
 import { Header, ClaimNFT } from "../../components";
-
+import { Box, Text, Button, Input } from "@chakra-ui/react";
 import { useAddress } from "@thirdweb-dev/react";
+import type { NextPage } from "next";
+import React, { useState } from "react";
 
 const MintPage: NextPage = () => {
   const address = useAddress();
