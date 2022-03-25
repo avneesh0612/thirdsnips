@@ -15,7 +15,7 @@
     "description": "Wrap your application in the Provider"
   },
   "The useAddress() hook": {
-    "prefix": "useAddress()",
+    "prefix": "useAddress",
     "body": ["const address = useAddress()"],
     "description": "The useAddress() hook"
   },
@@ -46,7 +46,7 @@
   },
   "The useNetwork() hook": {
     "prefix": "useNetwork",
-    "body": ["const useNetwork = useNetwork()"],
+    "body": ["const network = useNetwork()"],
     "description": "The useNetwork() hook"
   }
 }
