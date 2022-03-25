@@ -1,26 +1,31 @@
 import type { NextPage } from "next";
+import React, { useEffect, useState } from "react";
 
-import { Box, Text, Button, Badge } from "@chakra-ui/react";
+import { Box, Text, Button, Input } from "@chakra-ui/react";
 
-import { Header } from "../../components";
+import { Header, ClaimNFT } from "../../components";
 
-import {
-  useAddress,
-  useMetamask,
-  useNFTDrop,
-} from "@thirdweb-dev/react";
+import { useAddress } from "@thirdweb-dev/react";
 
 const MintPage: NextPage = () => {
-  const connectWithMetamask = useMetamask()
-  const address = useAddress()
+  const address = useAddress();
+  const [val, setVal] = useState<string>();
 
-  const nftDrop = useNFTDrop("0x968fAE78A3FdF1C3DBfb86F00Ab9590b4B145b8e");
+  let secret = "All Hail Web3!";
+
+  const [metTheCondition, setMetTheCondition] = useState<boolean>(false);
+  console.log(metTheCondition);
+
+  const check = () => {
+    val === secret ? setMetTheCondition(true) : setMetTheCondition(false);
+  };
 
   return (
     <>
       <Box
         h="100vh"
         w="100vw"
+        fontFamily="sen"
         overflowX="hidden"
         bgImage="https://res.cloudinary.com/didkcszrq/image/upload/v1647222804/background_gradient_mwbieb.svg"
         backgroundSize="cover"
@@ -40,7 +45,7 @@ const MintPage: NextPage = () => {
         >
           <Text>claim your early access NFT</Text>
 
-          {address ? (
+          {metTheCondition && address ? (
             <Text
               fontFamily="sen"
               fontWeight="400"
@@ -49,7 +54,7 @@ const MintPage: NextPage = () => {
             >
               wallet connected! claim your early access NFT
             </Text>
-          ) : (
+          ) : metTheCondition ? (
             <Text
               fontFamily="sen"
               fontWeight="400"
@@ -58,44 +63,46 @@ const MintPage: NextPage = () => {
             >
               please connect your wallet to continue
             </Text>
+          ) : null}
+
+          {!metTheCondition && (
+            <>
+              <Text
+                fontFamily="sen"
+                fontWeight="400"
+                textColor="gray.600"
+                fontSize="xl"
+              >
+                please enter the secret phrase to proceed to the next step
+              </Text>
+
+              <Box
+                display="flex"
+                fontFamily="sen"
+                justifyContent="center"
+                my="4"
+                flexDir="column"
+              >
+                <Box>
+                  <Input
+                    placeholder="enter the secret phrase uwu..."
+                    w="96"
+                    bgColor="gray.100"
+                    textColor="gray.700"
+                    _placeholder={{ textColor: "gray.500" }}
+                    onChange={e => setVal(e.target.value)}
+                  />
+                </Box>
+                <Box>
+                  <Button colorScheme="messenger" onClick={check}>
+                    check
+                  </Button>
+                </Box>
+              </Box>
+            </>
           )}
 
-          {address && (
-            <Box fontFamily="sen">
-              <Badge
-                px="4"
-                py="1"
-                rounded="full"
-                fontSize="md"
-                colorScheme="green"
-              >
-                {address}
-              </Badge>
-            </Box>
-          )}
-
-          <Box
-            fontFamily="sen"
-            my="4"
-            display="flex"
-            flexDir="column"
-            justifyContent="center"
-            alignItems="center"
-            gap="4"
-          >
-            {address ? (
-              <>
-                <Button colorScheme="messenger" onClick={()=>nftDrop?.claim(0)}>claim NFT</Button>
-              </>
-            ) : (
-              <Button
-                onClick={() => connectWithMetamask()}
-                colorScheme="messenger"
-              >
-                connect wallet
-              </Button>
-            )}
-          </Box>
+          {metTheCondition && <ClaimNFT />}
         </Box>
       </Box>
     </>
