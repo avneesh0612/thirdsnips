@@ -15,7 +15,7 @@ import "@fontsource/syncopate/700.css";
 import { NextSeo } from "next-seo";
 import type { AppProps } from "next/app";
 
-import Head from "next/head"
+import Head from "next/head";
 
 function MyApp({ Component, pageProps }: AppProps) {
   const desiredChainId = 80001;
@@ -43,7 +43,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         />
         <Head>
           <link rel="icon" type="image/svg" href="/assests/logo.svg" />
-        </Head>  
+        </Head>
         <Component {...pageProps} />
       </ChakraProvider>
     </ThirdwebProvider>

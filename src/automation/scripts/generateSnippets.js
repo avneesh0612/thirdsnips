@@ -10,6 +10,7 @@ const {
   snippetsFilePath,
 } = require("../data/constants");
 const renderSnippet = require("../utils/renderSnippet");
+const upperCase = require("../utils/upperCase");
 
 // Fetching the snippets from the thirdweb's snippet.json file using GitHub API
 axios.get(snippetsApiUrl).then(response => {
@@ -34,8 +35,8 @@ axios.get(snippetsApiUrl).then(response => {
       // Converting into the form which VSCode supports for snippets
       const snippet = renderSnippet(
         objectPath.get(method, "examples.javascript"),
-        method["name"],
-        method["summary"].replace(/\n/g, "")
+        `${contract.toLowerCase()}${upperCase(method["name"])}`,
+        `${method["summary"].replace(/\n/g, "")} | ${contract} contract`
       );
       // Adding the snippet to the snippets file
       fs.appendFileSync(`${snippetsFolder}/${snippetsFile}`, `${snippet}`);
