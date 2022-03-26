@@ -41,7 +41,7 @@ const Header: FC = () => {
           fontSize={{ base: "lg", md: "xl" }}
           fontWeight="700"
         >
-          <Link href="https://github.com/avneesh0612/thirdsnips">github.</Link>
+          <Link href="https://github.com/avneesh0612/thirdsnips" isExternal rel="noopener">github.</Link>
 
           {router.pathname === "/" ? (
             <Link href="/mint">early access.</Link>
