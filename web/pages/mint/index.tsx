@@ -11,7 +11,6 @@ const MintPage: NextPage = () => {
   let secret = "All Hail Web3!";
 
   const [metTheCondition, setMetTheCondition] = useState<boolean>(false);
-  console.log(metTheCondition);
 
   const check = () => {
     val === secret ? setMetTheCondition(true) : setMetTheCondition(false);

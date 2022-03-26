@@ -1,21 +1,17 @@
 import config from "../lib/config";
 import theme from "../styles/theme";
-
-import { ThirdwebProvider } from "@thirdweb-dev/react";
 import { ChakraProvider } from "@chakra-ui/react";
-import "regenerator-runtime/runtime";
-
 import "@fontsource/jost/500.css";
 import "@fontsource/jost/600.css";
 import "@fontsource/sen/400.css";
 import "@fontsource/sen/700.css";
 import "@fontsource/syncopate/400.css";
 import "@fontsource/syncopate/700.css";
-
+import { ThirdwebProvider } from "@thirdweb-dev/react";
 import { NextSeo } from "next-seo";
 import type { AppProps } from "next/app";
-
 import Head from "next/head";
+import "regenerator-runtime/runtime";
 
 function MyApp({ Component, pageProps }: AppProps) {
   const desiredChainId = 80001;
