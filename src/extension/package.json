@@ -3,9 +3,10 @@
   "displayName": "thirdsnips",
   "description": "Stop re-writing thirdweb snippets. Use thirdsnips to make it all snap!",
   "version": "0.1.0",
-  "publisher": "Avneesh Agarwal",
+  "icon": "logo.png",
+  "publisher": "AvneeshAgarwal",
   "repository": {
-    "url": "https://github.com/avneesh0612/thirdweb-snippets"
+    "url": "https://github.com/avneesh0612/thirdsnips"
   },
   "engines": {
     "vscode": "^1.65.0"

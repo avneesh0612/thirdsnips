@@ -1,7 +1,9 @@
 {
   "name": "thirdweb-snippets",
   "version": "0.1.0",
-  "repository": "git@github.com:avneesh0612/thirdweb-snippets.git",
+  "repository": {
+    "url": "https://github.com/avneesh0612/thirdsnips"
+  },
   "author": "Avneesh Agarwal",
   "license": "GPL-3.0-only",
   "scripts": {
