@@ -9,8 +9,8 @@
     "generateSnippets": "node ./src/automation/scripts/generateSnippets.js",
     "generateReadme": "node ./src/automation/scripts/generateReadme.js",
     "prepare": "husky install",
-    "format": "prettier --write src",
-    "format:check": "prettier --check src",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
     "pre-commit": "yarn run generateReadme && yarn run generateSnippets && yarn run format && git add -A ."
   },
   "devDependencies": {
