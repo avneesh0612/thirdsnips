@@ -1,16 +1,21 @@
 import config from "../lib/config";
 import theme from "../styles/theme";
+
+import { ThirdwebProvider } from "@thirdweb-dev/react";
 import { ChakraProvider } from "@chakra-ui/react";
+import "regenerator-runtime/runtime";
+
 import "@fontsource/jost/500.css";
 import "@fontsource/jost/600.css";
 import "@fontsource/sen/400.css";
 import "@fontsource/sen/700.css";
 import "@fontsource/syncopate/400.css";
 import "@fontsource/syncopate/700.css";
-import { ThirdwebProvider } from "@thirdweb-dev/react";
+
 import { NextSeo } from "next-seo";
 import type { AppProps } from "next/app";
-import "regenerator-runtime/runtime";
+
+import Head from "next/head"
 
 function MyApp({ Component, pageProps }: AppProps) {
   const desiredChainId = 80001;
@@ -36,6 +41,9 @@ function MyApp({ Component, pageProps }: AppProps) {
             cardType: "summary_large_image",
           }}
         />
+        <Head>
+          <link rel="icon" type="image/svg" href="/assests/logo.svg" />
+        </Head>  
         <Component {...pageProps} />
       </ChakraProvider>
     </ThirdwebProvider>

@@ -1,6 +1,5 @@
 # 🌈 Table of Snippets
 
-
 thirdsnips currently has a total of 68 snippets.
 
 | Prefix                   | Description                                                                                      |
@@ -72,7 +71,6 @@ thirdsnips currently has a total of 68 snippets.
 | `hasVoted`               | Check If Wallet Voted                                                                            |
 | `propose`                | Create Proposal                                                                                  |
 | `vote`                   | Vote                                                                                             |
-
 
 ## ⭐ Show your support
 

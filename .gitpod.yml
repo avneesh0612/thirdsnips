@@ -7,3 +7,12 @@ github:
     addCheck: true
     addComment: false
     addBadge: true
+
+tasks:
+  - init: yarn && cd web && yarn
+    command: cd web && yarn dev
+
+ports:
+  - port: 3000
+    visibility: private
+    onOpen: open-browser
