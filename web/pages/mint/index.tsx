@@ -1,9 +1,15 @@
-import { Header, ClaimNFT, SwitchNetwork } from "../../components";
-import { Box, Text, Button, Input, useToast } from "@chakra-ui/react";
+import { ClaimNFT, Header, SwitchNetwork } from "../../components";
+import {
+  Box,
+  Button,
+  FormControl,
+  Input,
+  Text,
+  useToast,
+} from "@chakra-ui/react";
 import { useAddress, useNetwork } from "@thirdweb-dev/react";
-import { ChainId } from "@thirdweb-dev/sdk";
 import type { NextPage } from "next";
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 const MintPage: NextPage = () => {
   const address = useAddress();
@@ -11,7 +17,6 @@ const MintPage: NextPage = () => {
 
   const [metTheCondition, setMetTheCondition] = useState<boolean | null>(null);
   const [isWrongNetwork, setIsWrongNetwork] = useState<boolean | null>(null);
-  console.log(isWrongNetwork);
 
   const network = useNetwork();
 
@@ -30,7 +35,7 @@ const MintPage: NextPage = () => {
       ? setMetTheCondition(true)
       : setMetTheCondition(false);
 
-    metTheCondition === false &&
+    val.toLowerCase() !== secret.toLowerCase() &&
       toast({
         title: "Wrong Guess o_O",
         description: "Please refer to the extension for the correct secret",
@@ -97,7 +102,7 @@ const MintPage: NextPage = () => {
                 please enter the secret phrase to proceed to the next step
               </Text>
 
-              <Box
+              <FormControl
                 display="flex"
                 fontFamily="sen"
                 justifyContent="center"
@@ -119,7 +124,7 @@ const MintPage: NextPage = () => {
                     check
                   </Button>
                 </Box>
-              </Box>
+              </FormControl>
             </>
           )}
 
