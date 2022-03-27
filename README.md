@@ -61,7 +61,7 @@ All the snippets are available in the 🌈 [Table of Snippets](./SNIPPETS.md)
 
 ## 👀 Early access NFT
 
-We are giving away 100 NFTs to the first 100 people who install our VSCode extension and run the `nft` command.
+We are giving away 1000 NFTs to the first 1000 people who install our VSCode extension and run the `nft` command.
 
 ## ⭐ Show your support
 
