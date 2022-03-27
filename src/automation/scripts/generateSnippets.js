@@ -46,6 +46,4 @@ axios.get(snippetsApiUrl).then(response => {
   shelljs.exec(`truncate -s -1 ${snippetsFilePath}`);
   // Adding the final "}" to the snippets file
   fs.appendFileSync(`${snippetsFolder}/${snippetsFile}`, "}");
-  // Formatting the file
-  shelljs.exec("yarn format");
 });
