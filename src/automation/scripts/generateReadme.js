@@ -5,7 +5,7 @@ const { readmeTop, readmeBottom } = require("../data/readmeConstants");
 const constants = require("../data/constants");
 
 // The array in which all the snippets are been stored, using this array we would be generating the markdown table in SNIPPETS.md file
-let finalSnippets = [["Prefix", "Description"]];
+let finalSnippets = [["Prefix", "Description", "Category"]];
 
 fs.readdir(constants["snippetsFolder"], function (err, files) {
   files.map(file => {
@@ -22,7 +22,11 @@ fs.readdir(constants["snippetsFolder"], function (err, files) {
 
         // Adding the snippet to the final array
         snippetArray.map(snippet => {
-          finalSnippets.push([`\`${snippet.prefix}\``, snippet.description]);
+          finalSnippets.push([
+            `\`${snippet.prefix}\``,
+            snippet.description.split("|")[0],
+            snippet.description.split("|")[1],
+          ]);
         });
 
         // Generating a markdown table

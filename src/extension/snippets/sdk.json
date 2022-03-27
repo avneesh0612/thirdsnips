@@ -1,47 +1,47 @@
 {
-  "The useEdition() hook": {
+  "The useEdition() hook | SDK hooks": {
     "prefix": "useEdition",
     "body": ["const useEdition = useEdition(${1:contractAddress})"],
-    "description": "The useEdition() hook"
+    "description": "The useEdition() hook | SDK hooks"
   },
-  "The useEditionDrop() hook": {
+  "The useEditionDrop() hook | SDK hooks": {
     "prefix": "useEditionDrop",
     "body": ["const useEditionDrop = useEditionDrop(${1:contractAddress})"],
-    "description": "The useEditionDrop() hook"
+    "description": "The useEditionDrop() hook | SDK hooks"
   },
-  "The useMarketplace() hook": {
+  "The useMarketplace() hook | SDK hooks": {
     "prefix": "useMarketplace",
     "body": ["const useMarketplace = useMarketplace(${1:contractAddress})"],
-    "description": "The useMarketplace() hook"
+    "description": "The useMarketplace() hook | SDK hooks"
   },
-  "The useNFTCollection() hook": {
+  "The useNFTCollection() hook | SDK hooks": {
     "prefix": "useNFTCollection",
     "body": ["const useNFTCollection = useNFTCollection(${1:contractAddress})"],
-    "description": "The useNFTCollection() hook"
+    "description": "The useNFTCollection() hook | SDK hooks"
   },
-  "The useNFTDrop() hook": {
+  "The useNFTDrop() hook | SDK hooks": {
     "prefix": "useNFTDrop",
     "body": ["const useNFTDrop = useNFTDrop(${1:contractAddress})"],
-    "description": "The useNFTDrop() hook"
+    "description": "The useNFTDrop() hook | SDK hooks"
   },
-  "The usePackModule() hook": {
+  "The usePackModule() hook | SDK hooks": {
     "prefix": "usePack",
     "body": ["const usePack = usePack(${1:moduleAddress})"],
-    "description": "The usePack() hook"
+    "description": "The usePack() hook | SDK hooks"
   },
-  "The useSplit() hook": {
+  "The useSplit() hook | SDK hooks": {
     "prefix": "useSplit",
     "body": ["const useSplit = useSplit(${1:contractAddress})"],
-    "description": "The useSplit() hook"
+    "description": "The useSplit() hook | SDK hooks"
   },
-  "The useToken() hook": {
+  "The useToken() hook | SDK hooks": {
     "prefix": "useToken",
     "body": ["const useToken = useToken(${1:contractAddress})"],
-    "description": "The useToken() hook"
+    "description": "The useToken() hook | SDK hooks"
   },
-  "The useVote() hook": {
+  "The useVote() hook | SDK hooks": {
     "prefix": "useVote",
     "body": ["const useVote = useVote(${1:contractAddress})"],
-    "description": "The useVote() hook"
+    "description": "The useVote() hook | SDK hooks"
   }
 }

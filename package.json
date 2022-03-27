@@ -7,7 +7,6 @@
   "author": "Avneesh Agarwal",
   "license": "GPL-3.0-only",
   "scripts": {
-    "install": "yarn install && cd src/automation && yarn install",
     "generateSnippets": "node ./src/automation/scripts/generateSnippets.js",
     "generateReadme": "node ./src/automation/scripts/generateReadme.js",
     "prepare": "husky install",
