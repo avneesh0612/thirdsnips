@@ -28,27 +28,27 @@
     "snippets": [
       {
         "language": "javascript",
-        "path": "./snippets/snippets.json"
+        "path": "./src/extension/snippets/snippets.json"
       },
       {
         "language": "typescript",
-        "path": "./snippets/snippets.json"
+        "path": "./src/extension/snippets/snippets.json"
       },
       {
         "language": "javascript",
-        "path": "./snippets/react.json"
+        "path": "./src/extension/snippets/react.json"
       },
       {
         "language": "typescript",
-        "path": "./snippets/react.json"
+        "path": "./src/extension/snippets/react.json"
       },
       {
         "language": "javascript",
-        "path": "./snippets/sdk.json"
+        "path": "./src/extension/snippets/sdk.json"
       },
       {
         "language": "typescript",
-        "path": "./snippets/sdk.json"
+        "path": "./src/extension/snippets/sdk.json"
       }
     ]
   }
