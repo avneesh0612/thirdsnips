@@ -16,12 +16,12 @@ const MintPage: NextPage = () => {
   const toast = useToast();
 
   const [metTheCondition, setMetTheCondition] = useState<boolean | null>(null);
-  const [isWrongNetwork, setIsWrongNetwork] = useState<boolean | null>(null);
+  const [isWrongNetwork, setIsWrongNetwork] = useState<boolean | null>(false);
 
   const network = useNetwork();
 
   useEffect(() => {
-    network?.[0].data.chain?.id === 80001
+    network?.[0].data.chain?.id !== 80001
       ? setIsWrongNetwork(false)
       : setIsWrongNetwork(true);
   }, [network, isWrongNetwork, setIsWrongNetwork]);
@@ -47,7 +47,7 @@ const MintPage: NextPage = () => {
 
   return (
     <>
-      {metTheCondition && !isWrongNetwork && <SwitchNetwork />}
+      {metTheCondition && address && !isWrongNetwork && <SwitchNetwork />}
       <Box
         h="100vh"
         w="100vw"
