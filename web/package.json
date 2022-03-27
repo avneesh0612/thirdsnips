@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "nextrate": "nextrate"
   },
   "dependencies": {
     "@chakra-ui/react": "^1.8.6",
@@ -31,6 +32,7 @@
     "@types/react": "17.0.40",
     "eslint": "8.11.0",
     "eslint-config-next": "12.1.0",
+    "nextrate": "^0.1.8",
     "typescript": "4.6.2"
   }
 }
