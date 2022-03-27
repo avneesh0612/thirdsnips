@@ -1,18 +1,22 @@
 import {
-  Box,
-  Text,
-  Button,
   Badge,
+  Box,
+  Button,
+  Spinner,
+  Text,
   useClipboard,
   useToast,
-  Input,
 } from "@chakra-ui/react";
-import { useAddress, useMetamask, useNFTDrop } from "@thirdweb-dev/react";
-import { FC, useState, useEffect } from "react";
+import { useAddress, useEditionDrop, useMetamask } from "@thirdweb-dev/react";
+import { FC, useEffect, useState } from "react";
 import { FiCopy } from "react-icons/fi";
 
 const ClaimNFT: FC = () => {
   const [add, setAdd] = useState<string>("");
+  const editionDrop = useEditionDrop(
+    "0xf21b092E6439C19ef38270d816346461c56aeD0b"
+  );
+  const [loading, setLoading] = useState<boolean>(false);
 
   const address = useAddress();
   const connectWithMetamask = useMetamask();
@@ -23,6 +27,32 @@ const ClaimNFT: FC = () => {
   }, [address, setAdd, add]);
 
   const { onCopy } = useClipboard(add);
+
+  const claimNFT = async () => {
+    setLoading(true);
+    editionDrop
+      ?.claimTo(address!, 0, 1)
+      .then(() => {
+        toast({
+          title: "NFT Claimed!",
+          description: "You have claimed your NFT!",
+          status: "success",
+          duration: 5000,
+          isClosable: true,
+        });
+        setLoading(false);
+      })
+      .catch(err => {
+        toast({
+          title: "NFT Claim Failed!",
+          description: err.message,
+          status: "error",
+          duration: 5000,
+          isClosable: true,
+        });
+        setLoading(false);
+      });
+  };
 
   const copy = () => {
     onCopy();
@@ -74,11 +104,17 @@ const ClaimNFT: FC = () => {
       >
         {address ? (
           <>
-            <Button colorScheme="messenger">claim NFT</Button>
+            <Button onClick={claimNFT} colorScheme="messenger">
+              {loading ? (
+                <Spinner size="sm" />
+              ) : (
+                <Text as="span">Claim NFT</Text>
+              )}
+            </Button>
           </>
         ) : (
           <Button onClick={() => connectWithMetamask()} colorScheme="messenger">
-            connect wallet
+            Connect Wallet
           </Button>
         )}
       </Box>

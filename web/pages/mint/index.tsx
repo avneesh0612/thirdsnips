@@ -6,14 +6,17 @@ import React, { useState } from "react";
 
 const MintPage: NextPage = () => {
   const address = useAddress();
-  const [val, setVal] = useState<string>();
+
+  const [val, setVal] = useState<string>("");
 
   let secret = "All Hail Web3!";
 
-  const [metTheCondition, setMetTheCondition] = useState<boolean>(false);
+  const [metTheCondition, setMetTheCondition] = useState<boolean>(true);
 
   const check = () => {
-    val === secret ? setMetTheCondition(true) : setMetTheCondition(false);
+    val.toLowerCase() === secret.toLowerCase()
+      ? setMetTheCondition(true)
+      : setMetTheCondition(false);
   };
 
   return (

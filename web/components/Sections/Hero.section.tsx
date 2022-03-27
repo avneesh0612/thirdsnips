@@ -43,6 +43,10 @@ const Hero: FC = () => {
 
         <Box>
           <Button
+            as="a"
+            href="https://marketplace.visualstudio.com/items?itemName=AvneeshAgarwal.thirdweb-snippets"
+            rel="noopener noreferrer"
+            target="_blank"
             fontFamily="jost"
             marginTop="12"
             fontSize="2xl"

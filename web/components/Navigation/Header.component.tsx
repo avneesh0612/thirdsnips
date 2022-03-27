@@ -1,4 +1,5 @@
-import { Box, Text, Link, Image } from "@chakra-ui/react";
+import { Box, Text, Image } from "@chakra-ui/react";
+import Link from "next/link";
 import { useRouter } from "next/router";
 import { FC } from "react";
 
@@ -24,7 +25,12 @@ const Header: FC = () => {
           fontSize={{ base: "xl", md: "2xl" }}
           fontWeight="600"
         >
-          <Image src="/assests/logo.svg" height="30" width="30" />
+          <Image
+            alt="Thirdsnips"
+            src="/assests/logo.svg"
+            height="30"
+            width="30"
+          />
 
           <Box display="flex" flexDir="row" alignItems="center">
             <Text>third</Text>
@@ -41,18 +47,18 @@ const Header: FC = () => {
           fontSize={{ base: "lg", md: "xl" }}
           fontWeight="700"
         >
-          <Link
+          <a
             href="https://github.com/avneesh0612/thirdsnips"
-            isExternal
-            rel="noopener"
+            rel="noopener noreferrer"
+            target="_blank"
           >
-            github.
-          </Link>
+            Github.
+          </a>
 
           {router.pathname === "/" ? (
-            <Link href="/mint">early access.</Link>
+            <Link href="/mint">Early Access.</Link>
           ) : (
-            <Link href="/">home.</Link>
+            <Link href="/">Home.</Link>
           )}
         </Box>
       </Box>

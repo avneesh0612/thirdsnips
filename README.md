@@ -61,7 +61,18 @@ All the snippets are available in the 🌈 [Table of Snippets](./SNIPPETS.md)
 
 ## 👀 Early access NFT
 
-We are giving away 1000 NFTs to the first 1000 people who install our VSCode extension and run the `nft` command.
+We are giving away 1000 NFTs to the first 1000 people who install our VSCode extension and claim the NFT!
+
+### Claiming the NFT
+
+1.  Install the extension
+2.  In a new js/ts file use the `secret` snippet
+3.  Copy the code
+4.  Go to the [website](https://www.thirdsnips.live/mint) and enter the code
+5.  Sign in with metamask
+6.  Claim your NFT!
+
+The entire process is free and you don't even need any gas!
 
 ## ⭐ Show your support
 
