@@ -1,22 +1,32 @@
 import { Header, ClaimNFT } from "../../components";
-import { Box, Text, Button, Input } from "@chakra-ui/react";
+import { Box, Text, Button, Input, useToast } from "@chakra-ui/react";
 import { useAddress } from "@thirdweb-dev/react";
 import type { NextPage } from "next";
 import React, { useState } from "react";
 
 const MintPage: NextPage = () => {
   const address = useAddress();
+  const toast = useToast();
 
   const [val, setVal] = useState<string>("");
 
   let secret = "All Hail Web3!";
 
-  const [metTheCondition, setMetTheCondition] = useState<boolean>(false);
+  const [metTheCondition, setMetTheCondition] = useState<boolean | null>(null);
 
   const check = () => {
     val.toLowerCase() === secret.toLowerCase()
       ? setMetTheCondition(true)
       : setMetTheCondition(false);
+
+    metTheCondition === false &&
+      toast({
+        title: "Wrong Guess o_O",
+        description: "Please refer to the extension for the correct secret",
+        status: "error",
+        duration: 5000,
+        isClosable: true,
+      });
   };
 
   return (

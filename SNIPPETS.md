@@ -5,7 +5,6 @@ thirdsnips currently has a total of 76 snippets.
 
 | Prefix                              | Description                                                                                       | Category                |
 | ----------------------------------- | ------------------------------------------------------------------------------------------------- | ----------------------- |
-| `provider`                          | Wrap your application in the Provider                                                             |  React SDK              |
 | `useEdition`                        | The useEdition() hook                                                                             |  SDK hooks              |
 | `useEditionDrop`                    | The useEditionDrop() hook                                                                         |  SDK hooks              |
 | `useMarketplace`                    | The useMarketplace() hook                                                                         |  SDK hooks              |
@@ -80,6 +79,7 @@ thirdsnips currently has a total of 76 snippets.
 | `voteHasVoted`                      | Check If Wallet Voted                                                                             |  Vote contract          |
 | `votePropose`                       | Create Proposal                                                                                   |  Vote contract          |
 | `voteVote`                          | Vote                                                                                              |  Vote contract          |
+| `provider`                          | Wrap your application in the Provider                                                             |  React SDK              |
 
 
 ## ⭐ Show your support

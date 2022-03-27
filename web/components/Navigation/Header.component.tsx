@@ -1,5 +1,5 @@
-import { Box, Text, Image } from "@chakra-ui/react";
-import Link from "next/link";
+import { Box, Text, Image, Link } from "@chakra-ui/react";
+import NextLink from "next/link";
 import { useRouter } from "next/router";
 import { FC } from "react";
 
@@ -47,18 +47,20 @@ const Header: FC = () => {
           fontSize={{ base: "lg", md: "xl" }}
           fontWeight="700"
         >
-          <a
-            href="https://github.com/avneesh0612/thirdsnips"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            Github.
-          </a>
+          <NextLink href="https://github.com/avneesh0612/thirdsnips" passHref>
+            <Link rel="noopener noreferrer" isExternal>
+              github.
+            </Link>
+          </NextLink>
 
           {router.pathname === "/" ? (
-            <Link href="/mint">Early Access.</Link>
+            <NextLink href="/mint" passHref>
+              <Link>early access.</Link>
+            </NextLink>
           ) : (
-            <Link href="/">Home.</Link>
+            <NextLink href="/" passHref>
+              <Link>home.</Link>
+            </NextLink>
           )}
         </Box>
       </Box>
