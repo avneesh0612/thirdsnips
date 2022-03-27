@@ -1,75 +1,75 @@
-{
-  "name": "thirdweb-snippets",
-  "displayName": "thirdsnips",
-  "description": "Stop re-writing thirdweb snippets. Use thirdsnips to make it all snap!",
-  "version": "0.2.1",
-  "icon": "logo.png",
-  "publisher": "AvneeshAgarwal",
-  "repository": {
-    "url": "https://github.com/avneesh0612/thirdsnips"
-  },
-  "engines": {
-    "vscode": "^1.65.0"
-  },
-  "devDependencies": {
-    "prettier": "^2.6.0"
-  },
-  "scripts": {
-    "format": "prettier --write ."
-  },
-  "categories": [
-    "Other"
-  ],
-  "contributes": {
-    "snippets": [
-      {
-        "language": "javascript",
-        "path": "./snippets/snippets.json"
-      },
-      {
-        "language": "typescript",
-        "path": "./snippets/snippets.json"
-      },
-      {
-        "language": "javascript",
-        "path": "./snippets/react.json"
-      },
-      {
-        "language": "typescript",
-        "path": "./snippets/react.json"
-      },
-      {
-        "language": "javascript",
-        "path": "./snippets/sdk.json"
-      },
-      {
-        "language": "typescript",
-        "path": "./snippets/sdk.json"
-      },
-      {
-        "language": "javascriptreact",
-        "path": "./snippets/snippets.json"
-      },
-      {
-        "language": "typescriptreact",
-        "path": "./snippets/snippets.json"
-      },
-      {
-        "language": "javascriptreact",
-        "path": "./snippets/react.json"
-      },
-      {
-        "language": "typescriptreact",
-        "path": "./snippets/react.json"
-      },
-      {
-        "language": "javascriptreact",
-        "path": "./snippets/sdk.json"
-      },
-      {
-        "language": "typescriptreact",
-        "path": "./snippets/sdk.json"
-      }
-    ]
-  }
-}
+{
+  "name": "thirdweb-snippets",
+  "displayName": "thirdsnips",
+  "description": "Stop re-writing thirdweb snippets. Use thirdsnips to make it all snap!",
+  "version": "0.2.0",
+  "icon": "logo.png",
+  "publisher": "AvneeshAgarwal",
+  "repository": {
+    "url": "https://github.com/avneesh0612/thirdsnips"
+  },
+  "engines": {
+    "vscode": "^1.65.0"
+  },
+  "devDependencies": {
+    "prettier": "^2.6.0"
+  },
+  "scripts": {
+    "format": "prettier --write ."
+  },
+  "categories": [
+    "Other"
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "language": "javascript",
+        "path": "./snippets/snippets.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/snippets.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/react.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/react.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/sdk.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/sdk.json"
+      },
+      {
+        "language": "javascriptreact",
+        "path": "./snippets/snippets.json"
+      },
+      {
+        "language": "typescriptreact",
+        "path": "./snippets/snippets.json"
+      },
+      {
+        "language": "javascriptreact",
+        "path": "./snippets/react.json"
+      },
+      {
+        "language": "typescriptreact",
+        "path": "./snippets/react.json"
+      },
+      {
+        "language": "javascriptreact",
+        "path": "./snippets/sdk.json"
+      },
+      {
+        "language": "typescriptreact",
+        "path": "./snippets/sdk.json"
+      }
+    ]
+  }
+}
