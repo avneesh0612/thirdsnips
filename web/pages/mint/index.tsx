@@ -11,7 +11,7 @@ const MintPage: NextPage = () => {
 
   let secret = "All Hail Web3!";
 
-  const [metTheCondition, setMetTheCondition] = useState<boolean>(true);
+  const [metTheCondition, setMetTheCondition] = useState<boolean>(false);
 
   const check = () => {
     val.toLowerCase() === secret.toLowerCase()

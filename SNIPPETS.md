@@ -1,11 +1,20 @@
 # 🌈 Table of Snippets
 
 
-thirdsnips currently has a total of 80 snippets.
+thirdsnips currently has a total of 76 snippets.
 
 | Prefix                              | Description                                                                                       | Category                |
 | ----------------------------------- | ------------------------------------------------------------------------------------------------- | ----------------------- |
 | `provider`                          | Wrap your application in the Provider                                                             |  React SDK              |
+| `useEdition`                        | The useEdition() hook                                                                             |  SDK hooks              |
+| `useEditionDrop`                    | The useEditionDrop() hook                                                                         |  SDK hooks              |
+| `useMarketplace`                    | The useMarketplace() hook                                                                         |  SDK hooks              |
+| `useNFTCollection`                  | The useNFTCollection() hook                                                                       |  SDK hooks              |
+| `useNFTDrop`                        | The useNFTDrop() hook                                                                             |  SDK hooks              |
+| `usePack`                           | The usePack() hook                                                                                |  SDK hooks              |
+| `useSplit`                          | The useSplit() hook                                                                               |  SDK hooks              |
+| `useToken`                          | The useToken() hook                                                                               |  SDK hooks              |
+| `useVote`                           | The useVote() hook                                                                                |  SDK hooks              |
 | `editionMintBatchTo`                | Mint Many NFTs with limited supplies                                                              |  Edition contract       |
 | `editionMintTo`                     | Mint an NFT with a limited supply                                                                 |  Edition contract       |
 | `editionBalanceOf`                  | Get NFT Balance                                                                                   |  Edition contract       |
@@ -37,7 +46,6 @@ thirdsnips currently has a total of 80 snippets.
 | `nftdropGetAllClaimed`              | Get All Claimed NFTs                                                                              |  NFTDrop contract       |
 | `nftdropGetAllUnclaimed`            | Get All Unclaimed NFTs                                                                            |  NFTDrop contract       |
 | `nftdropTotalClaimedSupply`         | Get the claimed supply                                                                            |  NFTDrop contract       |
-| `secret`                            | secret                                                                                            |  👀                     |
 | `nftdropTotalUnclaimedSupply`       | Get the unclaimed supply                                                                          |  NFTDrop contract       |
 | `nftdropBalanceOf`                  | Get NFT Balance                                                                                   |  NFTDrop contract       |
 | `nftdropGet`                        | Get a single NFT Metadata                                                                         |  NFTDrop contract       |
@@ -52,17 +60,14 @@ thirdsnips currently has a total of 80 snippets.
 | `packTransfer`                      | Transfer Pack                                                                                     |  Pack contract          |
 | `splitBalanceOf`                    | Get Funds owed to a particular wallet                                                             |  Split contract         |
 | `splitBalanceOfToken`               | Get non-native Token Funds owed to a particular wallet                                            |  Split contract         |
-| `splitDistribute`                   | Distribute Funds                                                                                  |  Split contract         |
 | `splitDistributeToken`              | Distribute Funds                                                                                  |  Split contract         |
 | `splitGetAllRecipients`             | Get Recipients of this splits contract                                                            |  Split contract         |
 | `splitWithdraw`                     | Withdraw Funds                                                                                    |  Split contract         |
 | `tokenMintBatchTo`                  | Mint Tokens To Many Wallets                                                                       |  Token contract         |
 | `tokenMintTo`                       | Mint Tokens                                                                                       |  Token contract         |
-| `tokenAllowance`                    | Get Token Allowance                                                                               |  Token contract         |
 | `tokenAllowanceOf`                  | Get Token Allowance                                                                               |  Token contract         |
 | `tokenBalance`                      | Get Token Balance for the currently connected wallet                                              |  Token contract         |
 | `tokenBalanceOf`                    | Get Token Balance                                                                                 |  Token contract         |
-| `tokenBurn`                         | Burn Tokens                                                                                       |  Token contract         |
 | `tokenBurnFrom`                     | Burn Tokens                                                                                       |  Token contract         |
 | `tokenGet`                          | Get the token Metadata (name, symbol, etc...)                                                     |  Token contract         |
 | `tokenSetAllowance`                 | Allows the specified `spender` wallet to transfer the given `amount` of tokens to another wallet  |  Token contract         |
@@ -75,15 +80,6 @@ thirdsnips currently has a total of 80 snippets.
 | `voteHasVoted`                      | Check If Wallet Voted                                                                             |  Vote contract          |
 | `votePropose`                       | Create Proposal                                                                                   |  Vote contract          |
 | `voteVote`                          | Vote                                                                                              |  Vote contract          |
-| `useEdition`                        | The useEdition() hook                                                                             |  SDK hooks              |
-| `useEditionDrop`                    | The useEditionDrop() hook                                                                         |  SDK hooks              |
-| `useMarketplace`                    | The useMarketplace() hook                                                                         |  SDK hooks              |
-| `useNFTCollection`                  | The useNFTCollection() hook                                                                       |  SDK hooks              |
-| `useNFTDrop`                        | The useNFTDrop() hook                                                                             |  SDK hooks              |
-| `usePack`                           | The usePack() hook                                                                                |  SDK hooks              |
-| `useSplit`                          | The useSplit() hook                                                                               |  SDK hooks              |
-| `useToken`                          | The useToken() hook                                                                               |  SDK hooks              |
-| `useVote`                           | The useVote() hook                                                                                |  SDK hooks              |
 
 
 ## ⭐ Show your support
