@@ -19,7 +19,6 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ThirdwebProvider
       desiredChainId={desiredChainId}
-      supportedChains={supportedChains}
       sdkOptions={{
         gasless: {
           openzeppelin: {

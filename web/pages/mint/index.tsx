@@ -1,26 +1,48 @@
-import { Header, ClaimNFT } from "../../components";
-import { Box, Text, Button, Input } from "@chakra-ui/react";
-import { useAddress } from "@thirdweb-dev/react";
+import { Header, ClaimNFT, SwitchNetwork } from "../../components";
+import { Box, Text, Button, Input, useToast } from "@chakra-ui/react";
+import { useAddress, useNetwork } from "@thirdweb-dev/react";
+import { ChainId } from "@thirdweb-dev/sdk";
 import type { NextPage } from "next";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const MintPage: NextPage = () => {
   const address = useAddress();
+  const toast = useToast();
+
+  const [metTheCondition, setMetTheCondition] = useState<boolean | null>(null);
+  const [isWrongNetwork, setIsWrongNetwork] = useState<boolean | null>(null);
+  console.log(isWrongNetwork);
+
+  const network = useNetwork();
+
+  useEffect(() => {
+    network?.[0].data.chain?.id === 80001
+      ? setIsWrongNetwork(false)
+      : setIsWrongNetwork(true);
+  }, [network, isWrongNetwork, setIsWrongNetwork]);
 
   const [val, setVal] = useState<string>("");
 
   let secret = "All Hail Web3!";
 
-  const [metTheCondition, setMetTheCondition] = useState<boolean>(false);
-
   const check = () => {
     val.toLowerCase() === secret.toLowerCase()
       ? setMetTheCondition(true)
       : setMetTheCondition(false);
+
+    metTheCondition === false &&
+      toast({
+        title: "Wrong Guess o_O",
+        description: "Please refer to the extension for the correct secret",
+        status: "error",
+        duration: 5000,
+        isClosable: true,
+      });
   };
 
   return (
     <>
+      {metTheCondition && !isWrongNetwork && <SwitchNetwork />}
       <Box
         h="100vh"
         w="100vw"
