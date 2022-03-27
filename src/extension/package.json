@@ -45,6 +45,30 @@
       {
         "language": "typescript",
         "path": "./snippets/sdk.json"
+      },
+      {
+        "language": "javascriptreact",
+        "path": "./snippets/snippets.json"
+      },
+      {
+        "language": "typescriptreact",
+        "path": "./snippets/snippets.json"
+      },
+      {
+        "language": "javascriptreact",
+        "path": "./snippets/react.json"
+      },
+      {
+        "language": "typescriptreact",
+        "path": "./snippets/react.json"
+      },
+      {
+        "language": "javascriptreact",
+        "path": "./snippets/sdk.json"
+      },
+      {
+        "language": "typescriptreact",
+        "path": "./snippets/sdk.json"
       }
     ]
   }
