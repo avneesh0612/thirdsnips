@@ -2,7 +2,7 @@
   "name": "thirdweb-snippets",
   "displayName": "thirdsnips",
   "description": "Stop re-writing thirdweb snippets. Use thirdsnips to make it all snap!",
-  "version": "0.2.0",
+  "version": "0.1.0",
   "icon": "logo.png",
   "publisher": "AvneeshAgarwal",
   "repository": {
@@ -44,6 +44,30 @@
       },
       {
         "language": "typescript",
+        "path": "./snippets/sdk.json"
+      },
+      {
+        "language": "javascriptreact",
+        "path": "./snippets/snippets.json"
+      },
+      {
+        "language": "typescriptreact",
+        "path": "./snippets/snippets.json"
+      },
+      {
+        "language": "javascriptreact",
+        "path": "./snippets/react.json"
+      },
+      {
+        "language": "typescriptreact",
+        "path": "./snippets/react.json"
+      },
+      {
+        "language": "javascriptreact",
+        "path": "./snippets/sdk.json"
+      },
+      {
+        "language": "typescriptreact",
         "path": "./snippets/sdk.json"
       }
     ]
