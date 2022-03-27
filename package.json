@@ -12,7 +12,7 @@
     "prepare": "husky install",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "pre-commit": "yarn run generateReadme && yarn run generateSnippets && yarn run format && git add -A ."
+    "pre-commit": "yarn run generateReadme && yarn run format && git add -A ."
   },
   "devDependencies": {
     "commitlint": "^16.2.3",

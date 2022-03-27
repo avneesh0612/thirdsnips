@@ -537,7 +537,7 @@
     "body": ["await contract.distribute();"],
     "description": "Distribute Funds | Split contract"
   },
-  "Distribute Funds | Split contract": {
+  "Distribute Funds token | Split contract": {
     "prefix": "splitDistributeToken",
     "body": [
       "// The address of the currency to distribute funds",
@@ -603,7 +603,7 @@
     ],
     "description": "Get Token Allowance | Token contract"
   },
-  "Get Token Allowance | Token contract": {
+  "Get Token Allowance of | Token contract": {
     "prefix": "tokenAllowanceOf",
     "body": [
       "// Address of the wallet who owns the funds",
@@ -646,7 +646,7 @@
     ],
     "description": "Burn Tokens | Token contract"
   },
-  "Burn Tokens | Token contract": {
+  "Burn Tokens from | Token contract": {
     "prefix": "tokenBurnFrom",
     "body": [
       "// Address of the wallet sending the tokens",
@@ -676,6 +676,11 @@
       "await contract.setAllowance(spenderAddress, amount);"
     ],
     "description": "Allows the specified `spender` wallet to transfer the given `amount` of tokens to another wallet | Token contract"
+  },
+  "secret | 👀": {
+    "prefix": "secret",
+    "body": ["All Hail Web3!"],
+    "description": "secret | 👀"
   },
   "Transfer Tokens | Token contract": {
     "prefix": "tokenTransfer",

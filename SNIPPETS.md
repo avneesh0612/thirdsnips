@@ -1,7 +1,7 @@
 # 🌈 Table of Snippets
 
 
-thirdsnips currently has a total of 76 snippets.
+thirdsnips currently has a total of 80 snippets.
 
 | Prefix                              | Description                                                                                       | Category                |
 | ----------------------------------- | ------------------------------------------------------------------------------------------------- | ----------------------- |
@@ -60,17 +60,21 @@ thirdsnips currently has a total of 76 snippets.
 | `packTransfer`                      | Transfer Pack                                                                                     |  Pack contract          |
 | `splitBalanceOf`                    | Get Funds owed to a particular wallet                                                             |  Split contract         |
 | `splitBalanceOfToken`               | Get non-native Token Funds owed to a particular wallet                                            |  Split contract         |
+| `splitDistribute`                   | Distribute Funds                                                                                  |  Split contract         |
 | `splitDistributeToken`              | Distribute Funds                                                                                  |  Split contract         |
 | `splitGetAllRecipients`             | Get Recipients of this splits contract                                                            |  Split contract         |
 | `splitWithdraw`                     | Withdraw Funds                                                                                    |  Split contract         |
 | `tokenMintBatchTo`                  | Mint Tokens To Many Wallets                                                                       |  Token contract         |
 | `tokenMintTo`                       | Mint Tokens                                                                                       |  Token contract         |
+| `tokenAllowance`                    | Get Token Allowance                                                                               |  Token contract         |
 | `tokenAllowanceOf`                  | Get Token Allowance                                                                               |  Token contract         |
 | `tokenBalance`                      | Get Token Balance for the currently connected wallet                                              |  Token contract         |
 | `tokenBalanceOf`                    | Get Token Balance                                                                                 |  Token contract         |
+| `tokenBurn`                         | Burn Tokens                                                                                       |  Token contract         |
 | `tokenBurnFrom`                     | Burn Tokens                                                                                       |  Token contract         |
 | `tokenGet`                          | Get the token Metadata (name, symbol, etc...)                                                     |  Token contract         |
 | `tokenSetAllowance`                 | Allows the specified `spender` wallet to transfer the given `amount` of tokens to another wallet  |  Token contract         |
+| `secret`                            | secret                                                                                            |  👀                     |
 | `tokenTransfer`                     | Transfer Tokens                                                                                   |  Token contract         |
 | `tokenTransferBatch`                | Transfer Tokens To Many Wallets                                                                   |  Token contract         |
 | `tokenTransferFrom`                 | Transfer Tokens From Address                                                                      |  Token contract         |
