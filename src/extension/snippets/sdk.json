@@ -43,5 +43,10 @@
     "prefix": "useVote",
     "body": ["const useVote = useVote(${1:contractAddress})"],
     "description": "The useVote() hook | SDK hooks"
+  },
+  "secret | 👀": {
+    "prefix": "secret",
+    "body": ["All Hail Web3!"],
+    "description": "secret | 👀"
   }
 }
