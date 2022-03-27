@@ -37,7 +37,7 @@ const Hero: FC = () => {
           textColor="gray.500"
           fontWeight="400"
         >
-          all the code snippets from thirdweb portal, packed in an vscode
+          all the code snippets from thirdweb portal, packed in an VSCode
           extension
         </Text>
 

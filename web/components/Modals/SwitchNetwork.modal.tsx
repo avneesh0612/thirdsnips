@@ -14,7 +14,7 @@ import React, { FC } from "react";
 const ChangeNetwork: FC = () => {
   return (
     <>
-      <Modal isOpen={true} onClose={() => {}} isCentered={true}>
+      <Modal isOpen isCentered>
         <ModalOverlay />
         <ModalContent fontFamily="sen">
           <ModalHeader>Change Network</ModalHeader>

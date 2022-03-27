@@ -29,16 +29,24 @@ function MyApp({ Component, pageProps }: AppProps) {
     >
       <ChakraProvider theme={theme}>
         <NextSeo
-          title="ThirdSnips"
-          titleTemplate="ThirdSnips"
-          defaultTitle="ThirdSnips"
-          description="Stop writing thirdweb snippets! Use thirdsnips to make it all snap. All the code snippets from thirdweb portal, packed in an vscode extension."
+          title="Thirdsnips"
+          titleTemplate="Thirdsnips"
+          defaultTitle="Thirdsnips"
+          description="Stop writing thirdweb snippets! Use thirdsnips to make it all snap. All the code snippets from thirdweb portal, packed in an VSCode extension."
           canonical="https://www.thirdsnips.live/"
           openGraph={{
             url: "https://www.thirdsnips.live/",
-            title: "ThirdSnips",
+            title: "Thirdsnips",
             description:
-              "Stop writing thirdweb snippets! Use thirdsnips to make it all snap. All the code snippets from thirdweb portal, packed in an vscode extension.",
+              "Stop writing thirdweb snippets! Use thirdsnips to make it all snap. All the code snippets from thirdweb portal, packed in an VSCode extension.",
+            images: [
+              {
+                url: "https://res.cloudinary.com/didkcszrq/image/upload/v1648392505/OG_image_p6027z.png",
+                width: 1475,
+                height: 786,
+                alt: "Thirdsnips",
+              },
+            ],
           }}
           twitter={{
             handle: "@avneesh0612",
