@@ -9,7 +9,7 @@
     "url": "https://github.com/avneesh0612/thirdsnips"
   },
   "engines": {
-    "VSCode": "^1.65.0"
+    "vscode": "^1.65.0"
   },
   "devDependencies": {
     "prettier": "^2.6.0"
