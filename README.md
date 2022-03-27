@@ -36,19 +36,19 @@ might need to explicitly enable loading of VSCode snippet plugins (like in the c
 1. With [packer](https://github.com/wbthomason/packer.nvim) -
 
    ```
-   use "avneesh0612/thirdweb-snippets"
+   use "avneesh0612/thirdsnips"
    ```
 
 2. With [vim-plug](https://github.com/junegunn/vim-plug)
 
    ```
-   Plug "avneesh0612/thirdweb-snippets"
+   Plug "avneesh0612/thirdsnips"
    ```
 
 3. If you are using `coc-snippets`, you can simply run the following command -
 
    ```
-   :CocInstall https://github.com/avneesh0612/thirdweb-snippets@main
+   :CocInstall https://github.com/avneesh0612/thirdsnips@main
    ```
 
 ### ✨ Atom
