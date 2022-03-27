@@ -49,6 +49,30 @@
       {
         "language": "typescript",
         "path": "./src/extension/snippets/sdk.json"
+      },
+      {
+        "language": "javascriptreact",
+        "path": "./src/extension/snippets/snippets.json"
+      },
+      {
+        "language": "typescriptreact",
+        "path": "./src/extension/snippets/snippets.json"
+      },
+      {
+        "language": "javascriptreact",
+        "path": "./src/extension/snippets/react.json"
+      },
+      {
+        "language": "typescriptreact",
+        "path": "./src/extension/snippets/react.json"
+      },
+      {
+        "language": "javascriptreact",
+        "path": "./src/extension/snippets/sdk.json"
+      },
+      {
+        "language": "typescriptreact",
+        "path": "./src/extension/snippets/sdk.json"
       }
     ]
   }
