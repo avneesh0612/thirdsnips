@@ -21,7 +21,7 @@ const MintPage: NextPage = () => {
   const network = useNetwork();
 
   useEffect(() => {
-    network?.[0].data.chain?.id !== 80001
+    network?.[0].data.chain?.id !== 137
       ? setIsWrongNetwork(false)
       : setIsWrongNetwork(true);
   }, [network, isWrongNetwork, setIsWrongNetwork]);
@@ -111,7 +111,7 @@ const MintPage: NextPage = () => {
               >
                 <Box>
                   <Input
-                    placeholder="enter the secret phrase uwu..."
+                    placeholder="enter the secret phrase..."
                     w="96"
                     bgColor="gray.100"
                     textColor="gray.700"
