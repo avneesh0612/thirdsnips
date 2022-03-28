@@ -24,6 +24,7 @@ const ChangeNetwork: FC = () => {
             justifyContent="center"
             gap="6"
             textAlign="center"
+            pb="5"
           >
             <Box
               display="flex"
@@ -34,13 +35,13 @@ const ChangeNetwork: FC = () => {
             >
               <Image
                 src="/assests/polygon-icon.svg"
-                height="8"
-                width="8"
-                alt="polygon bhai"
+                height="15"
+                width="15"
+                alt="polygon"
               />
 
               <Text fontWeight="700" fontSize="lg">
-                you&apos;re not connected to the polygon mumbai network
+                you&apos;re not connected to the polygon network
               </Text>
 
               <Text fontWeight="600" fontSize="lg" textColor="gray.800">

@@ -13,8 +13,8 @@ import type { AppProps } from "next/app";
 import Head from "next/head";
 
 function MyApp({ Component, pageProps }: AppProps) {
-  const desiredChainId = 80001;
-  const supportedChains = [80001] as SupportedChain[];
+  const desiredChainId = 137;
+  const supportedChains = [137] as SupportedChain[];
 
   return (
     <ThirdwebProvider

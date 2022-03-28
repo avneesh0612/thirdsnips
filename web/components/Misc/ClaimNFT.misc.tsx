@@ -14,7 +14,7 @@ import { FiCopy } from "react-icons/fi";
 const ClaimNFT: FC = () => {
   const [add, setAdd] = useState<string>("");
   const editionDrop = useEditionDrop(
-    "0xf21b092E6439C19ef38270d816346461c56aeD0b"
+    "0x968fAE78A3FdF1C3DBfb86F00Ab9590b4B145b8e"
   );
   const [loading, setLoading] = useState<boolean>(false);
 
