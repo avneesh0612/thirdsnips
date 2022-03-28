@@ -1,7 +1,7 @@
 # 🌈 Table of Snippets
 
 
-thirdsnips currently has a total of 80 snippets.
+thirdsnips currently has a total of 71 snippets.
 
 | Prefix                              | Description                                                                                       | Category                |
 | ----------------------------------- | ------------------------------------------------------------------------------------------------- | ----------------------- |
@@ -75,8 +75,17 @@ thirdsnips currently has a total of 80 snippets.
 | `voteHasVoted`                      | Check If Wallet Voted                                                                             |  Vote contract          |
 | `votePropose`                       | Create Proposal                                                                                   |  Vote contract          |
 | `voteVote`                          | Vote                                                                                              |  Vote contract          |
-| `useEdition`                        | The useEdition() hook                                                                             |  SDK hooks              |
-| `useEditionDrop`                    | The useEditionDrop() hook                                                                         |  SDK hooks              |
+
+
+## ⭐ Show your support
+
+Give a ⭐️ if this project helped you!
+
+## 📝 License
+
+Copyright © 2022 [Avneesh Agarwal](https://github.com/avneesh0612).<br />
+This project is [GNU](https://github.com/avneesh0612/thirdweb-snippets/blob/main/LICENSE) licensed.
+                                         |  SDK hooks              |
 | `useMarketplace`                    | The useMarketplace() hook                                                                         |  SDK hooks              |
 | `useNFTCollection`                  | The useNFTCollection() hook                                                                       |  SDK hooks              |
 | `useNFTDrop`                        | The useNFTDrop() hook                                                                             |  SDK hooks              |

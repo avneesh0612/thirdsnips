@@ -1,6 +1,6 @@
 {
   "name": "automation",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "scripts": {
     "start": "node scripts/generateSnippets.js",
     "format": "prettier --write ."
