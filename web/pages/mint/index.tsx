@@ -6,9 +6,12 @@ import {
   Input,
   Text,
   useToast,
+  Image,
+  Link,
 } from "@chakra-ui/react";
 import { useAddress, useNetwork } from "@thirdweb-dev/react";
 import type { NextPage } from "next";
+import NextLink from "next/link";
 import React, { useEffect, useState } from "react";
 
 const MintPage: NextPage = () => {
@@ -102,11 +105,26 @@ const MintPage: NextPage = () => {
                 please enter the secret phrase to proceed to the next step
               </Text>
 
+              <Text
+                fontFamily="sen"
+                fontWeight="400"
+                textColor="gray.500"
+                fontSize="lg"
+              >
+                not sure about how to access the secret phrase?
+                <NextLink
+                  href="https://github.com/avneesh0612/thirdsnips#-early-access-nft"
+                  passHref
+                >
+                  <Link isExternal> check steps here</Link>
+                </NextLink>
+              </Text>
+
               <FormControl
                 display="flex"
                 fontFamily="sen"
                 justifyContent="center"
-                my="4"
+                my="2"
                 flexDir="column"
               >
                 <Box>
@@ -129,6 +147,23 @@ const MintPage: NextPage = () => {
           )}
 
           {metTheCondition && <ClaimNFT />}
+
+          <Box display="flex" justifyContent="center">
+            <NextLink
+              href="https://opensea.io/assets/matic/0x968fae78a3fdf1c3dbfb86f00ab9590b4b145b8e/0"
+              passHref
+            >
+              <Link isExternal>
+                <Image
+                  src="/assests/nft.png"
+                  height="277"
+                  width="500"
+                  alt="NFT"
+                  cursor="pointer"
+                />
+              </Link>
+            </NextLink>
+          </Box>
         </Box>
       </Box>
     </>
