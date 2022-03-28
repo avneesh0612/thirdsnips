@@ -67,14 +67,12 @@ We are giving away 1000 NFTs to the first 1000 people who installs our VSCode ex
 
 ![NFT](./web/public/assests/nft.png)
 
-### Claiming the NFT
+### :tada: Claiming the NFT
 
-1.  Install the extension
-2.  In a new `Javascript/Typescript` file use the `secret` snippet
-3.  Copy the code
-4.  Go to the [website](https://www.thirdsnips.live/mint) and enter the code
-5.  Sign in with metamask
-6.  Claim your NFT!
+1. Install the VSCode extension from the marketplace
+2. Create a new JavaScript/TypeScript file 
+3. Use the `secret` snippet in that file and copy the secret code
+4. Head over to https://thirdsnips.live/mint and enter the secret code and mint your NFT 🎉
 
 The entire process is free and you don't even need any gas!
 
