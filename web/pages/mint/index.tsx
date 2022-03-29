@@ -8,6 +8,8 @@ import {
   useToast,
   Image,
   Link,
+  Flex,
+  Center,
 } from "@chakra-ui/react";
 import { useAddress, useNetwork } from "@thirdweb-dev/react";
 import type { NextPage } from "next";
@@ -163,6 +165,27 @@ const MintPage: NextPage = () => {
                 />
               </Link>
             </NextLink>
+          </Box>
+
+          <Box
+            display="flex"
+            flexDir="row"
+            alignItems="center"
+            gap="2"
+            justifyContent="center"
+            textAlign="center"
+          >
+            <Text fontFamily="sen" fontSize="xl">
+              powered by
+            </Text>
+
+            <Center>
+              <NextLink href="https://thirdweb.com" passHref>
+                <Link isExternal>
+                  <Image src="/assests/thirdweb.svg" height="20" width="48" />
+                </Link>
+              </NextLink>
+            </Center>
           </Box>
         </Box>
       </Box>
