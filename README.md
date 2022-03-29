@@ -76,6 +76,10 @@ We are giving away 1000 NFTs to the first 1000 people who installs our VSCode ex
 
 The entire process is free and you don't even need any gas!
 
+## 🚀 Powered by
+
+<p align="center"><img src="https://user-images.githubusercontent.com/76690419/160518840-fb6b1cd8-dad2-49df-9013-25fc16e031ab.svg"/></p>
+
 ## ⭐ Show your support
 
 Give a ⭐️ if this project helped you!
