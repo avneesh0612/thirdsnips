@@ -78,7 +78,11 @@ The entire process is free and you don't even need any gas!
 
 ## 🚀 Powered by
 
-<p align="center"><img src="https://user-images.githubusercontent.com/76690419/160518840-fb6b1cd8-dad2-49df-9013-25fc16e031ab.svg"/></p>
+<p align="center">
+<a href="https://thirdweb.com/">
+<img src="https://user-images.githubusercontent.com/76690419/160518840-fb6b1cd8-dad2-49df-9013-25fc16e031ab.svg"/>
+</a>
+</p>
 
 ## ⭐ Show your support
 
