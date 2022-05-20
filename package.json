@@ -16,13 +16,13 @@
   },
   "devDependencies": {
     "commitlint": "17.0.0",
-    "commitlint-config-gitmoji": "^2.2.5",
+    "commitlint-config-gitmoji": "2.2.5",
     "husky": "8.0.1",
-    "prettier": "^2.6.0"
+    "prettier": "2.6.0"
   },
   "dependencies": {
     "@commitlint/cli": "17.0.0",
-    "@trivago/prettier-plugin-sort-imports": "^3.2.0"
+    "@trivago/prettier-plugin-sort-imports": "3.2.0"
   },
   "contributes": {
     "snippets": [
