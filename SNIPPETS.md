@@ -6,15 +6,6 @@ thirdsnips currently has a total of 111 snippets.
 | Prefix                              | Description                                                                                       | Category                |
 | ----------------------------------- | ------------------------------------------------------------------------------------------------- | ----------------------- |
 | `provider`                          | Wrap your application in the Provider                                                             |  React SDK              |
-| `useEdition`                        | The useEdition() hook                                                                             |  SDK hooks              |
-| `useEditionDrop`                    | The useEditionDrop() hook                                                                         |  SDK hooks              |
-| `useMarketplace`                    | The useMarketplace() hook                                                                         |  SDK hooks              |
-| `useNFTCollection`                  | The useNFTCollection() hook                                                                       |  SDK hooks              |
-| `useNFTDrop`                        | The useNFTDrop() hook                                                                             |  SDK hooks              |
-| `usePack`                           | The usePack() hook                                                                                |  SDK hooks              |
-| `useSplit`                          | The useSplit() hook                                                                               |  SDK hooks              |
-| `useToken`                          | The useToken() hook                                                                               |  SDK hooks              |
-| `useVote`                           | The useVote() hook                                                                                |  SDK hooks              |
 | `editionBurn`                       | Burn a specified amount of a NFT                                                                  |  Edition contract       |
 | `editionGetAll`                     | Get All Minted NFTs                                                                               |  Edition contract       |
 | `editionGetOwned`                   | Get Owned NFTs                                                                                    |  Edition contract       |
@@ -115,6 +106,15 @@ thirdsnips currently has a total of 111 snippets.
 | `voteHasVoted`                      | Check If Wallet Voted                                                                             |  Vote contract          |
 | `votePropose`                       | Create Proposal                                                                                   |  Vote contract          |
 | `voteVote`                          | Vote                                                                                              |  Vote contract          |
+| `useEdition`                        | The useEdition() hook                                                                             |  SDK hooks              |
+| `useEditionDrop`                    | The useEditionDrop() hook                                                                         |  SDK hooks              |
+| `useMarketplace`                    | The useMarketplace() hook                                                                         |  SDK hooks              |
+| `useNFTCollection`                  | The useNFTCollection() hook                                                                       |  SDK hooks              |
+| `useNFTDrop`                        | The useNFTDrop() hook                                                                             |  SDK hooks              |
+| `usePack`                           | The usePack() hook                                                                                |  SDK hooks              |
+| `useSplit`                          | The useSplit() hook                                                                               |  SDK hooks              |
+| `useToken`                          | The useToken() hook                                                                               |  SDK hooks              |
+| `useVote`                           | The useVote() hook                                                                                |  SDK hooks              |
 
 
 ## ⭐ Show your support
