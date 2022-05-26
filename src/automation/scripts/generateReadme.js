@@ -1,8 +1,8 @@
 const fs = require("fs");
-const markdownTable = require("markdown-table");
 
 const { readmeTop, readmeBottom } = require("../data/readmeConstants");
 const { snippetsFolder, readmeFile } = require("../data/constants");
+const markdownTable = require("../utils/markdownTable");
 
 // The array in which all the snippets are been stored, using this array we would be generating the markdown table in SNIPPETS.md file
 let finalSnippets = [["Prefix", "Description", "Category"]];
