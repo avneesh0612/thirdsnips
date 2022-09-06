@@ -1,7 +1,370 @@
 {
+  "Deploys a new Edition contract | ContractDeployer contract": {
+    "prefix": "contractdeployerDeployEdition",
+    "body": [
+      "const contractAddress = await sdk.deployer.deployEdition({",
+      "  name: \"My Edition\",",
+      "  primary_sale_recipient: \"your-address\",",
+      "});"
+    ],
+    "description": "Deploys a new Edition contract | ContractDeployer contract"
+  },
+  "Deploys a new EditionDrop contract | ContractDeployer contract": {
+    "prefix": "contractdeployerDeployEditionDrop",
+    "body": [
+      "const contractAddress = await sdk.deployer.deployEditionDrop({",
+      "  name: \"My Edition Drop\",",
+      "  primary_sale_recipient: \"your-address\",",
+      "});"
+    ],
+    "description": "Deploys a new EditionDrop contract | ContractDeployer contract"
+  },
+  "Deploys a new Marketplace contract | ContractDeployer contract": {
+    "prefix": "contractdeployerDeployMarketplace",
+    "body": [
+      "const contractAddress = await sdk.deployer.deployMarketplace({",
+      "  name: \"My Marketplace\",",
+      "  primary_sale_recipient: \"your-address\",",
+      "});"
+    ],
+    "description": "Deploys a new Marketplace contract | ContractDeployer contract"
+  },
+  "Deploys a new Multiwrap contract | ContractDeployer contract": {
+    "prefix": "contractdeployerDeployMultiwrap",
+    "body": [
+      "const contractAddress = await sdk.deployer.deployMultiwrap({",
+      "  name: \"My Multiwrap\",",
+      "});"
+    ],
+    "description": "Deploys a new Multiwrap contract | ContractDeployer contract"
+  },
+  "Deploys an NFT Collection contract | ContractDeployer contract": {
+    "prefix": "contractdeployerDeployNFTCollection",
+    "body": [
+      "const contractAddress = await sdk.deployer.deployNFTCollection({",
+      "  name: \"My Collection\",",
+      "  primary_sale_recipient: \"your-address\",",
+      "});"
+    ],
+    "description": "Deploys an NFT Collection contract | ContractDeployer contract"
+  },
+  "Deploys a new NFTDrop contract | ContractDeployer contract": {
+    "prefix": "contractdeployerDeployNFTDrop",
+    "body": [
+      "const contractAddress = await sdk.deployer.deployNFTDrop({",
+      "  name: \"My Drop\",",
+      "  primary_sale_recipient: \"your-address\",",
+      "});"
+    ],
+    "description": "Deploys a new NFTDrop contract | ContractDeployer contract"
+  },
+  "Deploys a new Pack contract | ContractDeployer contract": {
+    "prefix": "contractdeployerDeployPack",
+    "body": [
+      "const contractAddress = await sdk.deployer.deployPack({",
+      "  name: \"My Pack\",",
+      "  primary_sale_recipient: \"your-address\",",
+      "});"
+    ],
+    "description": "Deploys a new Pack contract | ContractDeployer contract"
+  },
+  "Deploys a new SignatureDrop contract | ContractDeployer contract": {
+    "prefix": "contractdeployerDeploySignatureDrop",
+    "body": [
+      "const contractAddress = await sdk.deployer.deploySignatureDrop({",
+      "  name: \"My Signature Drop\",",
+      "  primary_sale_recipient: \"your-address\",",
+      "});"
+    ],
+    "description": "Deploys a new SignatureDrop contract | ContractDeployer contract"
+  },
+  "Deploys a new Split contract | ContractDeployer contract": {
+    "prefix": "contractdeployerDeploySplit",
+    "body": [
+      "const contractAddress = await sdk.deployer.deploySplit({",
+      "  name: \"My Split\",",
+      "  primary_sale_recipient: \"your-address\",",
+      "  recipients: [",
+      "   {",
+      "     address: \"your-address\",",
+      "     sharesBps: 80 * 100, // 80%",
+      "   },",
+      "   {",
+      "     address: \"another-address\",",
+      "     sharesBps: 20 * 100, // 20%",
+      "   },",
+      "  ],",
+      "});"
+    ],
+    "description": "Deploys a new Split contract | ContractDeployer contract"
+  },
+  "Deploys a new Token contract | ContractDeployer contract": {
+    "prefix": "contractdeployerDeployToken",
+    "body": [
+      "const contractAddress = await sdk.deployer.deployToken({",
+      "  name: \"My Token\",",
+      "  primary_sale_recipient: \"your-address\",",
+      "});"
+    ],
+    "description": "Deploys a new Token contract | ContractDeployer contract"
+  },
+  "Deploys a new Token Drop contract | ContractDeployer contract": {
+    "prefix": "contractdeployerDeployTokenDrop",
+    "body": [
+      "const contractAddress = await sdk.deployer.deployTokenDrop({",
+      "  name: \"My Token Drop\",",
+      "  primary_sale_recipient: \"your-address\",",
+      "});"
+    ],
+    "description": "Deploys a new Token Drop contract | ContractDeployer contract"
+  },
+  "Deploys a new Vote contract | ContractDeployer contract": {
+    "prefix": "contractdeployerDeployVote",
+    "body": [
+      "const contractAddress = await sdk.deployer.deployVote({",
+      "  name: \"My Vote\",",
+      "  primary_sale_recipient: \"your-address\",",
+      "  voting_token_address: \"your-token-contract-address\",",
+      "});"
+    ],
+    "description": "Deploys a new Vote contract | ContractDeployer contract"
+  },
+  "Subscribe to contract events | ContractEvents contract": {
+    "prefix": "contracteventsAddEventListener",
+    "body": [
+      "contract.events.addEventListener(\"TokensMinted\", (event) => {",
+      "  console.log(event);",
+      "});"
+    ],
+    "description": "Subscribe to contract events | ContractEvents contract"
+  },
+  "Subscribe to transactions in this contract. | ContractEvents contract": {
+    "prefix": "contracteventsAddTransactionListener",
+    "body": [
+      "contract.events.addTransactionListener((event) => {",
+      "  console.log(event);",
+      "}"
+    ],
+    "description": "Subscribe to transactions in this contract. | ContractEvents contract"
+  },
+  "Get All Events | ContractEvents contract": {
+    "prefix": "contracteventsGetAllEvents",
+    "body": [
+      "// Optionally pass in filters to limit the blocks from which events are retrieved",
+      "const filters = {",
+      "  fromBlock: 0,",
+      "  toBlock: 1000000,",
+      "}",
+      "const events = await contract.events.getAllEvents(filters);",
+      "console.log(events[0].eventName);",
+      "console.log(events[0].data);"
+    ],
+    "description": "Get All Events | ContractEvents contract"
+  },
+  "Get Events | ContractEvents contract": {
+    "prefix": "contracteventsGetEvents",
+    "body": [
+      "// The name of the event to get logs for",
+      "const eventName = \"Transfer\";",
+      "// Optionally pass in filters to limit the blocks from which events are retrieved",
+      "const filters = {",
+      "  fromBlock: 0,",
+      "  toBlock: 1000000,",
+      "}",
+      "const events = await contract.events.getEvents(eventName, filters);",
+      "console.log(events[0].eventName);",
+      "console.log(events[0].data);"
+    ],
+    "description": "Get Events | ContractEvents contract"
+  },
+  "Listen to all events emitted from this contract | ContractEvents contract": {
+    "prefix": "contracteventsListenToAllEvents",
+    "body": [
+      "contract.events.listenToAllEvents((event) => {",
+      "  console.log(event.eventName) // the name of the emitted event",
+      "  console.log(event.data) // event payload",
+      "}"
+    ],
+    "description": "Listen to all events emitted from this contract | ContractEvents contract"
+  },
+  "Remove all listeners on this contract | ContractEvents contract": {
+    "prefix": "contracteventsRemoveAllListeners",
+    "body": ["contract.events.removeAllListeners();"],
+    "description": "Remove all listeners on this contract | ContractEvents contract"
+  },
+  "Remove an event listener from this contract | ContractEvents contract": {
+    "prefix": "contracteventsRemoveEventListener",
+    "body": [
+      "contract.events.removeEventListener(\"TokensMinted\", (event) => {",
+      "  console.log(event);",
+      "});"
+    ],
+    "description": "Remove an event listener from this contract | ContractEvents contract"
+  },
+  "Remove a transaction listener | ContractEvents contract": {
+    "prefix": "contracteventsRemoveTransactionListener",
+    "body": [
+      "contract.events.removeTransactionListener((event) => {",
+      " console.log(event);",
+      "}"
+    ],
+    "description": "Remove a transaction listener | ContractEvents contract"
+  },
+  "The next transaction executed will add/replace any overrides passed via the passed in hook. | ContractInterceptor contract": {
+    "prefix": "contractinterceptorOverrideNextTransaction",
+    "body": [
+      "contract.interceptor.overrideNextTransaction(() => ({",
+      "  gasLimit: 3000000,",
+      "}));"
+    ],
+    "description": "The next transaction executed will add/replace any overrides passed via the passed in hook. | ContractInterceptor contract"
+  },
+  "Get the metadata of a contract | ContractMetadata contract": {
+    "prefix": "contractmetadataGet",
+    "body": ["const metadata = await contract.metadata.get();"],
+    "description": "Get the metadata of a contract | ContractMetadata contract"
+  },
+  "Set the metadata of a contract | ContractMetadata contract": {
+    "prefix": "contractmetadataSet",
+    "body": [
+      "await contract.metadata.set({",
+      " name: \"My Contract\",",
+      " description: \"My contract description\"",
+      "})"
+    ],
+    "description": "Set the metadata of a contract | ContractMetadata contract"
+  },
+  "Update the metadata of a contract | ContractMetadata contract": {
+    "prefix": "contractmetadataUpdate",
+    "body": [
+      "await contract.metadata.update({",
+      "  name: \"My Contract\",",
+      "  description: \"My contract description\"",
+      "})"
+    ],
+    "description": "Update the metadata of a contract | ContractMetadata contract"
+  },
+  "Call this to get a list of addresses that are members of a specific role. | ContractRoles contract": {
+    "prefix": "contractrolesGet",
+    "body": ["const minterAddresses = await contract.roles.get(\"minter\");"],
+    "description": "Call this to get a list of addresses that are members of a specific role. | ContractRoles contract"
+  },
+  "Call this to get get a list of addresses for all supported roles on the contract. | ContractRoles contract": {
+    "prefix": "contractrolesGetAll",
+    "body": ["const rolesAndMembers = await contract.roles.getAll();"],
+    "description": "Call this to get get a list of addresses for all supported roles on the contract. | ContractRoles contract"
+  },
+  "Call this to grant a role to a specific address. | ContractRoles contract": {
+    "prefix": "contractrolesGrant",
+    "body": [
+      "await contract.roles.grant(\"minter\", \"0x1234567890123456789012345678901234567890\");"
+    ],
+    "description": "Call this to grant a role to a specific address. | ContractRoles contract"
+  },
+  "Call this to revoke a role from a specific address. | ContractRoles contract": {
+    "prefix": "contractrolesRevoke",
+    "body": [
+      "await contract.roles.revoke(\"minter\", \"0x1234567890123456789012345678901234567890\");"
+    ],
+    "description": "Call this to revoke a role from a specific address. | ContractRoles contract"
+  },
+  "Call this to OVERWRITE the list of addresses that are members of specific roles.Every role in the list will be overwritten with the new list of addresses provided with them. If you want to add or remove addresses for a single address use {@link ContractRoles.grant} and {@link ContractRoles.revoke} respectively instead. | ContractRoles contract": {
+    "prefix": "contractrolesSetAll",
+    "body": [
+      "const minterAddresses = await contract.roles.get(\"minter\");",
+      "await contract.roles.setAll({",
+      " minter: []",
+      "});",
+      "console.log(await contract.roles.get(\"minter\")); // No matter what members had the role before, the new list will be set to []"
+    ],
+    "description": "Call this to OVERWRITE the list of addresses that are members of specific roles.Every role in the list will be overwritten with the new list of addresses provided with them. If you want to add or remove addresses for a single address use {@link ContractRoles.grant} and {@link ContractRoles.revoke} respectively instead. | ContractRoles contract"
+  },
+  "Create a batch of encrypted NFTs that can be revealed at a later time. | DelayedReveal contract": {
+    "prefix": "delayedrevealCreateDelayedRevealBatch",
+    "body": [
+      "// the real NFTs, these will be encrypted until your reveal them!",
+      "const realNFTs = [{",
+      "  name: \"Common NFT #1\",",
+      "  description: \"Common NFT, one of many.\",",
+      "  image: fs.readFileSync(\"path/to/image.png\"),",
+      "}, {",
+      "  name: \"Super Rare NFT #2\",",
+      "  description: \"You got a Super Rare NFT!\",",
+      "  image: fs.readFileSync(\"path/to/image.png\"),",
+      "}];",
+      "// A placeholder NFT that people will get immediately in their wallet, until the reveal happens!",
+      "const placeholderNFT = {",
+      "  name: \"Hidden NFT\",",
+      "  description: \"Will be revealed next week!\"",
+      "};",
+      "// Create and encrypt the NFTs",
+      "await contract.revealer.createDelayedRevealBatch(",
+      "  placeholderNFT,",
+      "  realNFTs,",
+      "  \"my secret password\",",
+      ");",
+      "// Whenever you're ready, reveal your NFTs at any time!",
+      "const batchId = 0; // the batch to reveal",
+      "await contract.revealer.reveal(batchId, \"my secret password\");"
+    ],
+    "description": "Create a batch of encrypted NFTs that can be revealed at a later time. | DelayedReveal contract"
+  },
+  "Gets the list of unrevealed NFT batches. | DelayedReveal contract": {
+    "prefix": "delayedrevealGetBatchesToReveal",
+    "body": ["const batches = await contract.revealer.getBatchesToReveal();"],
+    "description": "Gets the list of unrevealed NFT batches. | DelayedReveal contract"
+  },
+  "Reveal a batch of hidden NFTs | DelayedReveal contract": {
+    "prefix": "delayedrevealReveal",
+    "body": [
+      "// the batch to reveal",
+      "const batchId = 0;",
+      "// reveal the batch",
+      "await contract.revealer.reveal(batchId, \"my secret password\");"
+    ],
+    "description": "Reveal a batch of hidden NFTs | DelayedReveal contract"
+  },
+  "Can Claim | DropClaimConditions contract": {
+    "prefix": "dropclaimconditionsCanClaim",
+    "body": [
+      "// Quantity of tokens to check claimability of",
+      "const quantity = 1;",
+      "const canClaim = await contract.canClaim(quantity);"
+    ],
+    "description": "Can Claim | DropClaimConditions contract"
+  },
+  "Set public mint conditions | DropClaimConditions contract": {
+    "prefix": "dropclaimconditionsSet",
+    "body": [
+      "const presaleStartTime = new Date();",
+      "const publicSaleStartTime = new Date(Date.now() + 60 * 60 * 24 * 1000);",
+      "",
+      "// Optionally specify addresses that can claim",
+      "const snapshots = ['0x...', '0x...']",
+      "",
+      "// Or alternatively, you can pass snapshots with the max number of NFTs each address can claim",
+      "// const snapshots = [{ address: '0x...', maxClaimable: 1 }, { address: '0x...', maxClaimable: 2 }]",
+      "",
+      "const claimConditions = [",
+      "  {",
+      "    startTime: presaleStartTime, // start the presale now",
+      "    maxQuantity: 2, // limit how many mints for this presale",
+      "    price: 0.01, // presale price",
+      "    snapshot: snapshots, // limit minting to only certain addresses",
+      "  },",
+      "  {",
+      "    startTime: publicSaleStartTime, // 24h after presale, start public sale",
+      "    price: 0.08, // public sale price",
+      "  }",
+      "]);",
+      "",
+      "await dropContract.claimConditions.set(claimConditions);"
+    ],
+    "description": "Set public mint conditions | DropClaimConditions contract"
+  },
   "Burn a specified amount of a NFT | Edition contract": {
-    "prefix": "editionBurn",
-    "body": ["const result = await contract.burn(tokenId, amount);"],
+    "prefix": "editionBurnTokens",
+    "body": ["const result = await contract.burnTokens(tokenId, amount);"],
     "description": "Burn a specified amount of a NFT | Edition contract"
   },
   "Get All Minted NFTs | Edition contract": {
@@ -76,6 +439,8 @@
   "Airdrop multiple NFTs | Edition contract": {
     "prefix": "editionAirdrop",
     "body": [
+      "// The token ID of the NFT you want to airdrop",
+      "const tokenId = \"0\";",
       "// Array of objects of addresses and quantities to airdrop NFTs to",
       "const addresses = [",
       " {",
@@ -87,15 +452,14 @@
       "   quantity: 3,",
       " },",
       "];",
-      "const tokenId = \"0\";",
-      "await contract.airdrop(addresses, tokenId);",
+      "await contract.airdrop(tokenId, addresses);",
       "",
       "// You can also pass an array of addresses, it will airdrop 1 NFT per address",
+      "const tokenId = \"0\";",
       "const addresses = [",
       " \"0x...\", \"0x...\", \"0x...\",",
       "]",
-      "const tokenId = \"0\";",
-      "await contract.airdrop(addresses, tokenId);"
+      "await contract.airdrop(tokenId, addresses);"
     ],
     "description": "Airdrop multiple NFTs | Edition contract"
   },
@@ -126,8 +490,8 @@
     "description": "Transfer a single NFT | Edition contract"
   },
   "Burn a specified amount of a NFT | EditionDrop contract": {
-    "prefix": "editiondropBurn",
-    "body": ["const result = await contract.burn(tokenId, amount);"],
+    "prefix": "editiondropBurnTokens",
+    "body": ["const result = await contract.burnTokens(tokenId, amount);"],
     "description": "Burn a specified amount of a NFT | EditionDrop contract"
   },
   "Claim NFTs to a specific Wallet | EditionDrop contract": {
@@ -138,9 +502,7 @@
       "const quantity = 1; // how many NFTs you want to claim",
       "",
       "const tx = await contract.claimTo(address, tokenId, quantity);",
-      "const receipt = tx.receipt; // the transaction receipt",
-      "const claimedTokenId = tx.id; // the id of the NFT claimed",
-      "const claimedNFT = await tx.data(); // (optional) get the claimed NFT metadata"
+      "const receipt = tx.receipt; // the transaction receipt"
     ],
     "description": "Claim NFTs to a specific Wallet | EditionDrop contract"
   },
@@ -181,6 +543,8 @@
   "Airdrop multiple NFTs | EditionDrop contract": {
     "prefix": "editiondropAirdrop",
     "body": [
+      "// The token ID of the NFT you want to airdrop",
+      "const tokenId = \"0\";",
       "// Array of objects of addresses and quantities to airdrop NFTs to",
       "const addresses = [",
       " {",
@@ -192,15 +556,14 @@
       "   quantity: 3,",
       " },",
       "];",
-      "const tokenId = \"0\";",
-      "await contract.airdrop(addresses, tokenId);",
+      "await contract.airdrop(tokenId, addresses);",
       "",
       "// You can also pass an array of addresses, it will airdrop 1 NFT per address",
+      "const tokenId = \"0\";",
       "const addresses = [",
       " \"0x...\", \"0x...\", \"0x...\",",
       "]",
-      "const tokenId = \"0\";",
-      "await contract.airdrop(addresses, tokenId);"
+      "await contract.airdrop(tokenId, addresses);"
     ],
     "description": "Airdrop multiple NFTs | EditionDrop contract"
   },
@@ -230,6 +593,41 @@
     ],
     "description": "Transfer a single NFT | EditionDrop contract"
   },
+  "Returns the current gas price in gwei | GasCostEstimator contract": {
+    "prefix": "gascostestimatorCurrentGasPriceInGwei",
+    "body": [
+      "const gasCostInGwei = await contract.estimator.currentGasPriceInGwei();"
+    ],
+    "description": "Returns the current gas price in gwei | GasCostEstimator contract"
+  },
+  "Estimates the cost of gas in native token of the current chain Pass in the same parameters as the contract's function. | GasCostEstimator contract": {
+    "prefix": "gascostestimatorGasCostOf",
+    "body": [
+      "const costOfClaim = await nftDrop?.estimator.gasCostOf(\"claim\", [",
+      "  \"0x...\", // receiver",
+      "  1, // quantity",
+      "  \"0x...\", // currency",
+      "  1, // price per token",
+      "  [], // proofs",
+      "  1, // proof max quantity per transaction",
+      "]);"
+    ],
+    "description": "Estimates the cost of gas in native token of the current chain Pass in the same parameters as the contract's function. | GasCostEstimator contract"
+  },
+  "Estimates the gas limit of a transaction Pass in the same parameters as the contract's function. | GasCostEstimator contract": {
+    "prefix": "gascostestimatorGasLimitOf",
+    "body": [
+      "const gasLimitOfClaim = await nftDrop?.estimator.gasLimitOf(\"claim\", [",
+      "  \"0x...\", // receiver",
+      "  1, // quantity",
+      "  \"0x...\", // currency",
+      "  1, // price per token",
+      "  [], // proofs",
+      "  1, // proof max quantity per transaction",
+      "]);"
+    ],
+    "description": "Estimates the gas limit of a transaction Pass in the same parameters as the contract's function. | GasCostEstimator contract"
+  },
   "Purchase NFTs | Marketplace contract": {
     "prefix": "marketplaceBuyoutListing",
     "body": [
@@ -258,11 +656,19 @@
     ],
     "description": "Get all the listings | Marketplace contract"
   },
+  "Convenience function to get either a direct or auction listing | Marketplace contract": {
+    "prefix": "marketplaceGetListing",
+    "body": [
+      "const listingId = 0;",
+      "const listing = await contract.getListing(listingId);"
+    ],
+    "description": "Convenience function to get either a direct or auction listing | Marketplace contract"
+  },
   "Set the Auction bid buffer | Marketplace contract": {
     "prefix": "marketplaceSetBidBufferBps",
     "body": [
       "// the bid buffer in basis points",
-      "const bufferBps = 500;",
+      "const bufferBps = 5_00; // 5%",
       "await contract.setBidBufferBps(bufferBps);"
     ],
     "description": "Set the Auction bid buffer | Marketplace contract"
@@ -276,9 +682,265 @@
     ],
     "description": "Set the Auction Time buffer: | Marketplace contract"
   },
+  "Buyout Auction | MarketplaceAuction contract": {
+    "prefix": "marketplaceauctionBuyoutListing",
+    "body": [
+      "// The listing ID of the asset you want to buy",
+      "const listingId = 0;",
+      "",
+      "await contract.auction.buyoutListing(listingId);"
+    ],
+    "description": "Buyout Auction | MarketplaceAuction contract"
+  },
+  "Cancel Auction Listing | MarketplaceAuction contract": {
+    "prefix": "marketplaceauctionCancelListing",
+    "body": [
+      "// The listing ID of the auction listing you want to cancel",
+      "const listingId = \"0\";",
+      "",
+      "await contract.auction.cancelListing(listingId);"
+    ],
+    "description": "Cancel Auction Listing | MarketplaceAuction contract"
+  },
+  "Close the Auction | MarketplaceAuction contract": {
+    "prefix": "marketplaceauctionCloseListing",
+    "body": [
+      "// The listing ID of the auction listing you want to close",
+      "const listingId = \"0\";",
+      "await contract.auction.closeListing(listingId);"
+    ],
+    "description": "Close the Auction | MarketplaceAuction contract"
+  },
+  "Create Auction | MarketplaceAuction contract": {
+    "prefix": "marketplaceauctionCreateListing",
+    "body": [
+      "// Data of the auction you want to create",
+      "const auction = {",
+      "  // address of the contract the asset you want to list is on",
+      "  assetContractAddress: \"0x...\",",
+      "  // token ID of the asset you want to list",
+      "  tokenId: \"0\",",
+      " // when should the listing open up for offers",
+      "  startTimestamp: new Date(),",
+      "  // how long the listing will be open for",
+      "  listingDurationInSeconds: 86400,",
+      "  // how many of the asset you want to list",
+      "  quantity: 1,",
+      "  // address of the currency contract that will be used to pay for the listing",
+      "  currencyContractAddress: NATIVE_TOKEN_ADDRESS,",
+      "  // how much people would have to bid to instantly buy the asset",
+      "  buyoutPricePerToken: \"10\",",
+      "  // the minimum bid that will be accepted for the token",
+      "  reservePricePerToken: \"1.5\",",
+      "}",
+      "",
+      "const tx = await contract.auction.createListing(auction);",
+      "const receipt = tx.receipt; // the transaction receipt",
+      "const id = tx.id; // the id of the newly created listing"
+    ],
+    "description": "Create Auction | MarketplaceAuction contract"
+  },
+  "Get Auction Winner | MarketplaceAuction contract": {
+    "prefix": "marketplaceauctionGetWinner",
+    "body": [
+      "// The listing ID of the auction that closed",
+      "const listingId = 0;",
+      "",
+      "contract.auction.",
+      "  .getWinner(listingId)",
+      "  .then((auctionWinner) => console.log(auctionWinner))",
+      "  .catch((err) => console.error(err));"
+    ],
+    "description": "Get Auction Winner | MarketplaceAuction contract"
+  },
+  "Get Highest Bid | MarketplaceAuction contract": {
+    "prefix": "marketplaceauctionGetWinningBid",
+    "body": [
+      "// The listing ID of the auction that closed",
+      "const listingId = 0;",
+      "",
+      "contract.auction.",
+      "  .getWinningBid(listingId)",
+      "  .then((offer) => console.log(offer))",
+      "  .catch((err) => console.error(err));"
+    ],
+    "description": "Get Highest Bid | MarketplaceAuction contract"
+  },
+  "Bid On Auction | MarketplaceAuction contract": {
+    "prefix": "marketplaceauctionMakeBid",
+    "body": [
+      "// The listing ID of the asset you want to bid on",
+      "const listingId = 0;",
+      "// The price you are willing to bid for a single token of the listing",
+      "const pricePerToken = 1;",
+      "",
+      "await contract.auction.makeBid(listingId, pricePerToken);"
+    ],
+    "description": "Bid On Auction | MarketplaceAuction contract"
+  },
+  "Accept an offer on a direct listing | MarketplaceDirect contract": {
+    "prefix": "marketplacedirectAcceptOffer",
+    "body": [
+      "// The listing ID of the asset you want to bid on",
+      "const listingId = 0;",
+      "// The price you are willing to bid for a single token of the listing",
+      "const offeror = \"0x...\";",
+      "",
+      "await contract.direct.acceptOffer(listingId, offeror);"
+    ],
+    "description": "Accept an offer on a direct listing | MarketplaceDirect contract"
+  },
+  "Buy a Listing | MarketplaceDirect contract": {
+    "prefix": "marketplacedirectBuyoutListing",
+    "body": [
+      "// The listing ID of the asset you want to buy",
+      "const listingId = 0;",
+      "// Quantity of the asset you want to buy",
+      "const quantityDesired = 1;",
+      "",
+      "await contract.direct.buyoutListing(listingId, quantityDesired);"
+    ],
+    "description": "Buy a Listing | MarketplaceDirect contract"
+  },
+  "Cancel Direct Listing | MarketplaceDirect contract": {
+    "prefix": "marketplacedirectCancelListing",
+    "body": [
+      "// The listing ID of the direct listing you want to cancel",
+      "const listingId = \"0\";",
+      "",
+      "await contract.direct.cancelListing(listingId);"
+    ],
+    "description": "Cancel Direct Listing | MarketplaceDirect contract"
+  },
+  "Create Direct Listing | MarketplaceDirect contract": {
+    "prefix": "marketplacedirectCreateListing",
+    "body": [
+      "// Data of the listing you want to create",
+      "const listing = {",
+      "  // address of the contract the asset you want to list is on",
+      "  assetContractAddress: \"0x...\",",
+      "  // token ID of the asset you want to list",
+      "  tokenId: \"0\",",
+      "  // when should the listing open up for offers",
+      "  startTimestamp: new Date(),",
+      "  // how long the listing will be open for",
+      "  listingDurationInSeconds: 86400,",
+      "  // how many of the asset you want to list",
+      "  quantity: 1,",
+      "  // address of the currency contract that will be used to pay for the listing",
+      "  currencyContractAddress: NATIVE_TOKEN_ADDRESS,",
+      "  // how much the asset will be sold for",
+      "  buyoutPricePerToken: \"1.5\",",
+      "}",
+      "",
+      "const tx = await contract.direct.createListing(listing);",
+      "const receipt = tx.receipt; // the transaction receipt",
+      "const id = tx.id; // the id of the newly created listing"
+    ],
+    "description": "Create Direct Listing | MarketplaceDirect contract"
+  },
+  "Make an offer for a Direct Listing | MarketplaceDirect contract": {
+    "prefix": "marketplacedirectMakeOffer",
+    "body": [
+      "import { ChainId, NATIVE_TOKENS } from \"@thirdweb-dev/sdk\";",
+      "",
+      "// The listing ID of the asset you want to offer on",
+      "const listingId = 0;",
+      "// The price you are willing to offer per token",
+      "const pricePerToken = 1;",
+      "// The quantity of tokens you want to receive for this offer",
+      "const quantity = 1;",
+      "// The address of the currency you are making the offer in (must be ERC-20)",
+      "const currencyContractAddress = NATIVE_TOKENS[ChainId.Rinkeby].wrapped.address",
+      "",
+      "await contract.direct.makeOffer(",
+      "  listingId,",
+      "  quantity,",
+      "  currencyContractAddress,",
+      "  pricePerToken",
+      ");"
+    ],
+    "description": "Make an offer for a Direct Listing | MarketplaceDirect contract"
+  },
+  "Get All Wrapped Token Bundles | Multiwrap contract": {
+    "prefix": "multiwrapGetAll",
+    "body": [
+      "const wrappedBundles = await contract.getAll();",
+      "console.log(wrappedBundles);"
+    ],
+    "description": "Get All Wrapped Token Bundles | Multiwrap contract"
+  },
+  "Get the contents of a wrapped token bundle | Multiwrap contract": {
+    "prefix": "multiwrapGetWrappedContents",
+    "body": [
+      "const contents = await contract.getWrappedContents(wrappedTokenId);",
+      "console.log(contents.erc20Tokens);",
+      "console.log(contents.erc721Tokens);",
+      "console.log(contents.erc1155Tokens);"
+    ],
+    "description": "Get the contents of a wrapped token bundle | Multiwrap contract"
+  },
+  "Unwrap a wrapped token bundle, and retrieve its contents | Multiwrap contract": {
+    "prefix": "multiwrapUnwrap",
+    "body": ["await contract.unwrap(wrappedTokenId);"],
+    "description": "Unwrap a wrapped token bundle, and retrieve its contents | Multiwrap contract"
+  },
+  "Wrap any number of ERC20/ERC721/ERC1155 tokens into a single wrapped token | Multiwrap contract": {
+    "prefix": "multiwrapWrap",
+    "body": [
+      "const tx = await contract.wrap({",
+      "  erc20Tokens: [{",
+      "    contractAddress: \"0x...\",",
+      "    quantity: \"0.8\"",
+      "  }],",
+      "  erc721Tokens: [{",
+      "    contractAddress: \"0x...\",",
+      "    tokenId: \"0\"",
+      "  }],",
+      "  erc1155Tokens: [{",
+      "    contractAddress: \"0x...\",",
+      "    tokenId: \"1\",",
+      "    quantity: \"2\"",
+      "  }]",
+      "}, {",
+      "    name: \"Wrapped bundle\",",
+      "    description: \"This is a wrapped bundle of tokens and NFTs\",",
+      "    image: \"ipfs://...\",",
+      "});",
+      "const receipt = tx.receipt(); // the transaction receipt",
+      "const wrappedTokenId = tx.id; // the id of the wrapped token bundle"
+    ],
+    "description": "Wrap any number of ERC20/ERC721/ERC1155 tokens into a single wrapped token | Multiwrap contract"
+  },
+  "Get NFT Balance | Multiwrap contract": {
+    "prefix": "multiwrapBalanceOf",
+    "body": [
+      "const walletAddress = \"{{wallet_address}}\";",
+      "const balance = await contract.nft.balanceOf(walletAddress);",
+      "console.log(balance);"
+    ],
+    "description": "Get NFT Balance | Multiwrap contract"
+  },
+  "Get a single NFT Metadata | Multiwrap contract": {
+    "prefix": "multiwrapGet",
+    "body": [
+      "const tokenId = 0;",
+      "const nft = await contract.nft.get(tokenId);"
+    ],
+    "description": "Get a single NFT Metadata | Multiwrap contract"
+  },
+  "Transfer a single NFT | Multiwrap contract": {
+    "prefix": "multiwrapTransfer",
+    "body": [
+      "const walletAddress = \"{{wallet_address}}\";",
+      "const tokenId = 0;",
+      "await contract.nft.transfer(walletAddress, tokenId);"
+    ],
+    "description": "Transfer a single NFT | Multiwrap contract"
+  },
   "Burn a single NFT | NFTCollection contract": {
-    "prefix": "nftcollectionBurn",
-    "body": ["const result = await contract.burn(tokenId);"],
+    "prefix": "nftcollectionBurnToken",
+    "body": ["const result = await contract.burnToken(tokenId);"],
     "description": "Burn a single NFT | NFTCollection contract"
   },
   "Get All Minted NFTs | NFTCollection contract": {
@@ -367,8 +1029,8 @@
     "description": "Transfer a single NFT | NFTCollection contract"
   },
   "Burn a single NFT | NFTDrop contract": {
-    "prefix": "nftdropBurn",
-    "body": ["const result = await contract.burn(tokenId);"],
+    "prefix": "nftdropBurnToken",
+    "body": ["const result = await contract.burnToken(tokenId);"],
     "description": "Burn a single NFT | NFTDrop contract"
   },
   "Claim unique NFTs to a specific Wallet | NFTDrop contract": {
@@ -477,92 +1139,183 @@
     ],
     "description": "Transfer a single NFT | NFTDrop contract"
   },
-  "Get Pack Balance | Pack contract": {
-    "prefix": "packBalanceOf",
-    "body": [
-      "// Address of the wallet to check pack balance",
-      "const address = \"{{wallet_address}}\";",
-      "// The token ID of the pack you want to check the wallets balance of",
-      "const tokenId = \"0\"",
-      "",
-      "const balance = await contract.balanceOf(address, tokenId);",
-      "console.log(balance);"
-    ],
-    "description": "Get Pack Balance | Pack contract"
-  },
   "Create Pack | Pack contract": {
     "prefix": "packCreate",
     "body": [
-      "// Data to create the pack",
       "const pack = {",
-      "  // The address of the contract that holds the rewards you want to include",
-      "  assetContract: \"0x...\",",
-      "  // The metadata of the pack",
-      "  metadata: {",
-      "    name: \"Cool Pack\",",
-      "    description: \"This is a cool pack\",",
-      "    // This can be an image url or image file",
-      "    image: readFileSync(\"path/to/image.png\"),",
+      "  // The metadata for the pack NFT itself",
+      "  packMetadata: {",
+      "    name: \"My Pack\",",
+      "    description: \"This is a new pack\",",
+      "    image: \"ipfs://...\",",
       "  },",
-      "  // The NFTs you want to include in the pack",
-      "  assets: [",
+      "  // ERC20 rewards to be included in the pack",
+      "  erc20Rewards: [",
       "    {",
-      "      tokenId: 0, // The token ID of the asset you want to add",
-      "      amount: 1, // The amount of the asset you want to add",
-      "    }, {",
-      "      tokenId: 1,",
-      "      amount: 1,",
+      "      assetContract: \"0x...\",",
+      "      quantityPerReward: 5,",
+      "      quantity: 100,",
+      "      totalRewards: 20,",
       "    }",
       "  ],",
-      "};",
+      "  // ERC721 rewards to be included in the pack",
+      "  erc721Rewards: [",
+      "    {",
+      "      assetContract: \"0x...\",",
+      "      tokenId: 0,",
+      "    }",
+      "  ],",
+      "  // ERC1155 rewards to be included in the pack",
+      "  erc1155Rewards: [",
+      "    {",
+      "      assetContract: \"0x...\",",
+      "      tokenId: 0,",
+      "      quantityPerReward: 1,",
+      "      totalRewards: 100,",
+      "    }",
+      "  ],",
+      "  openStartTime: new Date(), // the date that packs can start to be opened, defaults to now",
+      "  rewardsPerPack: 1, // the number of rewards in each pack, defaults to 1",
+      "}",
       "",
-      "await contract.create(pack);"
+      "const tx = await contract.create(pack);"
     ],
     "description": "Create Pack | Pack contract"
   },
-  "Get Pack Data | Pack contract": {
-    "prefix": "packGetAll",
-    "body": ["const packs = await contract.getAll();", "console.log(packs);"],
-    "description": "Get Pack Data | Pack contract"
-  },
-  "Get Pack Reward Data | Pack contract": {
-    "prefix": "packGetNFTs",
+  "Create Pack To Wallet | Pack contract": {
+    "prefix": "packCreateTo",
     "body": [
-      "// The pack ID of the pack whos rewards you want to get",
-      "const packId = 0;",
+      "const pack = {",
+      "  // The metadata for the pack NFT itself",
+      "  packMetadata: {",
+      "    name: \"My Pack\",",
+      "    description: \"This is a new pack\",",
+      "    image: \"ipfs://...\",",
+      "  },",
+      "  // ERC20 rewards to be included in the pack",
+      "  erc20Rewards: [",
+      "    {",
+      "      assetContract: \"0x...\",",
+      "      quantityPerReward: 5,",
+      "      quantity: 100,",
+      "      totalRewards: 20,",
+      "    }",
+      "  ],",
+      "  // ERC721 rewards to be included in the pack",
+      "  erc721Rewards: [",
+      "    {",
+      "      assetContract: \"0x...\",",
+      "      tokenId: 0,",
+      "    }",
+      "  ],",
+      "  // ERC1155 rewards to be included in the pack",
+      "  erc1155Rewards: [",
+      "    {",
+      "      assetContract: \"0x...\",",
+      "      tokenId: 0,",
+      "      quantityPerReward: 1,",
+      "      totalRewards: 100,",
+      "    }",
+      "  ],",
+      "  openStartTime: new Date(), // the date that packs can start to be opened, defaults to now",
+      "  rewardsPerPack: 1, // the number of rewards in each pack, defaults to 1",
+      "}",
       "",
-      "const nfts = await contract.getNFTs(packId);",
-      "console.log(nfts);"
+      "const tx = await contract.createTo(\"0x...\", pack);"
     ],
-    "description": "Get Pack Reward Data | Pack contract"
+    "description": "Create Pack To Wallet | Pack contract"
+  },
+  "Get All Packs | Pack contract": {
+    "prefix": "packGetAll",
+    "body": ["const packs = await contract.getAll();", "console.log(packs;"],
+    "description": "Get All Packs | Pack contract"
+  },
+  "Get Owned Packs | Pack contract": {
+    "prefix": "packGetOwned",
+    "body": [
+      "// Address of the wallet to get the packs of",
+      "const address = \"{{wallet_address}}\";",
+      "const packss = await contract.getOwned(address);"
+    ],
+    "description": "Get Owned Packs | Pack contract"
+  },
+  "Get Pack Contents | Pack contract": {
+    "prefix": "packGetPackContents",
+    "body": [
+      "const packId = 0;",
+      "const contents = await contract.getPackContents(packId);",
+      "console.log(contents.erc20Rewards);",
+      "console.log(contents.erc721Rewards);",
+      "console.log(contents.erc1155Rewards);"
+    ],
+    "description": "Get Pack Contents | Pack contract"
   },
   "Open Pack | Pack contract": {
     "prefix": "packOpen",
     "body": [
-      "// The pack ID of the asset you want to buy",
-      "const packId = \"0\";",
-      "const tx = await contract.open(packId);",
-      "const receipt = tx.receipt; // the transaction receipt",
-      "const packId = tx.id; // the id of the pack that was opened",
-      "const rewards = tx.data(); // the contents of the opened pack"
+      "const tokenId = 0",
+      "const amount = 1",
+      "const tx = await contract.open(tokenId, amount);"
     ],
     "description": "Open Pack | Pack contract"
   },
-  "Transfer Pack | Pack contract": {
+  "Airdrop multiple NFTs | Pack contract": {
+    "prefix": "packAirdrop",
+    "body": [
+      "// The token ID of the NFT you want to airdrop",
+      "const tokenId = \"0\";",
+      "// Array of objects of addresses and quantities to airdrop NFTs to",
+      "const addresses = [",
+      " {",
+      "   address: \"0x...\",",
+      "   quantity: 2,",
+      " },",
+      " {",
+      "  address: \"0x...\",",
+      "   quantity: 3,",
+      " },",
+      "];",
+      "await contract.airdrop(tokenId, addresses);",
+      "",
+      "// You can also pass an array of addresses, it will airdrop 1 NFT per address",
+      "const tokenId = \"0\";",
+      "const addresses = [",
+      " \"0x...\", \"0x...\", \"0x...\",",
+      "]",
+      "await contract.airdrop(tokenId, addresses);"
+    ],
+    "description": "Airdrop multiple NFTs | Pack contract"
+  },
+  "Get NFT Balance | Pack contract": {
+    "prefix": "packBalanceOf",
+    "body": [
+      "// Address of the wallet to check NFT balance",
+      "const walletAddress = \"{{wallet_address}}\";",
+      "const tokenId = 0; // Id of the NFT to check",
+      "const balance = await contract.balanceOf(walletAddress, tokenId);"
+    ],
+    "description": "Get NFT Balance | Pack contract"
+  },
+  "Get a single NFT Metadata | Pack contract": {
+    "prefix": "packGet",
+    "body": ["const nft = await contract.get(\"0\");"],
+    "description": "Get a single NFT Metadata | Pack contract"
+  },
+  "Transfer a single NFT | Pack contract": {
     "prefix": "packTransfer",
     "body": [
-      "// Address of the wallet you want to send the pack to",
-      "const toAddress = \"0x...\";",
-      "",
-      "// The token ID of the pack you want to send",
-      "const tokenId = \"0\";",
-      "",
-      "// The number of packs you want to send",
-      "const amount = 1;",
-      "",
+      "// Address of the wallet you want to send the NFT to",
+      "const toAddress = \"{{wallet_address}}\";",
+      "const tokenId = \"0\"; // The token ID of the NFT you want to send",
+      "const amount = 3; // How many copies of the NFTs to transfer",
       "await contract.transfer(toAddress, tokenId, amount);"
     ],
-    "description": "Transfer Pack | Pack contract"
+    "description": "Transfer a single NFT | Pack contract"
+  },
+  "Burn a single NFT | SignatureDrop contract": {
+    "prefix": "signaturedropBurnToken",
+    "body": ["const result = await contract.burnToken(tokenId);"],
+    "description": "Burn a single NFT | SignatureDrop contract"
   },
   "Claim unique NFTs to a specific Wallet | SignatureDrop contract": {
     "prefix": "signaturedropClaimTo",
@@ -670,6 +1423,25 @@
     ],
     "description": "Transfer a single NFT | SignatureDrop contract"
   },
+  "Call any function on this contract | SmartContract contract": {
+    "prefix": "smartcontractCall",
+    "body": [
+      "// read functions will return the data from the contract",
+      "const myValue = await contract.call(\"myReadFunction\");",
+      "console.log(myValue);",
+      "",
+      "// write functions will return the transaction receipt",
+      "const tx = await contract.call(\"myWriteFunction\", arg1, arg2);",
+      "const receipt = tx.receipt;",
+      "",
+      "// Optionally override transaction options",
+      "await contract.call(\"myWriteFunction\", arg1, arg2, {",
+      " gasLimit: 1000000, // override default gas limit",
+      " value: ethers.utils.parseEther(\"0.1\"), // send 0.1 ether with the contract call",
+      "};"
+    ],
+    "description": "Call any function on this contract | SmartContract contract"
+  },
   "Get Funds owed to a particular wallet | Split contract": {
     "prefix": "splitBalanceOf",
     "body": [
@@ -697,7 +1469,7 @@
     "body": ["await contract.distribute();"],
     "description": "Distribute Funds | Split contract"
   },
-  "Distribute Funds token | Split contract": {
+  "Distribute Funds | Split contract": {
     "prefix": "splitDistributeToken",
     "body": [
       "// The address of the currency to distribute funds",
@@ -723,17 +1495,47 @@
     ],
     "description": "Withdraw Funds | Split contract"
   },
-  "Burn Tokens | Token contract": {
-    "prefix": "tokenBurn",
+  "Get an instance of the thirdweb SDK based on a private key. | ThirdwebSDK contract": {
+    "prefix": "thirdwebsdkFromPrivateKey",
     "body": [
-      "// The amount of this token you want to burn",
-      "const amount = 1.2;",
-      "",
-      "await contract.burn(amount);"
+      "const sdk = ThirdwebSDK.fromPrivateKey(\"SecretPrivateKey\", \"mainnet\");"
     ],
-    "description": "Burn Tokens | Token contract"
+    "description": "Get an instance of the thirdweb SDK based on a private key. | ThirdwebSDK contract"
   },
-  "Burn Tokens from | Token contract": {
+  "Get an instance of the thirdweb SDK based on an existing ethers signer | ThirdwebSDK contract": {
+    "prefix": "thirdwebsdkFromSigner",
+    "body": [
+      "// get a signer from somewhere (createRandom is being used purely for example purposes)",
+      "const signer = ethers.Wallet.createRandom();",
+      "",
+      "// get an instance of the SDK with the signer already setup",
+      "const sdk = ThirdwebSDK.fromSigner(signer, \"mainnet\");"
+    ],
+    "description": "Get an instance of the thirdweb SDK based on an existing ethers signer | ThirdwebSDK contract"
+  },
+  "Get the native balance of a given address (wallet or contract) | ThirdwebSDK contract": {
+    "prefix": "thirdwebsdkGetBalance",
+    "body": [
+      "const balance = await sdk.getBalance(\"0x...\");",
+      "console.log(balance.displayValue);"
+    ],
+    "description": "Get the native balance of a given address (wallet or contract) | ThirdwebSDK contract"
+  },
+  "Get an instance of a Custom contract from a json ABI | ThirdwebSDK contract": {
+    "prefix": "thirdwebsdkGetContractFromAbi",
+    "body": [
+      "// Import your ABI from a JSON file",
+      "import myABI from \"./path/to/myABI.json\";",
+      "",
+      "const contract = sdk.getContractFromAbi(",
+      "  \"{{contract_address}}\",",
+      "  // Pass in the \"abi\" field from the JSON file",
+      "  myABI.abi",
+      ");"
+    ],
+    "description": "Get an instance of a Custom contract from a json ABI | ThirdwebSDK contract"
+  },
+  "Burn Tokens | Token contract": {
     "prefix": "tokenBurnFrom",
     "body": [
       "// Address of the wallet sending the tokens",
@@ -743,6 +1545,16 @@
       "const amount = 1.2;",
       "",
       "await contract.burnFrom(holderAddress, amount);"
+    ],
+    "description": "Burn Tokens | Token contract"
+  },
+  "Burn Tokens | Token contract": {
+    "prefix": "tokenBurnTokens",
+    "body": [
+      "// The amount of this token you want to burn",
+      "const amount = 1.2;",
+      "",
+      "await contract.burnTokens(amount);"
     ],
     "description": "Burn Tokens | Token contract"
   },
@@ -784,7 +1596,7 @@
     ],
     "description": "Get Token Allowance | Token contract"
   },
-  "Get Token Allowance of | Token contract": {
+  "Get Token Allowance | Token contract": {
     "prefix": "tokenAllowanceOf",
     "body": [
       "// Address of the wallet who owns the funds",
@@ -875,16 +1687,6 @@
     "description": "Transfer Tokens From Address | Token contract"
   },
   "Burn Tokens | TokenDrop contract": {
-    "prefix": "tokendropBurn",
-    "body": [
-      "// The amount of this token you want to burn",
-      "const amount = 1.2;",
-      "",
-      "await contract.burn(amount);"
-    ],
-    "description": "Burn Tokens | TokenDrop contract"
-  },
-  "Burn Tokens from | TokenDrop contract": {
     "prefix": "tokendropBurnFrom",
     "body": [
       "// Address of the wallet sending the tokens",
@@ -894,6 +1696,16 @@
       "const amount = 1.2;",
       "",
       "await contract.burnFrom(holderAddress, amount);"
+    ],
+    "description": "Burn Tokens | TokenDrop contract"
+  },
+  "Burn Tokens | TokenDrop contract": {
+    "prefix": "tokendropBurnTokens",
+    "body": [
+      "// The amount of this token you want to burn",
+      "const amount = 1.2;",
+      "",
+      "await contract.burnTokens(amount);"
     ],
     "description": "Burn Tokens | TokenDrop contract"
   },
@@ -917,7 +1729,7 @@
     ],
     "description": "Get Token Allowance | TokenDrop contract"
   },
-  "Get Token Allowance of | TokenDrop contract": {
+  "Get Token Allowance | TokenDrop contract": {
     "prefix": "tokendropAllowanceOf",
     "body": [
       "// Address of the wallet who owns the funds",
@@ -963,11 +1775,6 @@
     "body": ["const balance = await contract.token.totalSupply();"],
     "description": "The total supply for this Token | TokenDrop contract"
   },
-  "secret | 👀": {
-    "prefix": "secret",
-    "body": ["All Hail Web3!"],
-    "description": "secret | 👀"
-  },
   "Transfer Tokens | TokenDrop contract": {
     "prefix": "tokendropTransfer",
     "body": [
@@ -1011,6 +1818,54 @@
       "await contract.token.transferFrom(fromAddress, toAddress, amount);"
     ],
     "description": "Transfer Tokens From Address | TokenDrop contract"
+  },
+  "Fetch the native or ERC20 token balance of this wallet | UserWallet contract": {
+    "prefix": "userwalletBalance",
+    "body": [
+      "// native currency balance",
+      "const balance = await sdk.wallet.balance();",
+      "// ERC20 token balance",
+      "const erc20balance = await sdk.wallet.balance(tokenContractAddress);",
+      ""
+    ],
+    "description": "Fetch the native or ERC20 token balance of this wallet | UserWallet contract"
+  },
+  "Get the currently connected address | UserWallet contract": {
+    "prefix": "userwalletGetAddress",
+    "body": ["const address = await sdk.wallet.getAddress();"],
+    "description": "Get the currently connected address | UserWallet contract"
+  },
+  "Recover the signing address from a signed message | UserWallet contract": {
+    "prefix": "userwalletRecoverAddress",
+    "body": [
+      "const message = \"Sign this message...\";",
+      "const signature = await sdk.wallet.sign(message);",
+      "",
+      "// Now we can recover the signing address",
+      "const address = sdk.wallet.recoverAddress(message, signature);"
+    ],
+    "description": "Recover the signing address from a signed message | UserWallet contract"
+  },
+  "Sign any message with the connected wallet private key | UserWallet contract": {
+    "prefix": "userwalletSign",
+    "body": [
+      "// This is the message to be signed",
+      "const message = \"Sign this message...\";",
+      "",
+      "// Now we can sign the message with the connected wallet",
+      "const signature = await sdk.wallet.sign(message);"
+    ],
+    "description": "Sign any message with the connected wallet private key | UserWallet contract"
+  },
+  "Transfer native or ERC20 tokens from this wallet to another wallet | UserWallet contract": {
+    "prefix": "userwalletTransfer",
+    "body": [
+      " // transfer 0.8 ETH",
+      "await sdk.wallet.transfer(\"0x...\", 0.8);",
+      " // transfer 0.8 tokens of `tokenContractAddress`",
+      "await sdk.wallet.transfer(\"0x...\", 0.8, tokenContractAddress);"
+    ],
+    "description": "Transfer native or ERC20 tokens from this wallet to another wallet | UserWallet contract"
   },
   "Can Execute | Vote contract": {
     "prefix": "voteCanExecute",
@@ -1091,5 +1946,49 @@
       "await contract.vote(proposalId, voteType, reason);"
     ],
     "description": "Vote | Vote contract"
+  },
+  "Authenticate With Token | WalletAuthenticator contract": {
+    "prefix": "walletauthenticatorAuthenticate",
+    "body": [
+      "const domain = \"thirdweb.com\";",
+      "const loginPayload = await sdk.auth.login(domain);",
+      "const token = await sdk.auth.generateAuthToken(domain, loginPayload);",
+      "",
+      "// Authenticate the token and get the address of authenticating users wallet",
+      "const address = sdk.auth.authenticate(domain, token);"
+    ],
+    "description": "Authenticate With Token | WalletAuthenticator contract"
+  },
+  "Generate Authentication Token | WalletAuthenticator contract": {
+    "prefix": "walletauthenticatorGenerateAuthToken",
+    "body": [
+      "const domain = \"thirdweb.com\";",
+      "const loginPayload = await sdk.auth.login(domain);",
+      "",
+      "// Generate a JWT token that can be sent to the client-side wallet and used for authentication",
+      "const token = await sdk.auth.generateAuthToken(domain, loginPayload);"
+    ],
+    "description": "Generate Authentication Token | WalletAuthenticator contract"
+  },
+  "Login With Connected Wallet | WalletAuthenticator contract": {
+    "prefix": "walletauthenticatorLogin",
+    "body": [
+      "// Add the domain of the application users will login to, this will be used throughout the login process",
+      "const domain = \"thirdweb.com\";",
+      "// Generate a signed login payload for the connected wallet to authenticate with",
+      "const loginPayload = await sdk.auth.login(domain);"
+    ],
+    "description": "Login With Connected Wallet | WalletAuthenticator contract"
+  },
+  "Verify Logged In Address | WalletAuthenticator contract": {
+    "prefix": "walletauthenticatorVerify",
+    "body": [
+      "const domain = \"thirdweb.com\";",
+      "const loginPayload = await sdk.auth.login(domain);",
+      "",
+      "// Verify the login request",
+      "const address = sdk.auth.verify(domain, loginPayload);"
+    ],
+    "description": "Verify Logged In Address | WalletAuthenticator contract"
   }
 }
